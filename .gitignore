@@ -33,15 +33,12 @@ ENV/
 env/
 
 # IDE and Editor files
-.vscode/
 .idea/
 *.swp
 *.swo
 *~
 
 # Environment files & Secrets
-.env
-.env.local
 .env.*.local
 *.key
 *.pem
@@ -72,3 +69,5 @@ results/reports/*.png
 # OS generated files
 .DS_Store
 Thumbs.db
+config.bat
+node_modules
