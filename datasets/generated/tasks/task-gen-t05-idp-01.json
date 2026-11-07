@@ -1,0 +1,78 @@
+{
+  "description": "Evaluate cryptographic migration reasoning for Migration Ordering.",
+  "difficulty": "INTRODUCTORY",
+  "evaluation_criteria": [
+    {
+      "criterion_id": "crit-t05-topological-validity",
+      "description": "Produce a multi-wave migration sequence where all prerequisites precede dependent callers.",
+      "is_safety_critical": true,
+      "name": "Topological Wave Validity",
+      "weight": 50.0
+    },
+    {
+      "criterion_id": "crit-t05-zero-downtime",
+      "description": "Ensure dual-stack compatibility and prevent breaking calling interfaces during transitions.",
+      "is_safety_critical": false,
+      "name": "Zero-Downtime Guarantee",
+      "weight": 50.0
+    }
+  ],
+  "expected_output_schema": {
+    "properties": {
+      "prerequisite_rationale": {
+        "type": "string"
+      },
+      "wave_sequence": {
+        "items": {
+          "properties": {
+            "components": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "prerequisites": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "wave": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "wave",
+            "components",
+            "prerequisites"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "zero_downtime_validation": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "wave_sequence",
+      "prerequisite_rationale",
+      "zero_downtime_validation"
+    ],
+    "type": "object"
+  },
+  "ground_truth_reference": "gt-gen-t05-idp-01",
+  "scenario_reference": "scen-gen-t05-idp-01",
+  "tags": [
+    "synthetic",
+    "family:T05",
+    "t05_migration_ordering",
+    "introductory"
+  ],
+  "task_category": "MIGRATION_SEQUENCING",
+  "task_family": "T05",
+  "task_id": "task-gen-t05-idp-01",
+  "task_instructions": "You are a Principal Cryptographic Systems Architect evaluating migration for scenario 'scen-gen-t05-idp-01'.\nObjective: Test whether the model produces a valid migration sequence respecting all dependency prerequisites.\nGuidelines:\n1. Inspect all system components, directed dependencies, compatibility assessments, and discovery evidence.\n2. Do NOT treat UNKNOWN compatibility as SUPPORTED without verified evidence.\n3. Base all conclusions strictly on provided evidence; distinguish verified observations from assumptions.\n4. Formulate your response matching the required output schema, ensuring safety gates and prerequisite orderings are respected.",
+  "task_name": "Migration Ordering - Cloud Identity - T05 MIGRATION ORDERING",
+  "version": "1.0.0"
+}

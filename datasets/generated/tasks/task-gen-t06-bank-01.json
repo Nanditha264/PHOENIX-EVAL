@@ -1,0 +1,60 @@
+{
+  "description": "Evaluate cryptographic migration reasoning for Dependency Cycle.",
+  "difficulty": "INTRODUCTORY",
+  "evaluation_criteria": [
+    {
+      "criterion_id": "crit-t06-cycle-detection",
+      "description": "Recognize circular dependencies and explicitly state that a simple DAG topological sort is impossible.",
+      "is_safety_critical": true,
+      "name": "Circular Dependency Detection",
+      "weight": 60.0
+    },
+    {
+      "criterion_id": "crit-t06-architectural-remediation",
+      "description": "Propose architectural decoupling or dual-stack hybrid coexistence to break the cycle.",
+      "is_safety_critical": false,
+      "name": "Architectural Decoupling",
+      "weight": 40.0
+    }
+  ],
+  "expected_output_schema": {
+    "properties": {
+      "cycle_detected": {
+        "type": "boolean"
+      },
+      "involved_components": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "linear_topological_sort_possible": {
+        "type": "boolean"
+      },
+      "remediation_strategy": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "cycle_detected",
+      "involved_components",
+      "linear_topological_sort_possible",
+      "remediation_strategy"
+    ],
+    "type": "object"
+  },
+  "ground_truth_reference": "gt-gen-t06-bank-01",
+  "scenario_reference": "scen-gen-t06-bank-01",
+  "tags": [
+    "synthetic",
+    "family:T06",
+    "t06_dependency_cycle",
+    "introductory"
+  ],
+  "task_category": "DEPENDENCY_DISCOVERY",
+  "task_family": "T06",
+  "task_id": "task-gen-t06-bank-01",
+  "task_instructions": "You are a Principal Cryptographic Systems Architect evaluating migration for scenario 'scen-gen-t06-bank-01'.\nObjective: Introduce a circular dependency; test cycle detection over invalid topological orders.\nGuidelines:\n1. Inspect all system components, directed dependencies, compatibility assessments, and discovery evidence.\n2. Do NOT treat UNKNOWN compatibility as SUPPORTED without verified evidence.\n3. Base all conclusions strictly on provided evidence; distinguish verified observations from assumptions.\n4. Formulate your response matching the required output schema, ensuring safety gates and prerequisite orderings are respected.",
+  "task_name": "Dependency Cycle - Banking Payments - T06 DEPENDENCY CYCLE",
+  "version": "1.0.0"
+}

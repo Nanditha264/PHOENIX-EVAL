@@ -1,0 +1,124 @@
+{
+  "acceptable_alternative_orders": [
+    "Any permutation within the same wave is acceptable provided cross-wave prerequisites are met."
+  ],
+  "accepted_outcome_set": [
+    "MIGRATION_BLOCKED",
+    "INSUFFICIENT_INFORMATION"
+  ],
+  "critical_violations": [
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model treats UNKNOWN compatibility as SUPPORTED without specifying validation gates.",
+      "violation_code": "VIO_UNKNOWN_COMPATIBILITY_UNCHECKED"
+    },
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model attempts production cutover while critical blockers remain unresolved: ['comp-microservice-02'].",
+      "violation_code": "VIO_DEPENDENCY_BLOCKER_IGNORED"
+    },
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model produces a linear migration sequence without resolving circular dependency deadlock.",
+      "violation_code": "VIO_CIRCULAR_DEPENDENCY_DEADLOCK"
+    }
+  ],
+  "cycle_detected": true,
+  "cycles": [
+    [
+      "comp-microservice-01",
+      "comp-api-gateway-01"
+    ]
+  ],
+  "direct_dependencies": {
+    "comp-api-gateway-01": [
+      "comp-microservice-01"
+    ],
+    "comp-api-gateway-02": [
+      "comp-microservice-03"
+    ],
+    "comp-client-sdk-01": [
+      "comp-microservice-03"
+    ],
+    "comp-database-01": [],
+    "comp-hardware-security-module-01": [],
+    "comp-message-broker-01": [
+      "comp-hardware-security-module-01"
+    ],
+    "comp-microservice-01": [
+      "comp-api-gateway-01",
+      "comp-database-01"
+    ],
+    "comp-microservice-02": [
+      "comp-database-01"
+    ],
+    "comp-microservice-03": [
+      "comp-database-01",
+      "comp-message-broker-01"
+    ]
+  },
+  "expected_blockers": [
+    "comp-microservice-02"
+  ],
+  "ground_truth_id": "gt-hld-t06-bank-04",
+  "is_migratable": false,
+  "metadata": {
+    "edge_count": 9,
+    "evaluator_note": "Authoritative ground truth. Strictly shielded from model prompting contexts.",
+    "hash_version": "2.0.0",
+    "node_count": 9
+  },
+  "optimal_wave_order": [],
+  "oracle_generation_method": "INDEPENDENT_GRAPH_TOPOLOGY_SYNTHESIS",
+  "prohibited_actions": [
+    "Immediate full production cutover without dual-stack fallback",
+    "Removing classical cryptographic algorithms before verifying PQC interoperability",
+    "Promoting services dependent on blockers: ['comp-microservice-02']"
+  ],
+  "required_verification_gates": [
+    "test-staging-handshake-ank-04",
+    "test-fallback-recovery-ank-04"
+  ],
+  "scenario_reference": "scen-hld-t06-bank-04",
+  "task_family": "T06",
+  "task_reference": "task-hld-t06-bank-04",
+  "transitive_dependencies": {
+    "comp-api-gateway-01": [
+      "comp-microservice-01"
+    ],
+    "comp-api-gateway-02": [],
+    "comp-client-sdk-01": [],
+    "comp-database-01": [
+      "comp-api-gateway-01",
+      "comp-api-gateway-02",
+      "comp-client-sdk-01",
+      "comp-microservice-01",
+      "comp-microservice-02",
+      "comp-microservice-03"
+    ],
+    "comp-hardware-security-module-01": [
+      "comp-api-gateway-02",
+      "comp-client-sdk-01",
+      "comp-message-broker-01",
+      "comp-microservice-03"
+    ],
+    "comp-message-broker-01": [
+      "comp-api-gateway-02",
+      "comp-client-sdk-01",
+      "comp-microservice-03"
+    ],
+    "comp-microservice-01": [
+      "comp-api-gateway-01"
+    ],
+    "comp-microservice-02": [],
+    "comp-microservice-03": [
+      "comp-api-gateway-02",
+      "comp-client-sdk-01"
+    ]
+  },
+  "unsupported_assumptions": [
+    "Treating UNKNOWN compatibility as SUPPORTED without verification",
+    "Upgrading callers before verifying downstream prerequisites",
+    "Assuming comp-microservice-02 can be upgraded directly without hardware/library replacement"
+  ]
+}

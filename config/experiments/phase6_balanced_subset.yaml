@@ -1,0 +1,40 @@
+# PHOENIX-EVAL Phase 6 Balanced Evaluation Subset Configuration
+# Balanced benchmark experiment covering all 10 task families (T01-T10),
+# all 5 enterprise architecture domains, and all 3 difficulty tiers.
+# Includes canonical paired counterfactual sensitivity pairs.
+
+experiment_id: exp-phase6-balanced-001
+experiment_name: "PHOENIX-EVAL Phase 6 Balanced Evaluation Campaign"
+description: "Comprehensive multi-model evaluation across T01-T10, 5 enterprise domains, 3 difficulty tiers, and counterfactual sensitivity pairs."
+
+selected_models:
+  - mock-valid-migration
+  - mock-unsafe-migration
+  - mock-malformed-response
+
+selected_tasks:
+  # T01-T10 balanced representation
+  - task-gen-t01-bank-01    # T01 | Bank | INTRODUCTORY
+  - task-gen-t02-erp-02     # T02 | ERP  | INTERMEDIATE
+  - task-gen-t03-telco-01   # T03 | Telco| INTRODUCTORY
+  - task-gen-t04-telco-03   # T04 | Telco| ADVANCED
+  - task-gen-t05-gov-02     # T05 | Gov  | INTERMEDIATE
+  - task-gen-t06-idp-03     # T06 | IdP  | ADVANCED
+  - task-gen-t07-gov-01     # T07 | Gov  | INTRODUCTORY
+  - task-gen-t08-idp-02     # T08 | IdP  | INTERMEDIATE
+  - task-gen-t09-bank-02    # T09 | Bank | INTERMEDIATE
+  - task-gen-t10-erp-03     # T10 | ERP  | ADVANCED
+  # Counterfactual paired cases
+  - task-pair-hsm-support-01-a    # T09 | Bank | INTERMEDIATE (Unblocked baseline)
+  - task-pair-hsm-support-01-b    # T03 | Bank | INTERMEDIATE (HSM firmware blocker)
+  - task-pair-interop-test-02-a   # T09 | ERP  | INTERMEDIATE (Unblocked baseline)
+  - task-pair-interop-test-02-b   # T06 | ERP  | INTERMEDIATE (Protocol test failure)
+
+number_of_trials: 2
+temperature: 0.0
+max_output_tokens: 2048
+timeout_seconds: 45.0
+retry_count: 2
+request_delay_seconds: 0.0
+resume: true
+mode: mock

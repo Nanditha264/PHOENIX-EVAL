@@ -1,0 +1,101 @@
+{
+  "task_id": "task-gen-t08-gov-03",
+  "decision": "MIGRATION_READY",
+  "identified_dependencies": [
+    {
+      "source_component_id": "comp-application-01",
+      "target_component_id": "comp-service-02"
+    },
+    {
+      "source_component_id": "comp-application-02",
+      "target_component_id": "comp-service-01"
+    },
+    {
+      "source_component_id": "comp-service-01",
+      "target_component_id": "comp-certificate-authority-01"
+    },
+    {
+      "source_component_id": "comp-iot-gateway-01",
+      "target_component_id": "comp-database-01"
+    },
+    {
+      "source_component_id": "comp-service-02",
+      "target_component_id": "comp-certificate-authority-02"
+    },
+    {
+      "source_component_id": "comp-iot-gateway-02",
+      "target_component_id": "comp-database-01"
+    }
+  ],
+  "compatibility_assessments": [
+    {
+      "component_id": "comp-certificate-authority-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-application-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-service-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-iot-gateway-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-database-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-certificate-authority-02",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-application-02",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-service-02",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-iot-gateway-02",
+      "status": "SUPPORTED"
+    }
+  ],
+  "migration_plan": [],
+  "blocked_components": [
+    "comp-certificate-authority-02"
+  ],
+  "required_actions": [
+    "Remediate packet fragmentation on test-downstream-interop-gov-03"
+  ],
+  "verification_results": [
+    {
+      "test_id": "test-staging-handshake-gov-03",
+      "reported_status": "PASSED"
+    },
+    {
+      "test_id": "test-fallback-recovery-gov-03",
+      "reported_status": "PASSED"
+    },
+    {
+      "test_id": "test-downstream-interop-gov-03",
+      "reported_status": "FAILED"
+    }
+  ],
+  "evidence_references": [
+    "evid-sbom-certificate-authority-01",
+    "evid-telemetry-certificate-authority-01"
+  ],
+  "assumptions": [
+    "Network middleboxes support standard PQC MTU sizes"
+  ],
+  "uncertainties": [
+    "Mandatory interoperability test failed"
+  ],
+  "explanation": "Mandatory interoperability test test-downstream-interop-gov-03 failed and comp-certificate-authority-02 is UNSUPPORTED. Production cutover blocked based on telemetry and failed verification tests.",
+  "contract_version": "1.0.0"
+}

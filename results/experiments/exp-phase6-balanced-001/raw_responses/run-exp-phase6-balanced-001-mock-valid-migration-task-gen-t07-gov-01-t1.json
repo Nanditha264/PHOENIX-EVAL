@@ -1,0 +1,217 @@
+{
+  "error_message": null,
+  "execution_duration": 0.00019659986719489098,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "valid_migration",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-valid-migration",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "assumptions": [],
+    "blocked_components": [
+      "comp-certificate-authority-02",
+      "comp-database-02"
+    ],
+    "compatibility_assessments": [
+      {
+        "component_id": "comp-certificate-authority-01",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-application-01",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-service-01",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-iot-gateway-01",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-database-01",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-certificate-authority-02",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Identified compatibility blocker preventing direct migration.",
+        "status": "UNSUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-application-02",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-service-02",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-iot-gateway-02",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-database-02",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Identified compatibility blocker preventing direct migration.",
+        "status": "UNSUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-certificate-authority-03",
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      }
+    ],
+    "contract_version": "1.0.0",
+    "decision": "MIGRATION_BLOCKED",
+    "evidence_references": [
+      "evid-sbom-certificate-authority-01",
+      "evid-telemetry-certificate-authority-01",
+      "evid-sbom-application-01",
+      "evid-telemetry-application-01",
+      "evid-sbom-service-01"
+    ],
+    "explanation": "Migration blocked for task task-gen-t07-gov-01. Architectural evaluation detected 2 blocked component(s). Only non-destructive preparatory discovery actions may be scheduled until blockers are cleared.",
+    "identified_dependencies": [
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "CALLS",
+        "source_component_id": "comp-application-01",
+        "target_component_id": "comp-service-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "CALLS",
+        "source_component_id": "comp-application-02",
+        "target_component_id": "comp-iot-gateway-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-service-01",
+        "target_component_id": "comp-database-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-iot-gateway-01",
+        "target_component_id": "comp-database-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-service-02",
+        "target_component_id": "comp-database-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "CERTIFICATE_ISSUED_BY",
+        "source_component_id": "comp-iot-gateway-02",
+        "target_component_id": "comp-certificate-authority-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "CERTIFICATE_ISSUED_BY",
+        "source_component_id": "comp-application-02",
+        "target_component_id": "comp-certificate-authority-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-application-01",
+        "target_component_id": "comp-database-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-certificate-authority-01",
+        "relationship_type": "CERTIFICATE_ISSUED_BY",
+        "source_component_id": "comp-application-02",
+        "target_component_id": "comp-certificate-authority-02"
+      }
+    ],
+    "migration_plan": [
+      {
+        "action_type": "PREPARATION",
+        "coexisting_algorithms": [],
+        "component_id": "comp-certificate-authority-01",
+        "is_conditional": true,
+        "post_rollback_validation_gate": null,
+        "preconditions": [],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 1
+      },
+      {
+        "action_type": "PREPARATION",
+        "coexisting_algorithms": [],
+        "component_id": "comp-application-01",
+        "is_conditional": true,
+        "post_rollback_validation_gate": null,
+        "preconditions": [],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 1
+      }
+    ],
+    "required_actions": [
+      "Upgrade or remediate blocked components: ['comp-certificate-authority-02', 'comp-database-02']",
+      "Resolve pre-migration verification test failures before cutover."
+    ],
+    "task_id": "task-gen-t07-gov-01",
+    "uncertainties": [],
+    "verification_results": []
+  },
+  "prompt_hash": "9a4b4748e84c420c8623c517c428ccb20691ae89280806577d51bdc9953ff361",
+  "provider_request_id": "mock-req-task-gen-t07-gov-01",
+  "raw_response": "{\n  \"task_id\": \"task-gen-t07-gov-01\",\n  \"decision\": \"MIGRATION_BLOCKED\",\n  \"identified_dependencies\": [\n    {\n      \"source_component_id\": \"comp-application-01\",\n      \"target_component_id\": \"comp-service-01\",\n      \"relationship_type\": \"CALLS\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    },\n    {\n      \"source_component_id\": \"comp-application-02\",\n      \"target_component_id\": \"comp-iot-gateway-02\",\n      \"relationship_type\": \"CALLS\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    },\n    {\n      \"source_component_id\": \"comp-service-01\",\n      \"target_component_id\": \"comp-database-02\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    },\n    {\n      \"source_component_id\": \"comp-iot-gateway-01\",\n      \"target_component_id\": \"comp-database-02\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    },\n    {\n      \"source_component_id\": \"comp-service-02\",\n      \"target_component_id\": \"comp-database-02\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    },\n    {\n      \"source_component_id\": \"comp-iot-gateway-02\",\n      \"target_component_id\": \"comp-certificate-authority-01\",\n      \"relationship_type\": \"CERTIFICATE_ISSUED_BY\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    },\n    {\n      \"source_component_id\": \"comp-application-02\",\n      \"target_component_id\": \"comp-certificate-authority-01\",\n      \"relationship_type\": \"CERTIFICATE_ISSUED_BY\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    },\n    {\n      \"source_component_id\": \"comp-application-01\",\n      \"target_component_id\": \"comp-database-01\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    },\n    {\n      \"source_component_id\": \"comp-application-02\",\n      \"target_component_id\": \"comp-certificate-authority-02\",\n      \"relationship_type\": \"CERTIFICATE_ISSUED_BY\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\"\n    }\n  ],\n  \"compatibility_assessments\": [\n    {\n      \"component_id\": \"comp-certificate-authority-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-application-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-service-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-iot-gateway-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-database-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-certificate-authority-02\",\n      \"status\": \"UNSUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Identified compatibility blocker preventing direct migration.\"\n    },\n    {\n      \"component_id\": \"comp-application-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-service-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-iot-gateway-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-database-02\",\n      \"status\": \"UNSUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Identified compatibility blocker preventing direct migration.\"\n    },\n    {\n      \"component_id\": \"comp-certificate-authority-03\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-certificate-authority-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    }\n  ],\n  \"migration_plan\": [\n    {\n      \"wave\": 1,\n      \"component_id\": \"comp-certificate-authority-01\",\n      \"action_type\": \"PREPARATION\",\n      \"preconditions\": [],\n      \"required_validation_gates\": [],\n      \"is_conditional\": true,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 1,\n      \"component_id\": \"comp-application-01\",\n      \"action_type\": \"PREPARATION\",\n      \"preconditions\": [],\n      \"required_validation_gates\": [],\n      \"is_conditional\": true,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    }\n  ],\n  \"blocked_components\": [\n    \"comp-certificate-authority-02\",\n    \"comp-database-02\"\n  ],\n  \"required_actions\": [\n    \"Upgrade or remediate blocked components: ['comp-certificate-authority-02', 'comp-database-02']\",\n    \"Resolve pre-migration verification test failures before cutover.\"\n  ],\n  \"verification_results\": [],\n  \"evidence_references\": [\n    \"evid-sbom-certificate-authority-01\",\n    \"evid-telemetry-certificate-authority-01\",\n    \"evid-sbom-application-01\",\n    \"evid-telemetry-application-01\",\n    \"evid-sbom-service-01\"\n  ],\n  \"assumptions\": [],\n  \"uncertainties\": [],\n  \"explanation\": \"Migration blocked for task task-gen-t07-gov-01. Architectural evaluation detected 2 blocked component(s). Only non-destructive preparatory discovery actions may be scheduled until blockers are cleared.\",\n  \"contract_version\": \"1.0.0\"\n}",
+  "response_id": "resp-mock-valid-migration-0c470d24",
+  "returned_model_identifier": "mock-valid-migration",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-gen-t07-gov-01",
+  "timestamp": "2026-11-05T06:15:45.141424Z",
+  "token_usage": {
+    "completion_tokens": 397,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1888,
+    "total_tokens": 2285
+  }
+}

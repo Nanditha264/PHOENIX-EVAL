@@ -1,0 +1,31 @@
+{
+  "error_message": null,
+  "execution_duration": 1.950003206729889e-05,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "malformed_response",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-malformed-response",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "mock_analysis": "{\"task_id\": \"task-gen-t09-bank-02\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\""
+  },
+  "prompt_hash": "dabf9118ca8026ee18e4d165476c59db65e72720fddf71a83c4d49805e929b71",
+  "provider_request_id": "mock-req-task-gen-t09-bank-02",
+  "raw_response": "{\"task_id\": \"task-gen-t09-bank-02\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\"",
+  "response_id": "resp-mock-malformed-response-11fd987b",
+  "returned_model_identifier": "mock-malformed-response",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-gen-t09-bank-02",
+  "timestamp": "2026-11-05T06:15:45.424743Z",
+  "token_usage": {
+    "completion_tokens": 9,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1704,
+    "total_tokens": 1713
+  }
+}

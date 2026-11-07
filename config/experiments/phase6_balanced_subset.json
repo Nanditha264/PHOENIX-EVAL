@@ -1,0 +1,34 @@
+{
+  "experiment_id": "exp-phase6-balanced-001",
+  "experiment_name": "PHOENIX-EVAL Phase 6 Balanced Evaluation Campaign",
+  "description": "Comprehensive multi-model evaluation across T01-T10, 5 enterprise domains, 3 difficulty tiers, and counterfactual sensitivity pairs.",
+  "selected_models": [
+    "mock-valid-migration",
+    "mock-unsafe-migration",
+    "mock-malformed-response"
+  ],
+  "selected_tasks": [
+    "task-gen-t01-bank-01",
+    "task-gen-t02-erp-02",
+    "task-gen-t03-telco-01",
+    "task-gen-t04-telco-03",
+    "task-gen-t05-gov-02",
+    "task-gen-t06-idp-03",
+    "task-gen-t07-gov-01",
+    "task-gen-t08-idp-02",
+    "task-gen-t09-bank-02",
+    "task-gen-t10-erp-03",
+    "task-pair-hsm-support-01-a",
+    "task-pair-hsm-support-01-b",
+    "task-pair-interop-test-02-a",
+    "task-pair-interop-test-02-b"
+  ],
+  "number_of_trials": 2,
+  "temperature": 0.0,
+  "max_output_tokens": 2048,
+  "timeout_seconds": 45.0,
+  "retry_count": 2,
+  "request_delay_seconds": 0.0,
+  "resume": true,
+  "mode": "mock"
+}

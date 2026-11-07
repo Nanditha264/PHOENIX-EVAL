@@ -1,0 +1,987 @@
+{
+  "compatibility_records": [
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-certificate-authority-01",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01",
+        "evid-telemetry-certificate-authority-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-87"
+      },
+      "proposed_target": "ML-DSA-87",
+      "reason": "Runtime environment 'OpenSSL 3.0 Custom Root Appliance' supports 'ML-DSA-87' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-application-01",
+      "evidence_references": [
+        "evid-sbom-application-01",
+        "evid-telemetry-application-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Next.js / Node.js 20 / TLS 1.3' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-service-01",
+      "evidence_references": [
+        "evid-hw-audit-service-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Legacy runtime or firmware in 'Java 17 / Apache PDFBox / BouncyCastle 1.76' lacks cryptographic primitives for 'ML-DSA-65'.",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-iot-gateway-01",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01",
+        "evid-telemetry-iot-gateway-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-44"
+      },
+      "proposed_target": "ML-DSA-44",
+      "reason": "Runtime environment 'Rust / WolfSSL' supports 'ML-DSA-44' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-database-01",
+      "evidence_references": [
+        "evid-sbom-database-01",
+        "evid-telemetry-database-01"
+      ],
+      "metadata": {
+        "target_algorithm": "AES-256-GCM"
+      },
+      "proposed_target": "AES-256-GCM",
+      "reason": "Runtime environment 'Oracle 19c Enterprise / TDE' supports 'AES-256-GCM' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-certificate-authority-02",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-02",
+        "evid-telemetry-certificate-authority-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-87"
+      },
+      "proposed_target": "ML-DSA-87",
+      "reason": "Runtime environment 'OpenSSL 3.0 Custom Root Appliance' supports 'ML-DSA-87' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-application-02",
+      "evidence_references": [
+        "evid-sbom-application-02",
+        "evid-telemetry-application-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Next.js / Node.js 20 / TLS 1.3' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-service-02",
+      "evidence_references": [
+        "evid-sbom-service-02",
+        "evid-telemetry-service-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'C# .NET 8 / PKCS#7' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-iot-gateway-02",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-02",
+        "evid-telemetry-iot-gateway-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-44"
+      },
+      "proposed_target": "ML-DSA-44",
+      "reason": "Runtime environment 'C++17 / Embedded Linux / OpenSSL 1.1.1' supports 'ML-DSA-44' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-database-02",
+      "evidence_references": [
+        "evid-sbom-database-02",
+        "evid-telemetry-database-02"
+      ],
+      "metadata": {
+        "target_algorithm": "AES-256-GCM"
+      },
+      "proposed_target": "AES-256-GCM",
+      "reason": "Runtime environment 'Oracle 19c Enterprise / TDE' supports 'AES-256-GCM' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-certificate-authority-03",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-03",
+        "evid-telemetry-certificate-authority-03"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-87"
+      },
+      "proposed_target": "ML-DSA-87",
+      "reason": "Runtime environment 'EJBCA 8.1 / SafeNet Luna HSM' supports 'ML-DSA-87' verified via active telemetry.",
+      "status": "SUPPORTED"
+    }
+  ],
+  "dependencies": [
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Crown Digital Infrastructure Citizen Digital ID Portal depends on Crown Digital Infrastructure Official Document Signing Service",
+      "edge_id": "edge-application-01-to-service-01",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-application-01",
+      "target_component_id": "comp-service-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Crown Digital Infrastructure Citizen Digital ID Portal #2 depends on Crown Digital Infrastructure Border Control Biometric e-Gate",
+      "edge_id": "edge-application-02-to-iot-gateway-01",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-application-02",
+      "target_component_id": "comp-iot-gateway-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Crown Digital Infrastructure Official Document Signing Service depends on Crown Digital Infrastructure National Civil Registry Database",
+      "edge_id": "edge-service-01-to-database-01",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "STORES_DATA_IN",
+      "source_component_id": "comp-service-01",
+      "target_component_id": "comp-database-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Crown Digital Infrastructure Border Control Biometric e-Gate depends on Crown Digital Infrastructure National Root Certificate Authority",
+      "edge_id": "edge-iot-gateway-01-to-certificate-authority-01",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CERTIFICATE_ISSUED_BY",
+      "source_component_id": "comp-iot-gateway-01",
+      "target_component_id": "comp-certificate-authority-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Crown Digital Infrastructure Official Document Signing Service #2 depends on Crown Digital Infrastructure National Root Certificate Authority #3",
+      "edge_id": "edge-service-02-to-certificate-authority-03",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CERTIFICATE_ISSUED_BY",
+      "source_component_id": "comp-service-02",
+      "target_component_id": "comp-certificate-authority-03"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Crown Digital Infrastructure Border Control Biometric e-Gate #2 depends on Crown Digital Infrastructure National Civil Registry Database",
+      "edge_id": "edge-iot-gateway-02-to-database-01",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "STORES_DATA_IN",
+      "source_component_id": "comp-iot-gateway-02",
+      "target_component_id": "comp-database-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Crown Digital Infrastructure Citizen Digital ID Portal depends on Crown Digital Infrastructure Official Document Signing Service #2",
+      "edge_id": "edge-application-01-to-service-02",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-application-01",
+      "target_component_id": "comp-service-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Crown Digital Infrastructure Citizen Digital ID Portal #2 depends on Crown Digital Infrastructure National Civil Registry Database #2",
+      "edge_id": "edge-application-02-to-database-02",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "STORES_DATA_IN",
+      "source_component_id": "comp-application-02",
+      "target_component_id": "comp-database-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Crown Digital Infrastructure Citizen Digital ID Portal #2 depends on Crown Digital Infrastructure Border Control Biometric e-Gate #2",
+      "edge_id": "edge-application-02-to-iot-gateway-02",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-application-02",
+      "target_component_id": "comp-iot-gateway-02"
+    }
+  ],
+  "description": "Synthetic enterprise architecture evaluating cryptographic migration reasoning for T05.",
+  "evidence_records": [
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'OpenSSL 3.0 Custom Root Appliance' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-certificate-authority-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "OpenSSL 3.0 Custom Root Appliance"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-certificate-authority-01.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-87'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-certificate-authority-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-87"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-certificate-authority-01.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Next.js / Node.js 20 / TLS 1.3' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-application-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Next.js / Node.js 20 / TLS 1.3"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-application-01.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-application-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-application-01.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 1.0,
+      "description": "Firmware attestation confirms legacy hardware constraints preventing 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-hw-audit-service-01",
+      "evidence_type": "HARDWARE_ATTESTATION",
+      "metadata": {},
+      "observed_value": {
+        "firmware_version": "Java 17 / Apache PDFBox / BouncyCastle 1.76",
+        "pqc_supported": false
+      },
+      "provenance": "audit:fips-attestation/log-1102",
+      "source": "security/attestation/comp-service-01.attest",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Rust / WolfSSL' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-iot-gateway-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Rust / WolfSSL"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-iot-gateway-01.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-44'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-iot-gateway-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-44"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-iot-gateway-01.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Oracle 19c Enterprise / TDE' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-database-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Oracle 19c Enterprise / TDE"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-database-01.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'AES-256-GCM'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-database-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "AES-256-GCM"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-database-01.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'OpenSSL 3.0 Custom Root Appliance' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-certificate-authority-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "OpenSSL 3.0 Custom Root Appliance"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-certificate-authority-02.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-87'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-certificate-authority-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-87"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-certificate-authority-02.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Next.js / Node.js 20 / TLS 1.3' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-application-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Next.js / Node.js 20 / TLS 1.3"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-application-02.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-application-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-application-02.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'C# .NET 8 / PKCS#7' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-service-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "C# .NET 8 / PKCS#7"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-service-02.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-service-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-service-02.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'C++17 / Embedded Linux / OpenSSL 1.1.1' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-iot-gateway-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "C++17 / Embedded Linux / OpenSSL 1.1.1"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-iot-gateway-02.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-44'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-iot-gateway-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-44"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-iot-gateway-02.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Oracle 19c Enterprise / TDE' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-database-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Oracle 19c Enterprise / TDE"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-database-02.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'AES-256-GCM'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-database-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "AES-256-GCM"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-database-02.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'EJBCA 8.1 / SafeNet Luna HSM' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-certificate-authority-03",
+      "evidence_type": "SBOM_INSPECTION",
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "EJBCA 8.1 / SafeNet Luna HSM"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-certificate-authority-03.bom.json",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-87'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-certificate-authority-03",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-87"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-certificate-authority-03.log",
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "metadata": {
+    "author": "PHOENIX-EVAL Phase 2 Synthetic Engine",
+    "created_at": "2026-01-01T00:00:00Z",
+    "custom": {
+      "domain": "GOVERNMENT_CRITICAL",
+      "task_family": "T05"
+    },
+    "tags": [
+      "government_critical",
+      "t05",
+      "medium"
+    ],
+    "updated_at": null,
+    "version": "1.0.0"
+  },
+  "migration_constraints": [
+    {
+      "affected_components": [
+        "comp-certificate-authority-01",
+        "comp-application-01",
+        "comp-service-01",
+        "comp-iot-gateway-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-order-gov-02",
+      "constraint_type": "ORDERING",
+      "description": "Mandatory causal prerequisite ordering: foundational cryptographic providers and sinks must cutover prior to dependents.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    },
+    {
+      "affected_components": [
+        "comp-certificate-authority-01",
+        "comp-application-01",
+        "comp-service-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-no-downtime-gov-02",
+      "constraint_type": "NO_DOWNTIME",
+      "description": "High-availability zero-downtime requirement: continuous caller-callee availability must be maintained throughout all transitional waves.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [
+        "test-staging-handshake-gov-02"
+      ],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": true,
+      "service_availability_sla": "99.99% availability during wave cutovers",
+      "staged_transition_required": true,
+      "transition_deadline": null
+    },
+    {
+      "affected_components": [
+        "comp-certificate-authority-01",
+        "comp-application-01",
+        "comp-service-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-regulatory-gov-02",
+      "constraint_type": "REGULATORY_COMPLIANCE",
+      "description": "Regulatory compliance mandate: migration plan and target algorithms must satisfy NIST SP 800-208 / FIPS 203 standards.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": "NIST-SP-800-208",
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": "ML-KEM-768",
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [
+        "evid-sbom-certificate-authority-01",
+        "evid-telemetry-certificate-authority-01"
+      ],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [
+        "test-staging-handshake-gov-02"
+      ],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    }
+  ],
+  "required_tests": [
+    {
+      "description": "Staging mTLS handshake verification with hybrid ML-KEM key encapsulation.",
+      "target_components": [
+        "comp-certificate-authority-01"
+      ],
+      "test_id": "test-staging-handshake-gov-02",
+      "test_type": "INTEROPERABILITY"
+    },
+    {
+      "description": "Automated cipher downgrade fallback verification to classical algorithms under simulated network drop.",
+      "target_components": [
+        "comp-certificate-authority-01"
+      ],
+      "test_id": "test-fallback-recovery-gov-02",
+      "test_type": "FALLBACK_VERIFICATION"
+    }
+  ],
+  "scenario_id": "scen-gen-t05-gov-02",
+  "scenario_name": "Government Critical - T05 MIGRATION ORDERING",
+  "system_components": [
+    {
+      "component_id": "comp-certificate-authority-01",
+      "component_name": "Crown Digital Infrastructure National Root Certificate Authority",
+      "component_type": "CERTIFICATE_AUTHORITY",
+      "cryptographic_role": "CERTIFICATE_ISSUANCE",
+      "current_algorithms": [
+        "RSA-4096",
+        "SHA-512"
+      ],
+      "description": "Offline root CA issuing top-level trust anchors for government digital services.",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-01",
+        "evid-telemetry-certificate-authority-01"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-DSA-87",
+        "tier": 3
+      },
+      "technology": "OpenSSL 3.0 Custom Root Appliance"
+    },
+    {
+      "component_id": "comp-application-01",
+      "component_name": "Crown Digital Infrastructure Citizen Digital ID Portal",
+      "component_type": "APPLICATION",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "ECDSA-P256",
+        "AES-256-GCM"
+      ],
+      "description": "Public-facing web portal for citizen taxes, healthcare, and passport renewal.",
+      "evidence_references": [
+        "evid-sbom-application-01",
+        "evid-telemetry-application-01"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 0
+      },
+      "technology": "Next.js / Node.js 20 / TLS 1.3"
+    },
+    {
+      "component_id": "comp-service-01",
+      "component_name": "Crown Digital Infrastructure Official Document Signing Service",
+      "component_type": "SERVICE",
+      "cryptographic_role": "DIGITAL_SIGNATURE",
+      "current_algorithms": [
+        "ECDSA-P256"
+      ],
+      "description": "High-assurance legal document timestamping and digital signature service.",
+      "evidence_references": [
+        "evid-hw-audit-service-01"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 1
+      },
+      "technology": "Java 17 / Apache PDFBox / BouncyCastle 1.76"
+    },
+    {
+      "component_id": "comp-iot-gateway-01",
+      "component_name": "Crown Digital Infrastructure Border Control Biometric e-Gate",
+      "component_type": "IOT_GATEWAY",
+      "cryptographic_role": "CERTIFICATE_ISSUANCE",
+      "current_algorithms": [
+        "ECDSA-P256",
+        "RSA-2048"
+      ],
+      "description": "Airport electronic passport inspection gate verifying ICAO PKD certificates.",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01",
+        "evid-telemetry-iot-gateway-01"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-DSA-44",
+        "tier": 1
+      },
+      "technology": "Rust / WolfSSL"
+    },
+    {
+      "component_id": "comp-database-01",
+      "component_name": "Crown Digital Infrastructure National Civil Registry Database",
+      "component_type": "DATABASE",
+      "cryptographic_role": "DATA_ENCRYPTION_AT_REST",
+      "current_algorithms": [
+        "AES-256-GCM"
+      ],
+      "description": "Encrypted repository holding citizen vital statistics and biometric credentials.",
+      "evidence_references": [
+        "evid-sbom-database-01",
+        "evid-telemetry-database-01"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "AES-256-GCM",
+        "tier": 3
+      },
+      "technology": "Oracle 19c Enterprise / TDE"
+    },
+    {
+      "component_id": "comp-certificate-authority-02",
+      "component_name": "Crown Digital Infrastructure National Root Certificate Authority #2",
+      "component_type": "CERTIFICATE_AUTHORITY",
+      "cryptographic_role": "CERTIFICATE_ISSUANCE",
+      "current_algorithms": [
+        "RSA-4096",
+        "SHA-512"
+      ],
+      "description": "Offline root CA issuing top-level trust anchors for government digital services.",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-02",
+        "evid-telemetry-certificate-authority-02"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-DSA-87",
+        "tier": 3
+      },
+      "technology": "OpenSSL 3.0 Custom Root Appliance"
+    },
+    {
+      "component_id": "comp-application-02",
+      "component_name": "Crown Digital Infrastructure Citizen Digital ID Portal #2",
+      "component_type": "APPLICATION",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "ECDSA-P256",
+        "AES-256-GCM"
+      ],
+      "description": "Public-facing web portal for citizen taxes, healthcare, and passport renewal.",
+      "evidence_references": [
+        "evid-sbom-application-02",
+        "evid-telemetry-application-02"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 0
+      },
+      "technology": "Next.js / Node.js 20 / TLS 1.3"
+    },
+    {
+      "component_id": "comp-service-02",
+      "component_name": "Crown Digital Infrastructure Official Document Signing Service #2",
+      "component_type": "SERVICE",
+      "cryptographic_role": "DIGITAL_SIGNATURE",
+      "current_algorithms": [
+        "ECDSA-P256"
+      ],
+      "description": "High-assurance legal document timestamping and digital signature service.",
+      "evidence_references": [
+        "evid-sbom-service-02",
+        "evid-telemetry-service-02"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 1
+      },
+      "technology": "C# .NET 8 / PKCS#7"
+    },
+    {
+      "component_id": "comp-iot-gateway-02",
+      "component_name": "Crown Digital Infrastructure Border Control Biometric e-Gate #2",
+      "component_type": "IOT_GATEWAY",
+      "cryptographic_role": "CERTIFICATE_ISSUANCE",
+      "current_algorithms": [
+        "ECDSA-P256",
+        "RSA-2048"
+      ],
+      "description": "Airport electronic passport inspection gate verifying ICAO PKD certificates.",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-02",
+        "evid-telemetry-iot-gateway-02"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-DSA-44",
+        "tier": 1
+      },
+      "technology": "C++17 / Embedded Linux / OpenSSL 1.1.1"
+    },
+    {
+      "component_id": "comp-database-02",
+      "component_name": "Crown Digital Infrastructure National Civil Registry Database #2",
+      "component_type": "DATABASE",
+      "cryptographic_role": "DATA_ENCRYPTION_AT_REST",
+      "current_algorithms": [
+        "AES-256-GCM"
+      ],
+      "description": "Encrypted repository holding citizen vital statistics and biometric credentials.",
+      "evidence_references": [
+        "evid-sbom-database-02",
+        "evid-telemetry-database-02"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "AES-256-GCM",
+        "tier": 3
+      },
+      "technology": "Oracle 19c Enterprise / TDE"
+    },
+    {
+      "component_id": "comp-certificate-authority-03",
+      "component_name": "Crown Digital Infrastructure National Root Certificate Authority #3",
+      "component_type": "CERTIFICATE_AUTHORITY",
+      "cryptographic_role": "CERTIFICATE_ISSUANCE",
+      "current_algorithms": [
+        "RSA-4096",
+        "SHA-512"
+      ],
+      "description": "Offline root CA issuing top-level trust anchors for government digital services.",
+      "evidence_references": [
+        "evid-sbom-certificate-authority-03",
+        "evid-telemetry-certificate-authority-03"
+      ],
+      "metadata": {
+        "domain": "GOVERNMENT_CRITICAL",
+        "target_pqc_algorithm": "ML-DSA-87",
+        "tier": 3
+      },
+      "technology": "EJBCA 8.1 / SafeNet Luna HSM"
+    }
+  ]
+}

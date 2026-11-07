@@ -1,0 +1,4 @@
+domain_name,model_identifier,sample_count,mean_raw_score,mean_effective_score,safety_failure_rate,common_errors
+BANKING_PAYMENTS,mock-malformed-response,4,0.0,0.0,1.0,VIO_MALFORMED_RESPONSE
+BANKING_PAYMENTS,mock-unsafe-migration,4,22.5,0.0,1.0,VIO_DEPENDENCY_ORDER_REVERSED;VIO_REQUIRED_TEST_MISSING
+BANKING_PAYMENTS,mock-valid-migration,4,92.25,92.25,0.0,

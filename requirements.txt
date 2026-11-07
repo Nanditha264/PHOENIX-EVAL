@@ -1,0 +1,17 @@
+# PHOENIX-EVAL Core Dependencies
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+networkx>=3.2.0
+pandas>=2.1.0
+numpy>=1.26.0
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+rich>=13.7.0
+httpx>=0.25.0
+
+# Development, Testing, and Validation Dependencies
+pytest>=8.0.0
+pytest-cov>=4.1.0
+mypy>=1.8.0
+ruff>=0.2.0
+jsonschema>=4.20.0

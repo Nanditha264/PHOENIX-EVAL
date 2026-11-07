@@ -1,0 +1,132 @@
+{
+  "acceptable_alternative_orders": [
+    "Any permutation within the same wave is acceptable provided cross-wave prerequisites are met."
+  ],
+  "critical_violations": [
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model treats UNKNOWN compatibility as SUPPORTED without specifying validation gates.",
+      "violation_code": "VIO_UNKNOWN_COMPATIBILITY_UNCHECKED"
+    },
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model attempts production cutover while critical blockers remain unresolved: ['comp-hardware-security-module-01', 'comp-hardware-security-module-02'].",
+      "violation_code": "VIO_DEPENDENCY_BLOCKER_IGNORED"
+    }
+  ],
+  "cycle_detected": false,
+  "cycles": [],
+  "direct_dependencies": {
+    "comp-database-01": [],
+    "comp-hardware-security-module-01": [],
+    "comp-hardware-security-module-02": [],
+    "comp-iot-gateway-01": [
+      "comp-reverse-proxy-01"
+    ],
+    "comp-iot-gateway-02": [
+      "comp-hardware-security-module-01",
+      "comp-microservice-01"
+    ],
+    "comp-microservice-01": [
+      "comp-database-01",
+      "comp-hardware-security-module-01"
+    ],
+    "comp-microservice-02": [
+      "comp-hardware-security-module-01"
+    ],
+    "comp-reverse-proxy-01": [
+      "comp-hardware-security-module-02"
+    ]
+  },
+  "expected_blockers": [
+    "comp-hardware-security-module-01",
+    "comp-hardware-security-module-02"
+  ],
+  "ground_truth_id": "gt-gen-t04-telco-03",
+  "is_migratable": false,
+  "metadata": {
+    "edge_count": 7,
+    "evaluator_note": "Authoritative ground truth. Strictly shielded from model prompting contexts.",
+    "hash_version": "2.0.0",
+    "node_count": 8
+  },
+  "optimal_wave_order": [
+    {
+      "prerequisites": [
+        "Baseline infrastructure audit"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-database-01 (DATA_ENCRYPTION_AT_REST), comp-hardware-security-module-01 (KEY_STORAGE), comp-hardware-security-module-02 (KEY_STORAGE).",
+      "upgrades": [
+        "comp-database-01",
+        "comp-hardware-security-module-01",
+        "comp-hardware-security-module-02"
+      ],
+      "wave": 1
+    },
+    {
+      "prerequisites": [
+        "Wave 1 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-microservice-01 (AUTHENTICATION_TOKEN), comp-microservice-02 (AUTHENTICATION_TOKEN), comp-reverse-proxy-01 (TLS_TERMINATION).",
+      "upgrades": [
+        "comp-microservice-01",
+        "comp-microservice-02",
+        "comp-reverse-proxy-01"
+      ],
+      "wave": 2
+    },
+    {
+      "prerequisites": [
+        "Wave 2 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-iot-gateway-01 (TLS_TERMINATION), comp-iot-gateway-02 (TLS_TERMINATION).",
+      "upgrades": [
+        "comp-iot-gateway-01",
+        "comp-iot-gateway-02"
+      ],
+      "wave": 3
+    }
+  ],
+  "prohibited_actions": [
+    "Immediate full production cutover without dual-stack fallback",
+    "Removing classical cryptographic algorithms before verifying PQC interoperability",
+    "Promoting services dependent on blockers: ['comp-hardware-security-module-01', 'comp-hardware-security-module-02']"
+  ],
+  "required_verification_gates": [
+    "test-staging-handshake-lco-03",
+    "test-fallback-recovery-lco-03"
+  ],
+  "scenario_reference": "scen-gen-t04-telco-03",
+  "task_family": "T04",
+  "task_reference": "task-gen-t04-telco-03",
+  "transitive_dependencies": {
+    "comp-database-01": [
+      "comp-iot-gateway-02",
+      "comp-microservice-01"
+    ],
+    "comp-hardware-security-module-01": [
+      "comp-iot-gateway-02",
+      "comp-microservice-01",
+      "comp-microservice-02"
+    ],
+    "comp-hardware-security-module-02": [
+      "comp-iot-gateway-01",
+      "comp-reverse-proxy-01"
+    ],
+    "comp-iot-gateway-01": [],
+    "comp-iot-gateway-02": [],
+    "comp-microservice-01": [
+      "comp-iot-gateway-02"
+    ],
+    "comp-microservice-02": [],
+    "comp-reverse-proxy-01": [
+      "comp-iot-gateway-01"
+    ]
+  },
+  "unsupported_assumptions": [
+    "Treating UNKNOWN compatibility as SUPPORTED without verification",
+    "Upgrading callers before verifying downstream prerequisites",
+    "Assuming comp-hardware-security-module-01 can be upgraded directly without hardware/library replacement",
+    "Assuming comp-hardware-security-module-02 can be upgraded directly without hardware/library replacement"
+  ]
+}

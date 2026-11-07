@@ -1,0 +1,44 @@
+{
+  "error_message": null,
+  "execution_duration": 0.00010850001126527786,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "valid_contract",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-model-v1",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "dependency_graph": [],
+    "detailed_explanation": "Contract-compliant mock migration plan for task task-gen-t01-bank-01.",
+    "evidence_justifications": [],
+    "headline_decision": "MIGRATION_READY",
+    "migration_plan": [
+      {
+        "action": "PREPARATION",
+        "dependencies_cleared": [],
+        "step_id": "step-prep-01",
+        "target_component": "comp-mock-service",
+        "verification_gate": "test-mock-prep",
+        "wave": 1
+      }
+    ],
+    "migration_readiness": "READY",
+    "target_compatibility": [],
+    "verification_gates": []
+  },
+  "prompt_hash": "1307d2eee7f1c6f03c79f8f5af4d7ff3d9b96f1ee07025a63bffeab667037dd7",
+  "raw_response": "{\n  \"headline_decision\": \"MIGRATION_READY\",\n  \"migration_readiness\": \"READY\",\n  \"dependency_graph\": [],\n  \"target_compatibility\": [],\n  \"migration_plan\": [\n    {\n      \"step_id\": \"step-prep-01\",\n      \"wave\": 1,\n      \"action\": \"PREPARATION\",\n      \"target_component\": \"comp-mock-service\",\n      \"dependencies_cleared\": [],\n      \"verification_gate\": \"test-mock-prep\"\n    }\n  ],\n  \"evidence_justifications\": [],\n  \"verification_gates\": [],\n  \"detailed_explanation\": \"Contract-compliant mock migration plan for task task-gen-t01-bank-01.\"\n}",
+  "response_id": "resp-mock-model-v1-f69ebe8a",
+  "task_id": "task-gen-t01-bank-01",
+  "timestamp": "2026-11-03T18:17:53.356948Z",
+  "token_usage": {
+    "completion_tokens": 39,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1563,
+    "total_tokens": 1602
+  }
+}

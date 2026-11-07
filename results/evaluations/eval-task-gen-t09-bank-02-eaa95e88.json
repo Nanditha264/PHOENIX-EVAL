@@ -1,0 +1,132 @@
+{
+  "authoritative_readiness_decision": "MIGRATION_READY",
+  "compatibility_findings": {
+    "accuracy": 1.0,
+    "correct_count": 9,
+    "incorrect_count": 0,
+    "total_expected": 9
+  },
+  "contract_version": "1.0.0",
+  "critical_violations": [
+    {
+      "description": "Model scheduled caller component before or in the same wave as its prerequisite.",
+      "evidence": "Causal violations: [('comp-api-gateway-01', 'comp-microservice-03', 1, 2), ('comp-microservice-02', 'comp-message-broker-01', 2, 2), ('comp-microservice-02', 'comp-database-01', 2, 3), ('comp-api-gateway-02', 'comp-message-broker-01', 1, 2), ('comp-api-gateway-02', 'comp-microservice-03', 1, 2), ('comp-microservice-03', 'comp-database-01', 2, 3), ('comp-message-broker-01', 'comp-database-01', 2, 3), ('comp-microservice-01', 'comp-database-01', 2, 3)]",
+      "rule_name": "VIO_DEPENDENCY_ORDER_REVERSED",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_dependency_order_reversed-51b2059d"
+    }
+  ],
+  "dependency_findings": {
+    "expected_count": 9,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "reported_count": 9
+  },
+  "dimension_scores": {
+    "compatibility_reasoning": {
+      "deductions": [],
+      "max_score": 20.0,
+      "normalized_score": 1.0,
+      "raw_score": 20.0,
+      "weighted_contribution": 20.0
+    },
+    "dependency_identification": {
+      "deductions": [],
+      "max_score": 20.0,
+      "normalized_score": 1.0,
+      "raw_score": 20.0,
+      "weighted_contribution": 20.0
+    },
+    "evidence_and_uncertainty": {
+      "deductions": [],
+      "max_score": 15.0,
+      "normalized_score": 1.0,
+      "raw_score": 15.0,
+      "weighted_contribution": 15.0
+    },
+    "explanation_and_traceability": {
+      "deductions": [
+        {
+          "amount": 2.5,
+          "reason": "Explanation does not ground reasoning in discovery evidence or telemetry."
+        },
+        {
+          "amount": 2.5,
+          "reason": "Explanation does not articulate dependency order or wave sequencing rationale."
+        }
+      ],
+      "max_score": 10.0,
+      "normalized_score": 0.5,
+      "raw_score": 5.0,
+      "weighted_contribution": 5.0
+    },
+    "migration_plan_correctness": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "8 causal wave ordering violations (e.g. ('comp-api-gateway-01', 'comp-microservice-03', 1, 2))."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.5,
+      "raw_score": 10.0,
+      "weighted_contribution": 10.0
+    },
+    "validation_and_safety_gates": {
+      "deductions": [],
+      "max_score": 15.0,
+      "normalized_score": 1.0,
+      "raw_score": 15.0,
+      "weighted_contribution": 15.0
+    }
+  },
+  "effective_score": 0.0,
+  "evaluation_id": "eval-task-gen-t09-bank-02-eaa95e88",
+  "evaluation_trace": [
+    "[CRITICAL VETO] VIO_DEPENDENCY_ORDER_REVERSED: Model scheduled caller component before or in the same wave as its prerequisite.",
+    "All components supported and verification gates clear: MIGRATION_READY permitted."
+  ],
+  "evaluator_version": "3.0.0",
+  "evidence_findings": {
+    "disproven_citation_count": 0,
+    "invalid_citation_count": 0,
+    "uncertainties_calibrated": true,
+    "valid_citation_count": 2
+  },
+  "is_valid_contract": true,
+  "is_valid_json": true,
+  "migration_order_findings": {
+    "causal_violation_count": 8,
+    "omitted_count": 0,
+    "step_count": 9,
+    "unsupported_scheduled_count": 0
+  },
+  "model_identifier": "unknown",
+  "model_reported_decision": "MIGRATION_READY",
+  "model_version": "unknown",
+  "non_critical_violations": [],
+  "overall_status": "BLOCKED_BY_SAFETY_GATE",
+  "parsing_errors": [],
+  "raw_weighted_score": 85.0,
+  "rubric_weights": {
+    "compatibility_reasoning": 20.0,
+    "dependency_identification": 20.0,
+    "evidence_and_uncertainty": 15.0,
+    "explanation_and_traceability": 10.0,
+    "migration_plan_correctness": 20.0,
+    "validation_and_safety_gates": 15.0
+  },
+  "safety_gate_passed": false,
+  "scenario_id": "scen-gen-t09-bank-02",
+  "task_id": "task-gen-t09-bank-02",
+  "timestamp": "2026-11-02T16:48:54.078618Z",
+  "validation_errors": [],
+  "verification_gate_findings": {
+    "failed_test_count": 0,
+    "mandatory_test_count": 2,
+    "pending_test_count": 0,
+    "readiness_blocked_by_gates": false,
+    "reported_test_count": 2
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "experiment_id": "exp-phase6-balanced-001",
+  "patterns": [
+    {
+      "category": "SAFETY",
+      "confidence": 1.0,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_REQUIRED_TEST_MISSING across 28 run(s) spanning 14 task(s) and 5 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 28,
+      "number_of_affected_trials": 28,
+      "pattern_id": "patt-3597b8aa",
+      "pattern_name": "Required Test Missing (CROSS_DOMAIN_RECURRING)",
+      "relevant_dimension": "safety",
+      "scope": "CROSS_DOMAIN_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model bypasses mandatory pre-migration or post-cutover verification test suites.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t01-bank-01-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t01-bank-01-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t03-telco-01-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t03-telco-01-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t04-telco-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t04-telco-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t05-gov-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t05-gov-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t06-idp-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t06-idp-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t07-gov-01-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t07-gov-01-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t08-idp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t08-idp-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t09-bank-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t09-bank-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t10-erp-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t10-erp-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-a-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-a-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t01-bank-01",
+        "task-gen-t02-erp-02",
+        "task-gen-t03-telco-01",
+        "task-gen-t04-telco-03",
+        "task-gen-t05-gov-02",
+        "task-gen-t06-idp-03",
+        "task-gen-t07-gov-01",
+        "task-gen-t08-idp-02",
+        "task-gen-t09-bank-02",
+        "task-gen-t10-erp-03",
+        "task-pair-hsm-support-01-a",
+        "task-pair-hsm-support-01-b",
+        "task-pair-interop-test-02-a",
+        "task-pair-interop-test-02-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_REQUIRED_TEST_MISSING"
+      ]
+    },
+    {
+      "category": "DEPENDENCY",
+      "confidence": 1.0,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_KNOWN_DEPENDENCY_OMITTED across 28 run(s) spanning 14 task(s) and 5 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 28,
+      "number_of_affected_trials": 28,
+      "pattern_id": "patt-b1e7a951",
+      "pattern_name": "Known Dependency Omitted (CROSS_DOMAIN_RECURRING)",
+      "relevant_dimension": "dependency",
+      "scope": "CROSS_DOMAIN_RECURRING",
+      "severity": "MAJOR",
+      "suggested_interpretation": "Model routinely omits prerequisite upstream/downstream dependencies from the migration sequence.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t01-bank-01-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t01-bank-01-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t03-telco-01-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t03-telco-01-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t04-telco-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t04-telco-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t05-gov-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t05-gov-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t06-idp-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t06-idp-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t07-gov-01-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t07-gov-01-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t08-idp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t08-idp-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t09-bank-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t09-bank-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t10-erp-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t10-erp-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-a-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-a-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t01-bank-01",
+        "task-gen-t02-erp-02",
+        "task-gen-t03-telco-01",
+        "task-gen-t04-telco-03",
+        "task-gen-t05-gov-02",
+        "task-gen-t06-idp-03",
+        "task-gen-t07-gov-01",
+        "task-gen-t08-idp-02",
+        "task-gen-t09-bank-02",
+        "task-gen-t10-erp-03",
+        "task-pair-hsm-support-01-a",
+        "task-pair-hsm-support-01-b",
+        "task-pair-interop-test-02-a",
+        "task-pair-interop-test-02-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_KNOWN_DEPENDENCY_OMITTED"
+      ]
+    },
+    {
+      "category": "PARSING",
+      "confidence": 1.0,
+      "description": "Model 'mock-malformed-response' demonstrated VIO_MALFORMED_RESPONSE across 28 run(s) spanning 14 task(s) and 5 domain(s).",
+      "model_identifier": "mock-malformed-response",
+      "number_of_affected_runs": 28,
+      "number_of_affected_trials": 28,
+      "pattern_id": "patt-846db6ce",
+      "pattern_name": "Malformed Response (CROSS_DOMAIN_RECURRING)",
+      "relevant_dimension": "parsing",
+      "scope": "CROSS_DOMAIN_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model systematically breaches JSON syntax or strict response contract schema specifications.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t01-bank-01-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t01-bank-01-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t02-erp-02-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t02-erp-02-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t03-telco-01-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t03-telco-01-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t04-telco-03-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t04-telco-03-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t05-gov-02-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t05-gov-02-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t06-idp-03-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t06-idp-03-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t07-gov-01-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t07-gov-01-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t08-idp-02-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t08-idp-02-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t09-bank-02-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t09-bank-02-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t10-erp-03-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-gen-t10-erp-03-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-hsm-support-01-a-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-hsm-support-01-a-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-hsm-support-01-b-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-hsm-support-01-b-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-interop-test-02-a-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-interop-test-02-a-t2",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-interop-test-02-b-t1",
+        "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-interop-test-02-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t01-bank-01",
+        "task-gen-t02-erp-02",
+        "task-gen-t03-telco-01",
+        "task-gen-t04-telco-03",
+        "task-gen-t05-gov-02",
+        "task-gen-t06-idp-03",
+        "task-gen-t07-gov-01",
+        "task-gen-t08-idp-02",
+        "task-gen-t09-bank-02",
+        "task-gen-t10-erp-03",
+        "task-pair-hsm-support-01-a",
+        "task-pair-hsm-support-01-b",
+        "task-pair-interop-test-02-a",
+        "task-pair-interop-test-02-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_MALFORMED_RESPONSE"
+      ]
+    },
+    {
+      "category": "PLANNING",
+      "confidence": 0.97,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_DEPENDENCY_ORDER_REVERSED across 24 run(s) spanning 12 task(s) and 4 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 24,
+      "number_of_affected_trials": 24,
+      "pattern_id": "patt-eda6cd0b",
+      "pattern_name": "Dependency Order Reversed (CROSS_DOMAIN_RECURRING)",
+      "relevant_dimension": "planning",
+      "scope": "CROSS_DOMAIN_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model orders dependents before dependencies, creating service interruption or breaking cutovers.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t01-bank-01-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t01-bank-01-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t03-telco-01-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t03-telco-01-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t04-telco-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t04-telco-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t06-idp-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t06-idp-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t08-idp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t08-idp-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t09-bank-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t09-bank-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t10-erp-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t10-erp-03-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-a-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-a-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t01-bank-01",
+        "task-gen-t02-erp-02",
+        "task-gen-t03-telco-01",
+        "task-gen-t04-telco-03",
+        "task-gen-t06-idp-03",
+        "task-gen-t08-idp-02",
+        "task-gen-t09-bank-02",
+        "task-gen-t10-erp-03",
+        "task-pair-hsm-support-01-a",
+        "task-pair-hsm-support-01-b",
+        "task-pair-interop-test-02-a",
+        "task-pair-interop-test-02-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_DEPENDENCY_ORDER_REVERSED"
+      ]
+    },
+    {
+      "category": "SAFETY",
+      "confidence": 0.91,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_CONSTRAINT_VIOLATION across 4 run(s) spanning 2 task(s) and 2 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 4,
+      "number_of_affected_trials": 4,
+      "pattern_id": "patt-2c2149db",
+      "pattern_name": "Constraint Violation (CROSS_DOMAIN_RECURRING)",
+      "relevant_dimension": "safety",
+      "scope": "CROSS_DOMAIN_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model violates explicit operational, regulatory, or zero-downtime migration constraints.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t04-telco-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t04-telco-03-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t02-erp-02",
+        "task-gen-t04-telco-03"
+      ],
+      "supporting_violation_codes": [
+        "VIO_CONSTRAINT_VIOLATION"
+      ]
+    },
+    {
+      "category": "EVIDENCE",
+      "confidence": 0.91,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_FAILED_TEST_IGNORED across 4 run(s) spanning 2 task(s) and 2 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 4,
+      "number_of_affected_trials": 4,
+      "pattern_id": "patt-322dbd0e",
+      "pattern_name": "Failed Test Ignored (CROSS_DOMAIN_RECURRING)",
+      "relevant_dimension": "evidence",
+      "scope": "CROSS_DOMAIN_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Recurring EVIDENCE reasoning failure under VIO_FAILED_TEST_IGNORED.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t08-idp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t08-idp-02-t2",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t08-idp-02",
+        "task-pair-interop-test-02-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_FAILED_TEST_IGNORED"
+      ]
+    },
+    {
+      "category": "EVIDENCE",
+      "confidence": 0.75,
+      "description": "Model 'mock-valid-migration' demonstrated VIO_FAILED_TEST_IGNORED across 2 run(s) spanning 1 task(s) and 1 domain(s).",
+      "model_identifier": "mock-valid-migration",
+      "number_of_affected_runs": 2,
+      "number_of_affected_trials": 2,
+      "pattern_id": "patt-78d3a421",
+      "pattern_name": "Failed Test Ignored (TASK_REPEATED)",
+      "relevant_dimension": "evidence",
+      "scope": "TASK_REPEATED",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Recurring EVIDENCE reasoning failure under VIO_FAILED_TEST_IGNORED.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-interop-test-02-b-t1",
+        "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-interop-test-02-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-pair-interop-test-02-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_FAILED_TEST_IGNORED"
+      ]
+    },
+    {
+      "category": "COMPATIBILITY",
+      "confidence": 0.75,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_UNSUPPORTED_COMPONENT_SCHEDULED across 2 run(s) spanning 1 task(s) and 1 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 2,
+      "number_of_affected_trials": 2,
+      "pattern_id": "patt-e25ff7d0",
+      "pattern_name": "Unsupported Component Scheduled (TASK_REPEATED)",
+      "relevant_dimension": "compatibility",
+      "scope": "TASK_REPEATED",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model schedules migration cutover for components with known architectural incompatibilities.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t02-erp-02-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t02-erp-02"
+      ],
+      "supporting_violation_codes": [
+        "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+      ]
+    },
+    {
+      "category": "DEPENDENCY",
+      "confidence": 0.75,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_CYCLE_IGNORED across 2 run(s) spanning 1 task(s) and 1 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 2,
+      "number_of_affected_trials": 2,
+      "pattern_id": "patt-ed2f0e70",
+      "pattern_name": "Cycle Ignored (TASK_REPEATED)",
+      "relevant_dimension": "dependency",
+      "scope": "TASK_REPEATED",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model attempts linear topological ordering over circular dependency graphs without resolution.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t06-idp-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t06-idp-03-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t06-idp-03"
+      ],
+      "supporting_violation_codes": [
+        "VIO_CYCLE_IGNORED"
+      ]
+    },
+    {
+      "category": "COMPATIBILITY",
+      "confidence": 0.75,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_UNKNOWN_ASSUMED_SUPPORTED across 2 run(s) spanning 1 task(s) and 1 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 2,
+      "number_of_affected_trials": 2,
+      "pattern_id": "patt-fda76aa8",
+      "pattern_name": "Unknown Assumed Supported (TASK_REPEATED)",
+      "relevant_dimension": "compatibility",
+      "scope": "TASK_REPEATED",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model assumes unverified cryptographic provider support in the absence of explicit compatibility evidence.",
+      "supporting_run_ids": [
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t10-erp-03-t1",
+        "run-exp-phase6-balanced-001-mock-unsafe-migration-task-gen-t10-erp-03-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t10-erp-03"
+      ],
+      "supporting_violation_codes": [
+        "VIO_UNKNOWN_ASSUMED_SUPPORTED"
+      ]
+    }
+  ],
+  "total_patterns": 10
+}

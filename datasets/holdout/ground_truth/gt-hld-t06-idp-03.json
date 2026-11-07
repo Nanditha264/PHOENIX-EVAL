@@ -1,0 +1,106 @@
+{
+  "acceptable_alternative_orders": [
+    "Any permutation within the same wave is acceptable provided cross-wave prerequisites are met."
+  ],
+  "accepted_outcome_set": [
+    "MIGRATION_BLOCKED",
+    "INSUFFICIENT_INFORMATION"
+  ],
+  "critical_violations": [
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model treats UNKNOWN compatibility as SUPPORTED without specifying validation gates.",
+      "violation_code": "VIO_UNKNOWN_COMPATIBILITY_UNCHECKED"
+    },
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model attempts production cutover while critical blockers remain unresolved: ['comp-key-management-service-01'].",
+      "violation_code": "VIO_DEPENDENCY_BLOCKER_IGNORED"
+    },
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model produces a linear migration sequence without resolving circular dependency deadlock.",
+      "violation_code": "VIO_CIRCULAR_DEPENDENCY_DEADLOCK"
+    }
+  ],
+  "cycle_detected": true,
+  "cycles": [
+    [
+      "comp-service-01",
+      "comp-reverse-proxy-01"
+    ]
+  ],
+  "direct_dependencies": {
+    "comp-application-01": [
+      "comp-database-01"
+    ],
+    "comp-database-01": [],
+    "comp-key-management-service-01": [],
+    "comp-key-management-service-02": [],
+    "comp-reverse-proxy-01": [
+      "comp-service-01"
+    ],
+    "comp-reverse-proxy-02": [
+      "comp-application-01"
+    ],
+    "comp-service-01": [
+      "comp-database-01",
+      "comp-reverse-proxy-01"
+    ],
+    "comp-service-02": [
+      "comp-database-01"
+    ]
+  },
+  "expected_blockers": [
+    "comp-key-management-service-01"
+  ],
+  "ground_truth_id": "gt-hld-t06-idp-03",
+  "is_migratable": false,
+  "metadata": {
+    "edge_count": 6,
+    "evaluator_note": "Authoritative ground truth. Strictly shielded from model prompting contexts.",
+    "hash_version": "2.0.0",
+    "node_count": 8
+  },
+  "optimal_wave_order": [],
+  "oracle_generation_method": "INDEPENDENT_GRAPH_TOPOLOGY_SYNTHESIS",
+  "prohibited_actions": [
+    "Immediate full production cutover without dual-stack fallback",
+    "Removing classical cryptographic algorithms before verifying PQC interoperability",
+    "Promoting services dependent on blockers: ['comp-key-management-service-01']"
+  ],
+  "required_verification_gates": [
+    "test-staging-handshake-idp-03",
+    "test-fallback-recovery-idp-03"
+  ],
+  "scenario_reference": "scen-hld-t06-idp-03",
+  "task_family": "T06",
+  "task_reference": "task-hld-t06-idp-03",
+  "transitive_dependencies": {
+    "comp-application-01": [
+      "comp-reverse-proxy-02"
+    ],
+    "comp-database-01": [
+      "comp-application-01",
+      "comp-reverse-proxy-01",
+      "comp-reverse-proxy-02",
+      "comp-service-01",
+      "comp-service-02"
+    ],
+    "comp-key-management-service-01": [],
+    "comp-key-management-service-02": [],
+    "comp-reverse-proxy-01": [
+      "comp-service-01"
+    ],
+    "comp-reverse-proxy-02": [],
+    "comp-service-01": [
+      "comp-reverse-proxy-01"
+    ],
+    "comp-service-02": []
+  },
+  "unsupported_assumptions": [
+    "Treating UNKNOWN compatibility as SUPPORTED without verification",
+    "Upgrading callers before verifying downstream prerequisites",
+    "Assuming comp-key-management-service-01 can be upgraded directly without hardware/library replacement"
+  ]
+}

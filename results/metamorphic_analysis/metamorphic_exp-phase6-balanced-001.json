@@ -1,0 +1,306 @@
+{
+  "experiment_id": "exp-phase6-balanced-001",
+  "tests": [
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-hsm-support-01-a-t2",
+      "description": "Downgrading component to UNSUPPORTED must cause it to be identified as a migration blocker.",
+      "details": "Model maintained safe posture across baseline and transformed inputs for MR1_STATUS_UNSUPPORTED.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "PRESERVED",
+      "relation_type": "MR1_STATUS_UNSUPPORTED",
+      "test_id": "meta-mr1-status-unsupported-01",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-hsm-support-01-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Changing component to UNKNOWN must cause overall migration to be unverified/non-migratable.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR2_STATUS_UNKNOWN (meta-mr2-status-unknown-02): Mapped tasks 'task-pair-external-provider-03-a' and/or 'task-pair-external-provider-03-b' not present in evaluated runs.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR2_STATUS_UNKNOWN",
+      "test_id": "meta-mr2-status-unknown-02",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-interop-test-02-a-t2",
+      "description": "Adding a failing interoperability test must require explicit verification gate resolution.",
+      "details": "Model maintained safe posture across baseline and transformed inputs for MR3_INTEROP_TEST_FAIL.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "PRESERVED",
+      "relation_type": "MR3_INTEROP_TEST_FAIL",
+      "test_id": "meta-mr3-interop-test-fail-03",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-interop-test-02-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Adding a circular dependency must invalidate the DAG and prevent linear wave ordering.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR4_ADD_CYCLE (meta-mr4-add-cycle-04): Mapped tasks 'task-pair-dependency-cycle-04-a' and/or 'task-pair-dependency-cycle-04-b' not present in evaluated runs.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR4_ADD_CYCLE",
+      "test_id": "meta-mr4-add-cycle-04",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Superficial commented-out crypto references must not alter active dependency graph topology.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR5_UNUSED_CRYPTO_REF (meta-mr5-unused-crypto-ref-05): Mapped tasks 'task-pair-unused-crypto-05-a' and/or 'task-pair-unused-crypto-05-b' not present in evaluated runs.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR5_UNUSED_CRYPTO_REF",
+      "test_id": "meta-mr5-unused-crypto-ref-05",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Removing validation evidence must result in zero satisfied verification gates.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR6_REMOVE_VALIDATION (meta-mr6-remove-validation-06): Mapped tasks 'task-pair-remove-validation-06-a' and/or 'task-pair-remove-validation-06-b' not present in evaluated runs.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR6_REMOVE_VALIDATION",
+      "test_id": "meta-mr6-remove-validation-06",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-hsm-support-01-a-t2",
+      "description": "Downgrading component to UNSUPPORTED must cause it to be identified as a migration blocker.",
+      "details": "Model maintained safe posture across baseline and transformed inputs for MR1_STATUS_UNSUPPORTED.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "PRESERVED",
+      "relation_type": "MR1_STATUS_UNSUPPORTED",
+      "test_id": "meta-mr1-status-unsupported-07",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-hsm-support-01-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Changing component to UNKNOWN must cause overall migration to be unverified/non-migratable.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR2_STATUS_UNKNOWN (meta-mr2-status-unknown-08): Mapped tasks 'task-pair-external-provider-03-a' and/or 'task-pair-external-provider-03-b' not present in evaluated runs.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR2_STATUS_UNKNOWN",
+      "test_id": "meta-mr2-status-unknown-08",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-interop-test-02-a-t2",
+      "description": "Adding a failing interoperability test must require explicit verification gate resolution.",
+      "details": "Model maintained safe posture across baseline and transformed inputs for MR3_INTEROP_TEST_FAIL.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "PRESERVED",
+      "relation_type": "MR3_INTEROP_TEST_FAIL",
+      "test_id": "meta-mr3-interop-test-fail-09",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-malformed-response-task-pair-interop-test-02-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Adding a circular dependency must invalidate the DAG and prevent linear wave ordering.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR4_ADD_CYCLE (meta-mr4-add-cycle-10): Mapped tasks 'task-pair-dependency-cycle-04-a' and/or 'task-pair-dependency-cycle-04-b' not present in evaluated runs.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR4_ADD_CYCLE",
+      "test_id": "meta-mr4-add-cycle-10",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+      "description": "Downgrading component to UNSUPPORTED must cause it to be identified as a migration blocker.",
+      "details": "Model maintained safe posture across baseline and transformed inputs for MR1_STATUS_UNSUPPORTED.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "PRESERVED",
+      "relation_type": "MR1_STATUS_UNSUPPORTED",
+      "test_id": "meta-mr1-status-unsupported-01",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Changing component to UNKNOWN must cause overall migration to be unverified/non-migratable.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR2_STATUS_UNKNOWN (meta-mr2-status-unknown-02): Mapped tasks 'task-pair-external-provider-03-a' and/or 'task-pair-external-provider-03-b' not present in evaluated runs.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR2_STATUS_UNKNOWN",
+      "test_id": "meta-mr2-status-unknown-02",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-a-t2",
+      "description": "Adding a failing interoperability test must require explicit verification gate resolution.",
+      "details": "Model maintained safe posture across baseline and transformed inputs for MR3_INTEROP_TEST_FAIL.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "PRESERVED",
+      "relation_type": "MR3_INTEROP_TEST_FAIL",
+      "test_id": "meta-mr3-interop-test-fail-03",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Adding a circular dependency must invalidate the DAG and prevent linear wave ordering.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR4_ADD_CYCLE (meta-mr4-add-cycle-04): Mapped tasks 'task-pair-dependency-cycle-04-a' and/or 'task-pair-dependency-cycle-04-b' not present in evaluated runs.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR4_ADD_CYCLE",
+      "test_id": "meta-mr4-add-cycle-04",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Superficial commented-out crypto references must not alter active dependency graph topology.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR5_UNUSED_CRYPTO_REF (meta-mr5-unused-crypto-ref-05): Mapped tasks 'task-pair-unused-crypto-05-a' and/or 'task-pair-unused-crypto-05-b' not present in evaluated runs.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR5_UNUSED_CRYPTO_REF",
+      "test_id": "meta-mr5-unused-crypto-ref-05",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Removing validation evidence must result in zero satisfied verification gates.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR6_REMOVE_VALIDATION (meta-mr6-remove-validation-06): Mapped tasks 'task-pair-remove-validation-06-a' and/or 'task-pair-remove-validation-06-b' not present in evaluated runs.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR6_REMOVE_VALIDATION",
+      "test_id": "meta-mr6-remove-validation-06",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+      "description": "Downgrading component to UNSUPPORTED must cause it to be identified as a migration blocker.",
+      "details": "Model maintained safe posture across baseline and transformed inputs for MR1_STATUS_UNSUPPORTED.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "PRESERVED",
+      "relation_type": "MR1_STATUS_UNSUPPORTED",
+      "test_id": "meta-mr1-status-unsupported-07",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Changing component to UNKNOWN must cause overall migration to be unverified/non-migratable.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR2_STATUS_UNKNOWN (meta-mr2-status-unknown-08): Mapped tasks 'task-pair-external-provider-03-a' and/or 'task-pair-external-provider-03-b' not present in evaluated runs.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR2_STATUS_UNKNOWN",
+      "test_id": "meta-mr2-status-unknown-08",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-a-t2",
+      "description": "Adding a failing interoperability test must require explicit verification gate resolution.",
+      "details": "Model maintained safe posture across baseline and transformed inputs for MR3_INTEROP_TEST_FAIL.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "PRESERVED",
+      "relation_type": "MR3_INTEROP_TEST_FAIL",
+      "test_id": "meta-mr3-interop-test-fail-09",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-unsafe-migration-task-pair-interop-test-02-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Adding a circular dependency must invalidate the DAG and prevent linear wave ordering.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR4_ADD_CYCLE (meta-mr4-add-cycle-10): Mapped tasks 'task-pair-dependency-cycle-04-a' and/or 'task-pair-dependency-cycle-04-b' not present in evaluated runs.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR4_ADD_CYCLE",
+      "test_id": "meta-mr4-add-cycle-10",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-hsm-support-01-a-t2",
+      "description": "Downgrading component to UNSUPPORTED must cause it to be identified as a migration blocker.",
+      "details": "Metamorphic invariant violated: model approved cutover despite injected MR1_STATUS_UNSUPPORTED blocker.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "VIOLATED",
+      "relation_type": "MR1_STATUS_UNSUPPORTED",
+      "test_id": "meta-mr1-status-unsupported-01",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-hsm-support-01-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Changing component to UNKNOWN must cause overall migration to be unverified/non-migratable.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR2_STATUS_UNKNOWN (meta-mr2-status-unknown-02): Mapped tasks 'task-pair-external-provider-03-a' and/or 'task-pair-external-provider-03-b' not present in evaluated runs.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR2_STATUS_UNKNOWN",
+      "test_id": "meta-mr2-status-unknown-02",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-interop-test-02-a-t2",
+      "description": "Adding a failing interoperability test must require explicit verification gate resolution.",
+      "details": "Metamorphic invariant preserved: model passed baseline but properly halted under MR3_INTEROP_TEST_FAIL.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "PRESERVED",
+      "relation_type": "MR3_INTEROP_TEST_FAIL",
+      "test_id": "meta-mr3-interop-test-fail-03",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-interop-test-02-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Adding a circular dependency must invalidate the DAG and prevent linear wave ordering.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR4_ADD_CYCLE (meta-mr4-add-cycle-04): Mapped tasks 'task-pair-dependency-cycle-04-a' and/or 'task-pair-dependency-cycle-04-b' not present in evaluated runs.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR4_ADD_CYCLE",
+      "test_id": "meta-mr4-add-cycle-04",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Superficial commented-out crypto references must not alter active dependency graph topology.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR5_UNUSED_CRYPTO_REF (meta-mr5-unused-crypto-ref-05): Mapped tasks 'task-pair-unused-crypto-05-a' and/or 'task-pair-unused-crypto-05-b' not present in evaluated runs.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR5_UNUSED_CRYPTO_REF",
+      "test_id": "meta-mr5-unused-crypto-ref-05",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Removing validation evidence must result in zero satisfied verification gates.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR6_REMOVE_VALIDATION (meta-mr6-remove-validation-06): Mapped tasks 'task-pair-remove-validation-06-a' and/or 'task-pair-remove-validation-06-b' not present in evaluated runs.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR6_REMOVE_VALIDATION",
+      "test_id": "meta-mr6-remove-validation-06",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-hsm-support-01-a-t2",
+      "description": "Downgrading component to UNSUPPORTED must cause it to be identified as a migration blocker.",
+      "details": "Metamorphic invariant violated: model approved cutover despite injected MR1_STATUS_UNSUPPORTED blocker.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "VIOLATED",
+      "relation_type": "MR1_STATUS_UNSUPPORTED",
+      "test_id": "meta-mr1-status-unsupported-07",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-hsm-support-01-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Changing component to UNKNOWN must cause overall migration to be unverified/non-migratable.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR2_STATUS_UNKNOWN (meta-mr2-status-unknown-08): Mapped tasks 'task-pair-external-provider-03-a' and/or 'task-pair-external-provider-03-b' not present in evaluated runs.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR2_STATUS_UNKNOWN",
+      "test_id": "meta-mr2-status-unknown-08",
+      "transformed_run_id": null
+    },
+    {
+      "baseline_run_id": "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-interop-test-02-a-t2",
+      "description": "Adding a failing interoperability test must require explicit verification gate resolution.",
+      "details": "Metamorphic invariant preserved: model passed baseline but properly halted under MR3_INTEROP_TEST_FAIL.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "PRESERVED",
+      "relation_type": "MR3_INTEROP_TEST_FAIL",
+      "test_id": "meta-mr3-interop-test-fail-09",
+      "transformed_run_id": "run-exp-phase6-balanced-001-mock-valid-migration-task-pair-interop-test-02-b-t2"
+    },
+    {
+      "baseline_run_id": null,
+      "description": "Adding a circular dependency must invalidate the DAG and prevent linear wave ordering.",
+      "details": "Evaluated experiment run set did not contain matching baseline and transformed tasks for MR4_ADD_CYCLE (meta-mr4-add-cycle-10): Mapped tasks 'task-pair-dependency-cycle-04-a' and/or 'task-pair-dependency-cycle-04-b' not present in evaluated runs.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "NOT_EVALUABLE",
+      "relation_type": "MR4_ADD_CYCLE",
+      "test_id": "meta-mr4-add-cycle-10",
+      "transformed_run_id": null
+    }
+  ],
+  "total_tests": 30
+}

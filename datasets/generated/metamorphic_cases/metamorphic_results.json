@@ -1,0 +1,94 @@
+{
+  "metamorphic_tests": [
+    {
+      "baseline_value": "[]",
+      "description": "Downgrading component to UNSUPPORTED must cause it to be identified as a migration blocker.",
+      "message": "Component comp-microservice-03 successfully flagged in blockers: True.",
+      "passed": true,
+      "relation_type": "MR1_STATUS_UNSUPPORTED",
+      "test_id": "meta-mr1-status-unsupported-01",
+      "transformed_value": "['comp-microservice-03']"
+    },
+    {
+      "baseline_value": "True",
+      "description": "Changing component to UNKNOWN must cause overall migration to be unverified/non-migratable.",
+      "message": "Migration readiness correctly revoked upon UNKNOWN status: True.",
+      "passed": true,
+      "relation_type": "MR2_STATUS_UNKNOWN",
+      "test_id": "meta-mr2-status-unknown-02",
+      "transformed_value": "False"
+    },
+    {
+      "baseline_value": "2",
+      "description": "Adding a failing interoperability test must require explicit verification gate resolution.",
+      "message": "Failing test recorded in required verification gates: True.",
+      "passed": true,
+      "relation_type": "MR3_INTEROP_TEST_FAIL",
+      "test_id": "meta-mr3-interop-test-fail-03",
+      "transformed_value": "3"
+    },
+    {
+      "baseline_value": "False",
+      "description": "Adding a circular dependency must invalidate the DAG and prevent linear wave ordering.",
+      "message": "Circular deadlock successfully detected and wave ordering prevented: True.",
+      "passed": true,
+      "relation_type": "MR4_ADD_CYCLE",
+      "test_id": "meta-mr4-add-cycle-04",
+      "transformed_value": "True"
+    },
+    {
+      "baseline_value": "6",
+      "description": "Superficial commented-out crypto references must not alter active dependency graph topology.",
+      "message": "Active dependency topology strictly unaffected by superficial comments: True.",
+      "passed": true,
+      "relation_type": "MR5_UNUSED_CRYPTO_REF",
+      "test_id": "meta-mr5-unused-crypto-ref-05",
+      "transformed_value": "6"
+    },
+    {
+      "baseline_value": "2",
+      "description": "Removing validation evidence must result in zero satisfied verification gates.",
+      "message": "Missing validation gates reflected in ground truth: True.",
+      "passed": true,
+      "relation_type": "MR6_REMOVE_VALIDATION",
+      "test_id": "meta-mr6-remove-validation-06",
+      "transformed_value": "0"
+    },
+    {
+      "baseline_value": "[]",
+      "description": "Downgrading component to UNSUPPORTED must cause it to be identified as a migration blocker.",
+      "message": "Component comp-client-sdk-01 successfully flagged in blockers: True.",
+      "passed": true,
+      "relation_type": "MR1_STATUS_UNSUPPORTED",
+      "test_id": "meta-mr1-status-unsupported-07",
+      "transformed_value": "['comp-client-sdk-01']"
+    },
+    {
+      "baseline_value": "True",
+      "description": "Changing component to UNKNOWN must cause overall migration to be unverified/non-migratable.",
+      "message": "Migration readiness correctly revoked upon UNKNOWN status: True.",
+      "passed": true,
+      "relation_type": "MR2_STATUS_UNKNOWN",
+      "test_id": "meta-mr2-status-unknown-08",
+      "transformed_value": "False"
+    },
+    {
+      "baseline_value": "2",
+      "description": "Adding a failing interoperability test must require explicit verification gate resolution.",
+      "message": "Failing test recorded in required verification gates: True.",
+      "passed": true,
+      "relation_type": "MR3_INTEROP_TEST_FAIL",
+      "test_id": "meta-mr3-interop-test-fail-09",
+      "transformed_value": "3"
+    },
+    {
+      "baseline_value": "False",
+      "description": "Adding a circular dependency must invalidate the DAG and prevent linear wave ordering.",
+      "message": "Circular deadlock successfully detected and wave ordering prevented: True.",
+      "passed": true,
+      "relation_type": "MR4_ADD_CYCLE",
+      "test_id": "meta-mr4-add-cycle-10",
+      "transformed_value": "True"
+    }
+  ]
+}

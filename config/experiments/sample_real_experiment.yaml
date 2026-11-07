@@ -1,0 +1,25 @@
+# PHOENIX-EVAL Sample Real Provider Experiment Configuration
+# Phase 4 Multi-Model Evaluation (Real Provider Mode)
+# NOTE: Requires setting OPENAI_API_KEY and/or GOOGLE_API_KEY in your environment prior to execution.
+#       Never hardcode real credentials or secrets in this configuration file.
+
+experiment_id: exp-real-evaluation-001
+experiment_name: "Real Multi-Model Cryptographic Migration Benchmark"
+description: "Empirical evaluation of commercial frontier models on cryptographic migration intelligence."
+
+selected_models:
+  - gpt-4o-mini
+  - gemini-1.5-flash
+
+selected_tasks:
+  - task-gen-t01-bank-01
+  - task-gen-t01-telco-02
+
+number_of_trials: 1
+temperature: 0.0
+max_output_tokens: 2048
+timeout_seconds: 60.0
+retry_count: 3
+request_delay_seconds: 1.0
+resume: true
+mode: real

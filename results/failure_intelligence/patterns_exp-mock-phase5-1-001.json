@@ -1,0 +1,114 @@
+{
+  "experiment_id": "exp-mock-phase5-1-001",
+  "patterns": [
+    {
+      "category": "PLANNING",
+      "confidence": 0.85,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_DEPENDENCY_ORDER_REVERSED across 4 run(s) spanning 2 task(s) and 1 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 4,
+      "number_of_affected_trials": 4,
+      "pattern_id": "patt-01bce7e8",
+      "pattern_name": "Dependency Order Reversed (CROSS_TASK_RECURRING)",
+      "relevant_dimension": "planning",
+      "scope": "CROSS_TASK_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model orders dependents before dependencies, creating service interruption or breaking cutovers.",
+      "supporting_run_ids": [
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-pair-hsm-support-01-a",
+        "task-pair-hsm-support-01-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_DEPENDENCY_ORDER_REVERSED"
+      ]
+    },
+    {
+      "category": "SAFETY",
+      "confidence": 0.85,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_REQUIRED_TEST_MISSING across 4 run(s) spanning 2 task(s) and 1 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 4,
+      "number_of_affected_trials": 4,
+      "pattern_id": "patt-66a8a34e",
+      "pattern_name": "Required Test Missing (CROSS_TASK_RECURRING)",
+      "relevant_dimension": "safety",
+      "scope": "CROSS_TASK_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model bypasses mandatory pre-migration or post-cutover verification test suites.",
+      "supporting_run_ids": [
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-pair-hsm-support-01-a",
+        "task-pair-hsm-support-01-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_REQUIRED_TEST_MISSING"
+      ]
+    },
+    {
+      "category": "DEPENDENCY",
+      "confidence": 0.85,
+      "description": "Model 'mock-unsafe-migration' demonstrated VIO_KNOWN_DEPENDENCY_OMITTED across 4 run(s) spanning 2 task(s) and 1 domain(s).",
+      "model_identifier": "mock-unsafe-migration",
+      "number_of_affected_runs": 4,
+      "number_of_affected_trials": 4,
+      "pattern_id": "patt-ac42b0bb",
+      "pattern_name": "Known Dependency Omitted (CROSS_TASK_RECURRING)",
+      "relevant_dimension": "dependency",
+      "scope": "CROSS_TASK_RECURRING",
+      "severity": "MAJOR",
+      "suggested_interpretation": "Model routinely omits prerequisite upstream/downstream dependencies from the migration sequence.",
+      "supporting_run_ids": [
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+        "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-pair-hsm-support-01-a",
+        "task-pair-hsm-support-01-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_KNOWN_DEPENDENCY_OMITTED"
+      ]
+    },
+    {
+      "category": "PARSING",
+      "confidence": 0.85,
+      "description": "Model 'mock-malformed-response' demonstrated VIO_MALFORMED_RESPONSE across 4 run(s) spanning 2 task(s) and 1 domain(s).",
+      "model_identifier": "mock-malformed-response",
+      "number_of_affected_runs": 4,
+      "number_of_affected_trials": 4,
+      "pattern_id": "patt-617016af",
+      "pattern_name": "Malformed Response (CROSS_TASK_RECURRING)",
+      "relevant_dimension": "parsing",
+      "scope": "CROSS_TASK_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model systematically breaches JSON syntax or strict response contract schema specifications.",
+      "supporting_run_ids": [
+        "run-exp-mock-phase5-1-001-mock-malformed-response-task-pair-hsm-support-01-a-t1",
+        "run-exp-mock-phase5-1-001-mock-malformed-response-task-pair-hsm-support-01-a-t2",
+        "run-exp-mock-phase5-1-001-mock-malformed-response-task-pair-hsm-support-01-b-t1",
+        "run-exp-mock-phase5-1-001-mock-malformed-response-task-pair-hsm-support-01-b-t2"
+      ],
+      "supporting_task_ids": [
+        "task-pair-hsm-support-01-a",
+        "task-pair-hsm-support-01-b"
+      ],
+      "supporting_violation_codes": [
+        "VIO_MALFORMED_RESPONSE"
+      ]
+    }
+  ],
+  "total_patterns": 4
+}

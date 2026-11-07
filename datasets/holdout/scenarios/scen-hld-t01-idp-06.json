@@ -1,0 +1,864 @@
+{
+  "compatibility_records": [
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-service-01",
+      "evidence_references": [
+        "evid-sbom-service-01",
+        "evid-telemetry-service-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Java 17 / Keycloak 23.0 / BouncyCastle 1.77' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-reverse-proxy-01",
+      "evidence_references": [
+        "evid-sbom-reverse-proxy-01",
+        "evid-telemetry-reverse-proxy-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Envoy 1.28 / BoringSSL' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-key-management-service-01",
+      "evidence_references": [
+        "evid-sbom-key-management-service-01",
+        "evid-telemetry-key-management-service-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-1024"
+      },
+      "proposed_target": "ML-KEM-1024",
+      "reason": "Runtime environment 'C++ / PKCS#11 HSM Interop' supports 'ML-KEM-1024' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-application-01",
+      "evidence_references": [
+        "evid-sbom-application-01",
+        "evid-telemetry-application-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Python 3.11 / cryptography 42.0' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-database-01",
+      "evidence_references": [
+        "evid-sbom-database-01",
+        "evid-telemetry-database-01"
+      ],
+      "metadata": {
+        "target_algorithm": "AES-256-GCM"
+      },
+      "proposed_target": "AES-256-GCM",
+      "reason": "Runtime environment 'Active Directory / Kerberos' supports 'AES-256-GCM' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-service-02",
+      "evidence_references": [
+        "evid-sbom-service-02",
+        "evid-telemetry-service-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Java 17 / Keycloak 23.0 / BouncyCastle 1.77' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-reverse-proxy-02",
+      "evidence_references": [
+        "evid-sbom-reverse-proxy-02",
+        "evid-telemetry-reverse-proxy-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Envoy 1.28 / BoringSSL' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-key-management-service-02",
+      "evidence_references": [
+        "evid-hw-audit-key-management-service-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-1024"
+      },
+      "proposed_target": "ML-KEM-1024",
+      "reason": "Legacy runtime or firmware in 'C++ / PKCS#11 HSM Interop' lacks cryptographic primitives for 'ML-KEM-1024'.",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-application-02",
+      "evidence_references": [
+        "evid-sbom-application-02",
+        "evid-telemetry-application-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Go 1.21 / HashiCorp Vault 1.15' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "vendor_inquiry",
+      "component_id": "comp-ext-partner-idp-06",
+      "evidence_references": [],
+      "metadata": {},
+      "proposed_target": "ML-KEM-768",
+      "reason": "External partner capability unverified",
+      "status": "UNKNOWN"
+    }
+  ],
+  "dependencies": [
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "OmniAuth Cloud Services SSO Reverse Proxy depends on OmniAuth Cloud Services Cloud Identity Provider (IdP)",
+      "edge_id": "edge-reverse-proxy-01-to-service-01",
+      "evidence_references": [
+        "evid-sbom-service-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-reverse-proxy-01",
+      "target_component_id": "comp-service-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "OmniAuth Cloud Services SSO Reverse Proxy #2 depends on OmniAuth Cloud Services Cloud Identity Provider (IdP)",
+      "edge_id": "edge-reverse-proxy-02-to-service-01",
+      "evidence_references": [
+        "evid-sbom-service-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-reverse-proxy-02",
+      "target_component_id": "comp-service-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "OmniAuth Cloud Services Cloud Identity Provider (IdP) depends on OmniAuth Cloud Services Cloud Key Management Service (KMS) #2",
+      "edge_id": "edge-service-01-to-key-management-service-02",
+      "evidence_references": [
+        "evid-sbom-service-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "EXCHANGES_KEYS_WITH",
+      "source_component_id": "comp-service-01",
+      "target_component_id": "comp-key-management-service-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "OmniAuth Cloud Services Privileged Access Manager (PAM) depends on OmniAuth Cloud Services Cloud Key Management Service (KMS)",
+      "edge_id": "edge-application-01-to-key-management-service-01",
+      "evidence_references": [
+        "evid-sbom-service-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "EXCHANGES_KEYS_WITH",
+      "source_component_id": "comp-application-01",
+      "target_component_id": "comp-key-management-service-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "OmniAuth Cloud Services Cloud Identity Provider (IdP) #2 depends on OmniAuth Cloud Services Cloud Key Management Service (KMS) #2",
+      "edge_id": "edge-service-02-to-key-management-service-02",
+      "evidence_references": [
+        "evid-sbom-service-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "EXCHANGES_KEYS_WITH",
+      "source_component_id": "comp-service-02",
+      "target_component_id": "comp-key-management-service-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "OmniAuth Cloud Services Privileged Access Manager (PAM) #2 depends on OmniAuth Cloud Services Cloud Key Management Service (KMS)",
+      "edge_id": "edge-application-02-to-key-management-service-01",
+      "evidence_references": [
+        "evid-sbom-service-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "EXCHANGES_KEYS_WITH",
+      "source_component_id": "comp-application-02",
+      "target_component_id": "comp-key-management-service-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Indirect downstream dependency.",
+      "edge_id": "edge-service-01-to-application-02",
+      "evidence_references": [
+        "evid-sbom-service-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-service-01",
+      "target_component_id": "comp-application-02"
+    }
+  ],
+  "description": "Synthetic enterprise architecture evaluating cryptographic migration reasoning for T01.",
+  "evidence_records": [
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Java 17 / Keycloak 23.0 / BouncyCastle 1.77' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-service-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Java 17 / Keycloak 23.0 / BouncyCastle 1.77"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-service-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-service-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-service-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Envoy 1.28 / BoringSSL' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-reverse-proxy-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Envoy 1.28 / BoringSSL"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-reverse-proxy-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-reverse-proxy-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-reverse-proxy-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'C++ / PKCS#11 HSM Interop' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-key-management-service-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "C++ / PKCS#11 HSM Interop"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-key-management-service-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-1024'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-key-management-service-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-1024"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-key-management-service-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Python 3.11 / cryptography 42.0' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-application-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Python 3.11 / cryptography 42.0"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-application-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-application-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-application-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Active Directory / Kerberos' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-database-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Active Directory / Kerberos"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-database-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'AES-256-GCM'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-database-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "AES-256-GCM"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-database-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Java 17 / Keycloak 23.0 / BouncyCastle 1.77' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-service-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Java 17 / Keycloak 23.0 / BouncyCastle 1.77"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-service-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-service-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-service-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Envoy 1.28 / BoringSSL' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-reverse-proxy-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Envoy 1.28 / BoringSSL"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-reverse-proxy-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-reverse-proxy-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-reverse-proxy-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 1.0,
+      "description": "Firmware attestation confirms legacy hardware constraints preventing 'ML-KEM-1024'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-hw-audit-key-management-service-02",
+      "evidence_type": "HARDWARE_ATTESTATION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "firmware_version": "C++ / PKCS#11 HSM Interop",
+        "pqc_supported": false
+      },
+      "provenance": "audit:fips-attestation/log-1102",
+      "source": "security/attestation/comp-key-management-service-02.attest",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Go 1.21 / HashiCorp Vault 1.15' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-application-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Go 1.21 / HashiCorp Vault 1.15"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-application-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-application-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-application-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "metadata": {
+    "author": "PHOENIX-EVAL Phase 2 Synthetic Engine",
+    "created_at": "2026-01-01T00:00:00Z",
+    "custom": {
+      "domain": "CLOUD_IDENTITY",
+      "task_family": "T01"
+    },
+    "tags": [
+      "cloud_identity",
+      "t01",
+      "medium"
+    ],
+    "updated_at": null,
+    "version": "1.0.0"
+  },
+  "migration_constraints": [
+    {
+      "affected_components": [
+        "comp-service-01",
+        "comp-reverse-proxy-01",
+        "comp-key-management-service-01",
+        "comp-application-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-order-idp-06",
+      "constraint_type": "ORDERING",
+      "description": "Mandatory causal prerequisite ordering: foundational cryptographic providers and sinks must cutover prior to dependents.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    },
+    {
+      "affected_components": [
+        "comp-service-01"
+      ],
+      "coexisting_algorithms": [
+        "RSA-4096",
+        "ML-KEM-768"
+      ],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-backward-compat-idp-06",
+      "constraint_type": "BACKWARD_COMPATIBILITY",
+      "description": "Mandatory dual-stack backward compatibility: classical RSA/ECC fallbacks must coexist with PQC algorithms during all transitional phases.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [
+        "CONSUMER_CALLS_PRODUCER"
+      ],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": "test-staging-handshake-idp-06",
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    }
+  ],
+  "required_tests": [
+    {
+      "description": "Staging mTLS handshake verification with hybrid ML-KEM key encapsulation.",
+      "target_components": [
+        "comp-service-01"
+      ],
+      "test_id": "test-staging-handshake-idp-06",
+      "test_type": "INTEROPERABILITY"
+    },
+    {
+      "description": "Automated cipher downgrade fallback verification to classical algorithms under simulated network drop.",
+      "target_components": [
+        "comp-service-01"
+      ],
+      "test_id": "test-fallback-recovery-idp-06",
+      "test_type": "FALLBACK_VERIFICATION"
+    }
+  ],
+  "scenario_id": "scen-hld-t01-idp-06",
+  "scenario_name": "Cloud Identity - T01 HIDDEN DEPENDENCY",
+  "system_components": [
+    {
+      "component_id": "comp-service-01",
+      "component_name": "OmniAuth Cloud Services Cloud Identity Provider (IdP)",
+      "component_type": "SERVICE",
+      "cryptographic_role": "AUTHENTICATION_TOKEN",
+      "current_algorithms": [
+        "ECDSA-P256",
+        "SHA-384"
+      ],
+      "description": "Enterprise central identity provider issuing OpenID Connect and SAML tokens.",
+      "evidence_references": [
+        "evid-sbom-service-01",
+        "evid-telemetry-service-01"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 1
+      },
+      "technology": "Java 17 / Keycloak 23.0 / BouncyCastle 1.77"
+    },
+    {
+      "component_id": "comp-reverse-proxy-01",
+      "component_name": "OmniAuth Cloud Services SSO Reverse Proxy",
+      "component_type": "REVERSE_PROXY",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "RSA-2048"
+      ],
+      "description": "Edge security gateway intercepting enterprise web traffic for SSO authentication.",
+      "evidence_references": [
+        "evid-sbom-reverse-proxy-01",
+        "evid-telemetry-reverse-proxy-01"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 0
+      },
+      "technology": "Envoy 1.28 / BoringSSL"
+    },
+    {
+      "component_id": "comp-key-management-service-01",
+      "component_name": "OmniAuth Cloud Services Cloud Key Management Service (KMS)",
+      "component_type": "KEY_MANAGEMENT_SERVICE",
+      "cryptographic_role": "KEY_STORAGE",
+      "current_algorithms": [
+        "ECDSA-P256"
+      ],
+      "description": "Multi-tenant cryptographic key lifecycle and envelope encryption service.",
+      "evidence_references": [
+        "evid-sbom-key-management-service-01",
+        "evid-telemetry-key-management-service-01"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "ML-KEM-1024",
+        "tier": 3
+      },
+      "technology": "C++ / PKCS#11 HSM Interop"
+    },
+    {
+      "component_id": "comp-application-01",
+      "component_name": "OmniAuth Cloud Services Privileged Access Manager (PAM)",
+      "component_type": "APPLICATION",
+      "cryptographic_role": "DIGITAL_SIGNATURE",
+      "current_algorithms": [
+        "Ed25519",
+        "RSA-3072"
+      ],
+      "description": "Zero-trust access gateway generating ephemeral SSH certificates for engineers.",
+      "evidence_references": [
+        "evid-sbom-application-01",
+        "evid-telemetry-application-01"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 1
+      },
+      "technology": "Python 3.11 / cryptography 42.0"
+    },
+    {
+      "component_id": "comp-database-01",
+      "component_name": "OmniAuth Cloud Services Corporate Directory Database",
+      "component_type": "DATABASE",
+      "cryptographic_role": "DATA_ENCRYPTION_AT_REST",
+      "current_algorithms": [
+        "AES-256-GCM",
+        "SHA-384"
+      ],
+      "description": "LDAP / OpenLDAP user directory database with hashed and encrypted attributes.",
+      "evidence_references": [
+        "evid-sbom-database-01",
+        "evid-telemetry-database-01"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "AES-256-GCM",
+        "tier": 3
+      },
+      "technology": "Active Directory / Kerberos"
+    },
+    {
+      "component_id": "comp-service-02",
+      "component_name": "OmniAuth Cloud Services Cloud Identity Provider (IdP) #2",
+      "component_type": "SERVICE",
+      "cryptographic_role": "AUTHENTICATION_TOKEN",
+      "current_algorithms": [
+        "RSA-2048",
+        "SHA-256"
+      ],
+      "description": "Enterprise central identity provider issuing OpenID Connect and SAML tokens.",
+      "evidence_references": [
+        "evid-sbom-service-02",
+        "evid-telemetry-service-02"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 1
+      },
+      "technology": "Java 17 / Keycloak 23.0 / BouncyCastle 1.77"
+    },
+    {
+      "component_id": "comp-reverse-proxy-02",
+      "component_name": "OmniAuth Cloud Services SSO Reverse Proxy #2",
+      "component_type": "REVERSE_PROXY",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "RSA-2048"
+      ],
+      "description": "Edge security gateway intercepting enterprise web traffic for SSO authentication.",
+      "evidence_references": [
+        "evid-sbom-reverse-proxy-02",
+        "evid-telemetry-reverse-proxy-02"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 0
+      },
+      "technology": "Envoy 1.28 / BoringSSL"
+    },
+    {
+      "component_id": "comp-key-management-service-02",
+      "component_name": "OmniAuth Cloud Services Cloud Key Management Service (KMS) #2",
+      "component_type": "KEY_MANAGEMENT_SERVICE",
+      "cryptographic_role": "KEY_STORAGE",
+      "current_algorithms": [
+        "ECDSA-P256"
+      ],
+      "description": "Multi-tenant cryptographic key lifecycle and envelope encryption service.",
+      "evidence_references": [
+        "evid-hw-audit-key-management-service-02"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "ML-KEM-1024",
+        "tier": 3
+      },
+      "technology": "C++ / PKCS#11 HSM Interop"
+    },
+    {
+      "component_id": "comp-application-02",
+      "component_name": "OmniAuth Cloud Services Privileged Access Manager (PAM) #2",
+      "component_type": "APPLICATION",
+      "cryptographic_role": "DIGITAL_SIGNATURE",
+      "current_algorithms": [
+        "Ed25519",
+        "RSA-3072"
+      ],
+      "description": "Zero-trust access gateway generating ephemeral SSH certificates for engineers.",
+      "evidence_references": [
+        "evid-sbom-application-02",
+        "evid-telemetry-application-02"
+      ],
+      "metadata": {
+        "domain": "CLOUD_IDENTITY",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 1
+      },
+      "technology": "Go 1.21 / HashiCorp Vault 1.15"
+    },
+    {
+      "component_id": "comp-ext-partner-idp-06",
+      "component_name": "Third-Party External Gateway",
+      "component_type": "EXTERNAL_PROVIDER",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "RSA-2048"
+      ],
+      "description": "External third-party provider interface",
+      "evidence_references": [],
+      "metadata": {},
+      "technology": "Proprietary"
+    }
+  ]
+}

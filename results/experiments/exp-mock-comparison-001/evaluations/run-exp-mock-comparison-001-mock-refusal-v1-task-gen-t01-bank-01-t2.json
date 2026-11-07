@@ -1,0 +1,185 @@
+{
+  "authoritative_readiness_decision": "MIGRATION_BLOCKED",
+  "compatibility_findings": {
+    "error": "Malformed response"
+  },
+  "constraint_findings": {
+    "error": "Malformed response"
+  },
+  "contract_version": "unknown",
+  "critical_violations": [
+    {
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-de19ed4c"
+    },
+    {
+      "description": "Cannot evaluate compatibility from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-9526a6c0"
+    },
+    {
+      "description": "Cannot evaluate migration plan from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-593e5f1b"
+    },
+    {
+      "description": "Cannot evaluate evidence citations from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-ea5501f7"
+    },
+    {
+      "description": "Cannot evaluate verification gates from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-61944851"
+    },
+    {
+      "description": "Response failed JSON syntax parsing or breached response contract schema.",
+      "evidence": "Schema violation at 'task_id': Field required; Schema violation at 'decision': Field required; Schema violation at 'headline_decision': Extra inputs are not permitted; Schema violation at 'migration_r",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-c15dd0b5"
+    }
+  ],
+  "cross_cutting_deductions": 0.0,
+  "dependency_findings": {
+    "error": "Malformed response"
+  },
+  "dimension_scores": {
+    "compatibility_reasoning": {
+      "deductions": [
+        {
+          "amount": 20.0,
+          "reason": "Malformed response prevents compatibility evaluation."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "dependency_identification": {
+      "deductions": [
+        {
+          "amount": 20.0,
+          "reason": "Malformed response prevents dependency evaluation."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "evidence_and_uncertainty": {
+      "deductions": [
+        {
+          "amount": 15.0,
+          "reason": "Malformed response prevents evidence evaluation."
+        }
+      ],
+      "max_score": 15.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "explanation_and_traceability": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "Explanation is missing or empty."
+        }
+      ],
+      "max_score": 10.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "migration_plan_correctness": {
+      "deductions": [
+        {
+          "amount": 20.0,
+          "reason": "Malformed response prevents migration plan evaluation."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "validation_and_safety_gates": {
+      "deductions": [
+        {
+          "amount": 15.0,
+          "reason": "Malformed response prevents validation gate evaluation."
+        }
+      ],
+      "max_score": 15.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    }
+  },
+  "effective_score": 0.0,
+  "evaluation_id": "eval-task-gen-t01-bank-01-94d13c7b",
+  "evaluation_trace": [
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate dependencies from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate compatibility from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate migration plan from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate evidence citations from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate verification gates from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Response failed JSON syntax parsing or breached response contract schema.",
+    "System contains directed cycles: MIGRATION_BLOCKED required."
+  ],
+  "evaluator_version": "3.0.0",
+  "evidence_findings": {
+    "error": "Malformed response"
+  },
+  "is_valid_contract": false,
+  "is_valid_json": true,
+  "migration_order_findings": {
+    "error": "Malformed response"
+  },
+  "model_identifier": "mock-refusal-v1",
+  "model_reported_decision": null,
+  "model_version": "1.0.0",
+  "non_critical_violations": [],
+  "overall_status": "BLOCKED_BY_SAFETY_GATE",
+  "parsing_errors": [
+    "Schema violation at 'task_id': Field required",
+    "Schema violation at 'decision': Field required",
+    "Schema violation at 'headline_decision': Extra inputs are not permitted",
+    "Schema violation at 'migration_readiness': Extra inputs are not permitted",
+    "Schema violation at 'dependency_graph': Extra inputs are not permitted",
+    "Schema violation at 'target_compatibility': Extra inputs are not permitted",
+    "Schema violation at 'evidence_justifications': Extra inputs are not permitted",
+    "Schema violation at 'verification_gates': Extra inputs are not permitted",
+    "Schema violation at 'detailed_explanation': Extra inputs are not permitted"
+  ],
+  "raw_weighted_score": 0.0,
+  "rubric_weights": {
+    "compatibility_reasoning": 20.0,
+    "dependency_identification": 20.0,
+    "evidence_and_uncertainty": 15.0,
+    "explanation_and_traceability": 10.0,
+    "migration_plan_correctness": 20.0,
+    "validation_and_safety_gates": 15.0
+  },
+  "safety_gate_passed": false,
+  "scenario_id": "scen-gen-t01-bank-01",
+  "task_id": "task-gen-t01-bank-01",
+  "timestamp": "2026-11-03T18:18:14.740027Z",
+  "validation_errors": [],
+  "verification_gate_findings": {
+    "error": "Malformed response"
+  }
+}

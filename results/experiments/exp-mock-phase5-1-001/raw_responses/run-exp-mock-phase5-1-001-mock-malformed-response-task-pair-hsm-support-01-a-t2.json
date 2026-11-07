@@ -1,0 +1,31 @@
+{
+  "error_message": null,
+  "execution_duration": 2.4999957531690598e-05,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "malformed_response",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-malformed-response",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "mock_analysis": "{\"task_id\": \"task-pair-hsm-support-01-a\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\""
+  },
+  "prompt_hash": "1228f5239769150edfb7103bc1ffcf7d493b31c7a3a052d4154b6854dc2455df",
+  "provider_request_id": "mock-req-task-pair-hsm-support-01-a",
+  "raw_response": "{\"task_id\": \"task-pair-hsm-support-01-a\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\"",
+  "response_id": "resp-mock-malformed-response-1ce3b846",
+  "returned_model_identifier": "mock-malformed-response",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-pair-hsm-support-01-a",
+  "timestamp": "2026-11-05T05:46:32.215136Z",
+  "token_usage": {
+    "completion_tokens": 9,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1375,
+    "total_tokens": 1384
+  }
+}

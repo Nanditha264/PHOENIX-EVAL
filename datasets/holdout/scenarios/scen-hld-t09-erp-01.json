@@ -1,0 +1,1214 @@
+{
+  "compatibility_records": [
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-application-01",
+      "evidence_references": [
+        "evid-sbom-application-01",
+        "evid-telemetry-application-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Java 17 / Spring Boot' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-api-gateway-01",
+      "evidence_references": [
+        "evid-sbom-api-gateway-01",
+        "evid-telemetry-api-gateway-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Python 3.10 / AS4 Engine' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-message-broker-01",
+      "evidence_references": [
+        "evid-sbom-message-broker-01",
+        "evid-telemetry-message-broker-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Confluent Enterprise Kafka' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-database-01",
+      "evidence_references": [
+        "evid-sbom-database-01",
+        "evid-telemetry-database-01"
+      ],
+      "metadata": {
+        "target_algorithm": "AES-256-GCM"
+      },
+      "proposed_target": "AES-256-GCM",
+      "reason": "Runtime environment 'PostgreSQL 16 / AWS Aurora TDE' supports 'AES-256-GCM' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-legacy-system-01",
+      "evidence_references": [
+        "evid-sbom-legacy-system-01",
+        "evid-telemetry-legacy-system-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Java 8 / IBM JCE 1.8' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-application-02",
+      "evidence_references": [
+        "evid-sbom-application-02",
+        "evid-telemetry-application-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Java 17 / Spring Boot' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-api-gateway-02",
+      "evidence_references": [
+        "evid-sbom-api-gateway-02",
+        "evid-telemetry-api-gateway-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Java 17 / Mendelson AS2 / BouncyCastle 1.74' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-message-broker-02",
+      "evidence_references": [
+        "evid-sbom-message-broker-02",
+        "evid-telemetry-message-broker-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Apache Kafka 3.6 / mTLS / SASL_SSL' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-database-02",
+      "evidence_references": [
+        "evid-sbom-database-02",
+        "evid-telemetry-database-02"
+      ],
+      "metadata": {
+        "target_algorithm": "AES-256-GCM"
+      },
+      "proposed_target": "AES-256-GCM",
+      "reason": "Runtime environment 'MySQL 8.0 Enterprise' supports 'AES-256-GCM' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-legacy-system-02",
+      "evidence_references": [
+        "evid-sbom-legacy-system-02",
+        "evid-telemetry-legacy-system-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Java 8 / IBM JCE 1.8' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-application-03",
+      "evidence_references": [
+        "evid-sbom-application-03",
+        "evid-telemetry-application-03"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'SAP NetWeaver / CommonCryptoLib' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-api-gateway-03",
+      "evidence_references": [
+        "evid-sbom-api-gateway-03",
+        "evid-telemetry-api-gateway-03"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Java 17 / Mendelson AS2 / BouncyCastle 1.74' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    }
+  ],
+  "dependencies": [
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Equinox Supply Chain Network B2B EDI Partner Gateway depends on Equinox Supply Chain Network Central ERP Accounting Core",
+      "edge_id": "edge-api-gateway-01-to-application-01",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-api-gateway-01",
+      "target_component_id": "comp-application-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Equinox Supply Chain Network B2B EDI Partner Gateway #2 depends on Equinox Supply Chain Network Central ERP Accounting Core #3",
+      "edge_id": "edge-api-gateway-02-to-application-03",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-api-gateway-02",
+      "target_component_id": "comp-application-03"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Equinox Supply Chain Network B2B EDI Partner Gateway #3 depends on Equinox Supply Chain Network Central ERP Accounting Core #2",
+      "edge_id": "edge-api-gateway-03-to-application-02",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-api-gateway-03",
+      "target_component_id": "comp-application-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Equinox Supply Chain Network Central ERP Accounting Core depends on Equinox Supply Chain Network Enterprise Customer Database",
+      "edge_id": "edge-application-01-to-database-01",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "STORES_DATA_IN",
+      "source_component_id": "comp-application-01",
+      "target_component_id": "comp-database-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Equinox Supply Chain Network Central ERP Accounting Core depends on Equinox Supply Chain Network Enterprise Kafka Event Stream #2",
+      "edge_id": "edge-application-01-to-message-broker-02",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "ENCRYPTS_WITH",
+      "source_component_id": "comp-application-01",
+      "target_component_id": "comp-message-broker-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Equinox Supply Chain Network Central ERP Accounting Core #2 depends on Equinox Supply Chain Network Enterprise Customer Database #2",
+      "edge_id": "edge-application-02-to-database-02",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "STORES_DATA_IN",
+      "source_component_id": "comp-application-02",
+      "target_component_id": "comp-database-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "Equinox Supply Chain Network Central ERP Accounting Core #3 depends on Equinox Supply Chain Network Enterprise Customer Database #2",
+      "edge_id": "edge-application-03-to-database-02",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "STORES_DATA_IN",
+      "source_component_id": "comp-application-03",
+      "target_component_id": "comp-database-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Equinox Supply Chain Network Enterprise Kafka Event Stream depends on Equinox Supply Chain Network Legacy Mainframe Connector",
+      "edge_id": "edge-message-broker-01-to-legacy-system-01",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-message-broker-01",
+      "target_component_id": "comp-legacy-system-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Equinox Supply Chain Network Enterprise Kafka Event Stream #2 depends on Equinox Supply Chain Network Legacy Mainframe Connector",
+      "edge_id": "edge-message-broker-02-to-legacy-system-01",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-message-broker-02",
+      "target_component_id": "comp-legacy-system-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Equinox Supply Chain Network Central ERP Accounting Core #2 depends on Equinox Supply Chain Network Enterprise Customer Database",
+      "edge_id": "edge-application-02-to-database-01",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "STORES_DATA_IN",
+      "source_component_id": "comp-application-02",
+      "target_component_id": "comp-database-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Equinox Supply Chain Network Central ERP Accounting Core #3 depends on Equinox Supply Chain Network Enterprise Kafka Event Stream #2",
+      "edge_id": "edge-application-03-to-message-broker-02",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "ENCRYPTS_WITH",
+      "source_component_id": "comp-application-03",
+      "target_component_id": "comp-message-broker-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "Equinox Supply Chain Network B2B EDI Partner Gateway #2 depends on Equinox Supply Chain Network Central ERP Accounting Core",
+      "edge_id": "edge-api-gateway-02-to-application-01",
+      "evidence_references": [
+        "evid-sbom-application-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-api-gateway-02",
+      "target_component_id": "comp-application-01"
+    }
+  ],
+  "description": "Synthetic enterprise architecture evaluating cryptographic migration reasoning for T09.",
+  "evidence_records": [
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Java 17 / Spring Boot' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-application-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Java 17 / Spring Boot"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-application-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-application-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-application-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Python 3.10 / AS4 Engine' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-api-gateway-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Python 3.10 / AS4 Engine"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-api-gateway-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-api-gateway-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-api-gateway-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Confluent Enterprise Kafka' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-message-broker-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Confluent Enterprise Kafka"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-message-broker-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-message-broker-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-message-broker-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'PostgreSQL 16 / AWS Aurora TDE' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-database-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "PostgreSQL 16 / AWS Aurora TDE"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-database-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'AES-256-GCM'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-database-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "AES-256-GCM"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-database-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Java 8 / IBM JCE 1.8' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-legacy-system-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Java 8 / IBM JCE 1.8"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-legacy-system-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-legacy-system-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-legacy-system-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Java 17 / Spring Boot' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-application-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Java 17 / Spring Boot"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-application-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-application-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-application-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Java 17 / Mendelson AS2 / BouncyCastle 1.74' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-api-gateway-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Java 17 / Mendelson AS2 / BouncyCastle 1.74"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-api-gateway-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-api-gateway-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-api-gateway-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Apache Kafka 3.6 / mTLS / SASL_SSL' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-message-broker-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Apache Kafka 3.6 / mTLS / SASL_SSL"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-message-broker-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-message-broker-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-message-broker-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'MySQL 8.0 Enterprise' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-database-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "MySQL 8.0 Enterprise"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-database-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'AES-256-GCM'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-database-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "AES-256-GCM"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-database-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Java 8 / IBM JCE 1.8' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-legacy-system-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Java 8 / IBM JCE 1.8"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-legacy-system-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-legacy-system-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-legacy-system-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'SAP NetWeaver / CommonCryptoLib' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-application-03",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "SAP NetWeaver / CommonCryptoLib"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-application-03.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-application-03",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-application-03.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Java 17 / Mendelson AS2 / BouncyCastle 1.74' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-api-gateway-03",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Java 17 / Mendelson AS2 / BouncyCastle 1.74"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-api-gateway-03.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-api-gateway-03",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-api-gateway-03.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "metadata": {
+    "author": "PHOENIX-EVAL Phase 2 Synthetic Engine",
+    "created_at": "2026-01-01T00:00:00Z",
+    "custom": {
+      "domain": "ENTERPRISE_SERVICES",
+      "task_family": "T09"
+    },
+    "tags": [
+      "enterprise_services",
+      "t09",
+      "medium"
+    ],
+    "updated_at": null,
+    "version": "1.0.0"
+  },
+  "migration_constraints": [
+    {
+      "affected_components": [
+        "comp-application-01",
+        "comp-api-gateway-01",
+        "comp-message-broker-01",
+        "comp-database-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-order-erp-01",
+      "constraint_type": "ORDERING",
+      "description": "Mandatory causal prerequisite ordering: foundational cryptographic providers and sinks must cutover prior to dependents.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    },
+    {
+      "affected_components": [
+        "comp-application-01",
+        "comp-api-gateway-01",
+        "comp-message-broker-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-no-downtime-erp-01",
+      "constraint_type": "NO_DOWNTIME",
+      "description": "High-availability zero-downtime requirement: continuous caller-callee availability must be maintained throughout all transitional waves.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [
+        "test-staging-handshake-erp-01"
+      ],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": true,
+      "service_availability_sla": "99.99% availability during wave cutovers",
+      "staged_transition_required": true,
+      "transition_deadline": null
+    },
+    {
+      "affected_components": [
+        "comp-application-01",
+        "comp-api-gateway-01",
+        "comp-message-broker-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {
+        "comp-application-01": 2
+      },
+      "constraint_id": "cnstr-hw-limit-erp-01",
+      "constraint_type": "HARDWARE_LIMIT",
+      "description": "Hardware security module and accelerator capacity bounds: limit concurrent cutovers and verify cryptographic coprocessor firmware.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": 3,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": "QAT-Gen4",
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    },
+    {
+      "affected_components": [
+        "comp-application-01",
+        "comp-api-gateway-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-rollback-unspec-erp-01",
+      "constraint_type": "ROLLBACK_CAPABILITY",
+      "description": "Rollback procedures should be considered if migration encounters unexpected instability.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    }
+  ],
+  "required_tests": [
+    {
+      "description": "Staging mTLS handshake verification with hybrid ML-KEM key encapsulation.",
+      "target_components": [
+        "comp-application-01"
+      ],
+      "test_id": "test-staging-handshake-erp-01",
+      "test_type": "INTEROPERABILITY"
+    },
+    {
+      "description": "Automated cipher downgrade fallback verification to classical algorithms under simulated network drop.",
+      "target_components": [
+        "comp-application-01"
+      ],
+      "test_id": "test-fallback-recovery-erp-01",
+      "test_type": "FALLBACK_VERIFICATION"
+    }
+  ],
+  "scenario_id": "scen-hld-t09-erp-01",
+  "scenario_name": "Enterprise Services - T09 VALID MIGRATION",
+  "system_components": [
+    {
+      "component_id": "comp-application-01",
+      "component_name": "Equinox Supply Chain Network Central ERP Accounting Core",
+      "component_type": "APPLICATION",
+      "cryptographic_role": "DATA_ENCRYPTION_IN_TRANSIT",
+      "current_algorithms": [
+        "RSA-2048",
+        "AES-256-GCM"
+      ],
+      "description": "Core ERP accounting and human capital system coordinating enterprise orders.",
+      "evidence_references": [
+        "evid-sbom-application-01",
+        "evid-telemetry-application-01"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 1
+      },
+      "technology": "Java 17 / Spring Boot"
+    },
+    {
+      "component_id": "comp-api-gateway-01",
+      "component_name": "Equinox Supply Chain Network B2B EDI Partner Gateway",
+      "component_type": "API_GATEWAY",
+      "cryptographic_role": "DIGITAL_SIGNATURE",
+      "current_algorithms": [
+        "ECDSA-P256"
+      ],
+      "description": "AS2 / AS4 electronic data interchange gateway trading signed invoices with vendors.",
+      "evidence_references": [
+        "evid-sbom-api-gateway-01",
+        "evid-telemetry-api-gateway-01"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 0
+      },
+      "technology": "Python 3.10 / AS4 Engine"
+    },
+    {
+      "component_id": "comp-message-broker-01",
+      "component_name": "Equinox Supply Chain Network Enterprise Kafka Event Stream",
+      "component_type": "MESSAGE_BROKER",
+      "cryptographic_role": "DATA_ENCRYPTION_IN_TRANSIT",
+      "current_algorithms": [
+        "RSA-2048",
+        "AES-256-GCM"
+      ],
+      "description": "Distributed event bus propagating supply chain telemetry between warehouse apps.",
+      "evidence_references": [
+        "evid-sbom-message-broker-01",
+        "evid-telemetry-message-broker-01"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 2
+      },
+      "technology": "Confluent Enterprise Kafka"
+    },
+    {
+      "component_id": "comp-database-01",
+      "component_name": "Equinox Supply Chain Network Enterprise Customer Database",
+      "component_type": "DATABASE",
+      "cryptographic_role": "DATA_ENCRYPTION_AT_REST",
+      "current_algorithms": [
+        "AES-256-GCM"
+      ],
+      "description": "Multi-region SQL cluster with encrypted data tables and customer records.",
+      "evidence_references": [
+        "evid-sbom-database-01",
+        "evid-telemetry-database-01"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "AES-256-GCM",
+        "tier": 3
+      },
+      "technology": "PostgreSQL 16 / AWS Aurora TDE"
+    },
+    {
+      "component_id": "comp-legacy-system-01",
+      "component_name": "Equinox Supply Chain Network Legacy Mainframe Connector",
+      "component_type": "LEGACY_SYSTEM",
+      "cryptographic_role": "KEY_STORAGE",
+      "current_algorithms": [
+        "RSA-1024",
+        "DES3",
+        "AES-128-GCM"
+      ],
+      "description": "IBM z/OS Mainframe middleware connector handling legacy batch settlement.",
+      "evidence_references": [
+        "evid-sbom-legacy-system-01",
+        "evid-telemetry-legacy-system-01"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 3
+      },
+      "technology": "Java 8 / IBM JCE 1.8"
+    },
+    {
+      "component_id": "comp-application-02",
+      "component_name": "Equinox Supply Chain Network Central ERP Accounting Core #2",
+      "component_type": "APPLICATION",
+      "cryptographic_role": "DATA_ENCRYPTION_IN_TRANSIT",
+      "current_algorithms": [
+        "RSA-2048",
+        "AES-256-GCM"
+      ],
+      "description": "Core ERP accounting and human capital system coordinating enterprise orders.",
+      "evidence_references": [
+        "evid-sbom-application-02",
+        "evid-telemetry-application-02"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 1
+      },
+      "technology": "Java 17 / Spring Boot"
+    },
+    {
+      "component_id": "comp-api-gateway-02",
+      "component_name": "Equinox Supply Chain Network B2B EDI Partner Gateway #2",
+      "component_type": "API_GATEWAY",
+      "cryptographic_role": "DIGITAL_SIGNATURE",
+      "current_algorithms": [
+        "ECDSA-P256"
+      ],
+      "description": "AS2 / AS4 electronic data interchange gateway trading signed invoices with vendors.",
+      "evidence_references": [
+        "evid-sbom-api-gateway-02",
+        "evid-telemetry-api-gateway-02"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 0
+      },
+      "technology": "Java 17 / Mendelson AS2 / BouncyCastle 1.74"
+    },
+    {
+      "component_id": "comp-message-broker-02",
+      "component_name": "Equinox Supply Chain Network Enterprise Kafka Event Stream #2",
+      "component_type": "MESSAGE_BROKER",
+      "cryptographic_role": "DATA_ENCRYPTION_IN_TRANSIT",
+      "current_algorithms": [
+        "RSA-2048",
+        "AES-256-GCM"
+      ],
+      "description": "Distributed event bus propagating supply chain telemetry between warehouse apps.",
+      "evidence_references": [
+        "evid-sbom-message-broker-02",
+        "evid-telemetry-message-broker-02"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 2
+      },
+      "technology": "Apache Kafka 3.6 / mTLS / SASL_SSL"
+    },
+    {
+      "component_id": "comp-database-02",
+      "component_name": "Equinox Supply Chain Network Enterprise Customer Database #2",
+      "component_type": "DATABASE",
+      "cryptographic_role": "DATA_ENCRYPTION_AT_REST",
+      "current_algorithms": [
+        "AES-256-GCM"
+      ],
+      "description": "Multi-region SQL cluster with encrypted data tables and customer records.",
+      "evidence_references": [
+        "evid-sbom-database-02",
+        "evid-telemetry-database-02"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "AES-256-GCM",
+        "tier": 3
+      },
+      "technology": "MySQL 8.0 Enterprise"
+    },
+    {
+      "component_id": "comp-legacy-system-02",
+      "component_name": "Equinox Supply Chain Network Legacy Mainframe Connector #2",
+      "component_type": "LEGACY_SYSTEM",
+      "cryptographic_role": "KEY_STORAGE",
+      "current_algorithms": [
+        "RSA-1024",
+        "DES3",
+        "AES-128-GCM"
+      ],
+      "description": "IBM z/OS Mainframe middleware connector handling legacy batch settlement.",
+      "evidence_references": [
+        "evid-sbom-legacy-system-02",
+        "evid-telemetry-legacy-system-02"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 3
+      },
+      "technology": "Java 8 / IBM JCE 1.8"
+    },
+    {
+      "component_id": "comp-application-03",
+      "component_name": "Equinox Supply Chain Network Central ERP Accounting Core #3",
+      "component_type": "APPLICATION",
+      "cryptographic_role": "DATA_ENCRYPTION_IN_TRANSIT",
+      "current_algorithms": [
+        "RSA-2048",
+        "AES-256-GCM"
+      ],
+      "description": "Core ERP accounting and human capital system coordinating enterprise orders.",
+      "evidence_references": [
+        "evid-sbom-application-03",
+        "evid-telemetry-application-03"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 1
+      },
+      "technology": "SAP NetWeaver / CommonCryptoLib"
+    },
+    {
+      "component_id": "comp-api-gateway-03",
+      "component_name": "Equinox Supply Chain Network B2B EDI Partner Gateway #3",
+      "component_type": "API_GATEWAY",
+      "cryptographic_role": "DIGITAL_SIGNATURE",
+      "current_algorithms": [
+        "RSA-2048",
+        "SHA-256"
+      ],
+      "description": "AS2 / AS4 electronic data interchange gateway trading signed invoices with vendors.",
+      "evidence_references": [
+        "evid-sbom-api-gateway-03",
+        "evid-telemetry-api-gateway-03"
+      ],
+      "metadata": {
+        "domain": "ENTERPRISE_SERVICES",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 0
+      },
+      "technology": "Java 17 / Mendelson AS2 / BouncyCastle 1.74"
+    }
+  ]
+}

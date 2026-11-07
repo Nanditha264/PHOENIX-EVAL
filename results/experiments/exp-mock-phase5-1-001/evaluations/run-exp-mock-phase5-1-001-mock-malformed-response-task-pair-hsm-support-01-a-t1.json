@@ -1,0 +1,177 @@
+{
+  "authoritative_readiness_decision": "MIGRATION_BLOCKED",
+  "compatibility_findings": {
+    "error": "Malformed response"
+  },
+  "constraint_findings": {
+    "error": "Malformed response"
+  },
+  "contract_version": "unknown",
+  "critical_violations": [
+    {
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-068d20a1"
+    },
+    {
+      "description": "Cannot evaluate compatibility from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-db10dcac"
+    },
+    {
+      "description": "Cannot evaluate migration plan from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-3761fb22"
+    },
+    {
+      "description": "Cannot evaluate evidence citations from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-99bb2f02"
+    },
+    {
+      "description": "Cannot evaluate verification gates from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-64ac6db3"
+    },
+    {
+      "description": "Response failed JSON syntax parsing or breached response contract schema.",
+      "evidence": "JSON syntax error at line 1, col 134: Expecting ',' delimiter",
+      "rule_name": "VIO_MALFORMED_RESPONSE",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_malformed_response-d603b679"
+    }
+  ],
+  "cross_cutting_deductions": 0.0,
+  "dependency_findings": {
+    "error": "Malformed response"
+  },
+  "dimension_scores": {
+    "compatibility_reasoning": {
+      "deductions": [
+        {
+          "amount": 20.0,
+          "reason": "Malformed response prevents compatibility evaluation."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "dependency_identification": {
+      "deductions": [
+        {
+          "amount": 20.0,
+          "reason": "Malformed response prevents dependency evaluation."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "evidence_and_uncertainty": {
+      "deductions": [
+        {
+          "amount": 15.0,
+          "reason": "Malformed response prevents evidence evaluation."
+        }
+      ],
+      "max_score": 15.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "explanation_and_traceability": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "Explanation is missing or empty."
+        }
+      ],
+      "max_score": 10.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "migration_plan_correctness": {
+      "deductions": [
+        {
+          "amount": 20.0,
+          "reason": "Malformed response prevents migration plan evaluation."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "validation_and_safety_gates": {
+      "deductions": [
+        {
+          "amount": 15.0,
+          "reason": "Malformed response prevents validation gate evaluation."
+        }
+      ],
+      "max_score": 15.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    }
+  },
+  "effective_score": 0.0,
+  "evaluation_id": "eval-task-pair-hsm-support-01-a-c90b68cb",
+  "evaluation_trace": [
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate dependencies from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate compatibility from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate migration plan from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate evidence citations from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Cannot evaluate verification gates from malformed or unparseable response.",
+    "[CRITICAL VETO] VIO_MALFORMED_RESPONSE: Response failed JSON syntax parsing or breached response contract schema.",
+    "System contains directed cycles: MIGRATION_BLOCKED required."
+  ],
+  "evaluator_version": "3.0.0",
+  "evidence_findings": {
+    "error": "Malformed response"
+  },
+  "is_valid_contract": false,
+  "is_valid_json": false,
+  "migration_order_findings": {
+    "error": "Malformed response"
+  },
+  "model_identifier": "mock-malformed-response",
+  "model_reported_decision": null,
+  "model_version": "1.0.0",
+  "non_critical_violations": [],
+  "overall_status": "BLOCKED_BY_SAFETY_GATE",
+  "parsing_errors": [
+    "JSON syntax error at line 1, col 134: Expecting ',' delimiter"
+  ],
+  "raw_weighted_score": 0.0,
+  "rubric_weights": {
+    "compatibility_reasoning": 20.0,
+    "dependency_identification": 20.0,
+    "evidence_and_uncertainty": 15.0,
+    "explanation_and_traceability": 10.0,
+    "migration_plan_correctness": 20.0,
+    "validation_and_safety_gates": 15.0
+  },
+  "safety_gate_passed": false,
+  "scenario_id": "scen-pair-hsm-support-01-a",
+  "task_id": "task-pair-hsm-support-01-a",
+  "timestamp": "2026-11-05T05:46:32.212293Z",
+  "validation_errors": [],
+  "verification_gate_findings": {
+    "error": "Malformed response"
+  }
+}

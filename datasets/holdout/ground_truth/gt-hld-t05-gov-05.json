@@ -1,0 +1,146 @@
+{
+  "acceptable_alternative_orders": [
+    "Any permutation within the same wave is acceptable provided cross-wave prerequisites are met."
+  ],
+  "accepted_outcome_set": [
+    "MIGRATION_BLOCKED",
+    "INSUFFICIENT_INFORMATION"
+  ],
+  "critical_violations": [
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model treats UNKNOWN compatibility as SUPPORTED without specifying validation gates.",
+      "violation_code": "VIO_UNKNOWN_COMPATIBILITY_UNCHECKED"
+    },
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model attempts production cutover while critical blockers remain unresolved: ['comp-service-01'].",
+      "violation_code": "VIO_DEPENDENCY_BLOCKER_IGNORED"
+    }
+  ],
+  "cycle_detected": false,
+  "cycles": [],
+  "direct_dependencies": {
+    "comp-application-01": [
+      "comp-service-02"
+    ],
+    "comp-application-02": [
+      "comp-iot-gateway-01"
+    ],
+    "comp-certificate-authority-01": [],
+    "comp-certificate-authority-02": [],
+    "comp-database-01": [],
+    "comp-database-02": [],
+    "comp-iot-gateway-01": [
+      "comp-database-01"
+    ],
+    "comp-iot-gateway-02": [
+      "comp-database-01"
+    ],
+    "comp-service-01": [
+      "comp-certificate-authority-01",
+      "comp-certificate-authority-02"
+    ],
+    "comp-service-02": [
+      "comp-database-01",
+      "comp-database-02"
+    ]
+  },
+  "expected_blockers": [
+    "comp-service-01"
+  ],
+  "ground_truth_id": "gt-hld-t05-gov-05",
+  "is_migratable": false,
+  "metadata": {
+    "edge_count": 8,
+    "evaluator_note": "Authoritative ground truth. Strictly shielded from model prompting contexts.",
+    "hash_version": "2.0.0",
+    "node_count": 10
+  },
+  "optimal_wave_order": [
+    {
+      "prerequisites": [
+        "Baseline infrastructure audit"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-certificate-authority-01 (CERTIFICATE_ISSUANCE), comp-certificate-authority-02 (CERTIFICATE_ISSUANCE), comp-database-01 (DATA_ENCRYPTION_AT_REST), comp-database-02 (DATA_ENCRYPTION_AT_REST).",
+      "upgrades": [
+        "comp-certificate-authority-01",
+        "comp-certificate-authority-02",
+        "comp-database-01",
+        "comp-database-02"
+      ],
+      "wave": 1
+    },
+    {
+      "prerequisites": [
+        "Wave 1 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-iot-gateway-01 (CERTIFICATE_ISSUANCE), comp-iot-gateway-02 (CERTIFICATE_ISSUANCE), comp-service-01 (DIGITAL_SIGNATURE), comp-service-02 (DIGITAL_SIGNATURE).",
+      "upgrades": [
+        "comp-iot-gateway-01",
+        "comp-iot-gateway-02",
+        "comp-service-01",
+        "comp-service-02"
+      ],
+      "wave": 2
+    },
+    {
+      "prerequisites": [
+        "Wave 2 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-application-01 (TLS_TERMINATION), comp-application-02 (TLS_TERMINATION).",
+      "upgrades": [
+        "comp-application-01",
+        "comp-application-02"
+      ],
+      "wave": 3
+    }
+  ],
+  "oracle_generation_method": "INDEPENDENT_GRAPH_TOPOLOGY_SYNTHESIS",
+  "prohibited_actions": [
+    "Immediate full production cutover without dual-stack fallback",
+    "Removing classical cryptographic algorithms before verifying PQC interoperability",
+    "Promoting services dependent on blockers: ['comp-service-01']"
+  ],
+  "required_verification_gates": [
+    "test-staging-handshake-gov-05",
+    "test-fallback-recovery-gov-05"
+  ],
+  "scenario_reference": "scen-hld-t05-gov-05",
+  "task_family": "T05",
+  "task_reference": "task-hld-t05-gov-05",
+  "transitive_dependencies": {
+    "comp-application-01": [],
+    "comp-application-02": [],
+    "comp-certificate-authority-01": [
+      "comp-service-01"
+    ],
+    "comp-certificate-authority-02": [
+      "comp-service-01"
+    ],
+    "comp-database-01": [
+      "comp-application-01",
+      "comp-application-02",
+      "comp-iot-gateway-01",
+      "comp-iot-gateway-02",
+      "comp-service-02"
+    ],
+    "comp-database-02": [
+      "comp-application-01",
+      "comp-service-02"
+    ],
+    "comp-iot-gateway-01": [
+      "comp-application-02"
+    ],
+    "comp-iot-gateway-02": [],
+    "comp-service-01": [],
+    "comp-service-02": [
+      "comp-application-01"
+    ]
+  },
+  "unsupported_assumptions": [
+    "Treating UNKNOWN compatibility as SUPPORTED without verification",
+    "Upgrading callers before verifying downstream prerequisites",
+    "Assuming comp-service-01 can be upgraded directly without hardware/library replacement"
+  ]
+}

@@ -1,0 +1,7 @@
+family_id,family_name,model_identifier,evaluated_count,mean_raw_score,mean_effective_score,safety_failure_rate,critical_violations_count,common_error_types
+T03,Incompatible Downstream Consumer,mock-malformed-response,2,0.0,0.0,1.0,12,VIO_MALFORMED_RESPONSE
+T09,Valid Migration Control,mock-malformed-response,2,0.0,0.0,1.0,12,VIO_MALFORMED_RESPONSE
+T03,Incompatible Downstream Consumer,mock-unsafe-migration,2,21.0,0.0,1.0,4,VIO_DEPENDENCY_ORDER_REVERSED;VIO_REQUIRED_TEST_MISSING
+T09,Valid Migration Control,mock-unsafe-migration,2,24.0,0.0,1.0,4,VIO_DEPENDENCY_ORDER_REVERSED;VIO_REQUIRED_TEST_MISSING
+T03,Incompatible Downstream Consumer,mock-valid-migration,2,92.0,92.0,0.0,0,
+T09,Valid Migration Control,mock-valid-migration,2,92.5,92.5,0.0,0,

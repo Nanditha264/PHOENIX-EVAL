@@ -1,0 +1,54 @@
+{
+  "experiment_id": "exp-phase6-balanced-001",
+  "metadata": {},
+  "paired_comparisons": [
+    {
+      "bootstrap_ci": [
+        0.0,
+        0.0
+      ],
+      "common_tasks_count": 14,
+      "interpretation": "No statistically significant difference between mock-malformed-response and mock-unsafe-migration (95% bootstrap CI [0.0, 0.0] spans zero). Small sample size (N=14 < 30); interpret inferential statistics with caution.",
+      "mean_difference": 0.0,
+      "model_a": "mock-malformed-response",
+      "model_a_trial_count": 28,
+      "model_b": "mock-unsafe-migration",
+      "model_b_trial_count": 28,
+      "p_value": null,
+      "std_difference": 0.0,
+      "t_statistic": null
+    },
+    {
+      "bootstrap_ci": [
+        -91.8214,
+        -71.5714
+      ],
+      "common_tasks_count": 14,
+      "interpretation": "mock-valid-migration significantly outperformed mock-malformed-response (95% bootstrap CI [-91.8214, -71.5714] excludes zero). Small sample size (N=14 < 30); interpret inferential statistics with caution.",
+      "mean_difference": -84.6071,
+      "model_a": "mock-malformed-response",
+      "model_a_trial_count": 28,
+      "model_b": "mock-valid-migration",
+      "model_b_trial_count": 28,
+      "p_value": null,
+      "std_difference": 24.4298,
+      "t_statistic": -12.9584
+    },
+    {
+      "bootstrap_ci": [
+        -91.8214,
+        -71.5714
+      ],
+      "common_tasks_count": 14,
+      "interpretation": "mock-valid-migration significantly outperformed mock-unsafe-migration (95% bootstrap CI [-91.8214, -71.5714] excludes zero). Small sample size (N=14 < 30); interpret inferential statistics with caution.",
+      "mean_difference": -84.6071,
+      "model_a": "mock-unsafe-migration",
+      "model_a_trial_count": 28,
+      "model_b": "mock-valid-migration",
+      "model_b_trial_count": 28,
+      "p_value": null,
+      "std_difference": 24.4298,
+      "t_statistic": -12.9584
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "error_message": null,
+  "execution_duration": 0.00023030000738799572,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "valid_migration",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-valid-migration",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "assumptions": [],
+    "blocked_components": [
+      "comp-hardware-security-module-01",
+      "comp-iot-gateway-03"
+    ],
+    "compatibility_assessments": [
+      {
+        "component_id": "comp-iot-gateway-01",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-microservice-01",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-hardware-security-module-01",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Identified compatibility blocker preventing direct migration.",
+        "status": "UNSUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-reverse-proxy-01",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-database-01",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-iot-gateway-02",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-microservice-02",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-hardware-security-module-02",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-reverse-proxy-02",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-database-02",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-iot-gateway-03",
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "notes": "Identified compatibility blocker preventing direct migration.",
+        "status": "UNSUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      }
+    ],
+    "contract_version": "1.0.0",
+    "decision": "MIGRATION_BLOCKED",
+    "evidence_references": [
+      "evid-sbom-iot-gateway-01",
+      "evid-telemetry-iot-gateway-01",
+      "evid-sbom-microservice-01",
+      "evid-telemetry-microservice-01",
+      "evid-hw-audit-hardware-security-module-01"
+    ],
+    "explanation": "Migration blocked for task task-gen-t03-telco-01. Architectural evaluation detected 2 blocked component(s). Only non-destructive preparatory discovery actions may be scheduled until blockers are cleared.",
+    "identified_dependencies": [
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relationship_type": "CALLS",
+        "source_component_id": "comp-iot-gateway-01",
+        "target_component_id": "comp-microservice-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relationship_type": "CALLS",
+        "source_component_id": "comp-iot-gateway-02",
+        "target_component_id": "comp-reverse-proxy-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relationship_type": "CALLS",
+        "source_component_id": "comp-iot-gateway-03",
+        "target_component_id": "comp-reverse-proxy-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relationship_type": "HARDWARE_DEPENDENCY",
+        "source_component_id": "comp-microservice-01",
+        "target_component_id": "comp-hardware-security-module-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relationship_type": "HARDWARE_DEPENDENCY",
+        "source_component_id": "comp-reverse-proxy-01",
+        "target_component_id": "comp-hardware-security-module-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relationship_type": "HARDWARE_DEPENDENCY",
+        "source_component_id": "comp-microservice-02",
+        "target_component_id": "comp-hardware-security-module-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-reverse-proxy-02",
+        "target_component_id": "comp-database-01"
+      }
+    ],
+    "migration_plan": [
+      {
+        "action_type": "PREPARATION",
+        "coexisting_algorithms": [],
+        "component_id": "comp-iot-gateway-01",
+        "is_conditional": true,
+        "post_rollback_validation_gate": null,
+        "preconditions": [],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 1
+      },
+      {
+        "action_type": "PREPARATION",
+        "coexisting_algorithms": [],
+        "component_id": "comp-microservice-01",
+        "is_conditional": true,
+        "post_rollback_validation_gate": null,
+        "preconditions": [],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 1
+      }
+    ],
+    "required_actions": [
+      "Upgrade or remediate blocked components: ['comp-hardware-security-module-01', 'comp-iot-gateway-03']",
+      "Resolve pre-migration verification test failures before cutover."
+    ],
+    "task_id": "task-gen-t03-telco-01",
+    "uncertainties": [],
+    "verification_results": [
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relevant_component": "comp-iot-gateway-01",
+        "reported_status": "PASSED",
+        "test_id": "test-staging-handshake-lco-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-iot-gateway-01",
+        "relevant_component": "comp-iot-gateway-01",
+        "reported_status": "PASSED",
+        "test_id": "test-fallback-recovery-lco-01"
+      }
+    ]
+  },
+  "prompt_hash": "9783b289d9cfe9fab589d48a58004bab56cfab1440aceb234ac68f67320a8bfc",
+  "provider_request_id": "mock-req-task-gen-t03-telco-01",
+  "raw_response": "{\n  \"task_id\": \"task-gen-t03-telco-01\",\n  \"decision\": \"MIGRATION_BLOCKED\",\n  \"identified_dependencies\": [\n    {\n      \"source_component_id\": \"comp-iot-gateway-01\",\n      \"target_component_id\": \"comp-microservice-02\",\n      \"relationship_type\": \"CALLS\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-iot-gateway-02\",\n      \"target_component_id\": \"comp-reverse-proxy-02\",\n      \"relationship_type\": \"CALLS\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-iot-gateway-03\",\n      \"target_component_id\": \"comp-reverse-proxy-01\",\n      \"relationship_type\": \"CALLS\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-microservice-01\",\n      \"target_component_id\": \"comp-hardware-security-module-01\",\n      \"relationship_type\": \"HARDWARE_DEPENDENCY\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-reverse-proxy-01\",\n      \"target_component_id\": \"comp-hardware-security-module-02\",\n      \"relationship_type\": \"HARDWARE_DEPENDENCY\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-microservice-02\",\n      \"target_component_id\": \"comp-hardware-security-module-02\",\n      \"relationship_type\": \"HARDWARE_DEPENDENCY\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-reverse-proxy-02\",\n      \"target_component_id\": \"comp-database-01\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\"\n    }\n  ],\n  \"compatibility_assessments\": [\n    {\n      \"component_id\": \"comp-iot-gateway-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-microservice-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-hardware-security-module-01\",\n      \"status\": \"UNSUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Identified compatibility blocker preventing direct migration.\"\n    },\n    {\n      \"component_id\": \"comp-reverse-proxy-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-database-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-iot-gateway-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-microservice-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-hardware-security-module-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-reverse-proxy-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-database-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-iot-gateway-03\",\n      \"status\": \"UNSUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"notes\": \"Identified compatibility blocker preventing direct migration.\"\n    }\n  ],\n  \"migration_plan\": [\n    {\n      \"wave\": 1,\n      \"component_id\": \"comp-iot-gateway-01\",\n      \"action_type\": \"PREPARATION\",\n      \"preconditions\": [],\n      \"required_validation_gates\": [],\n      \"is_conditional\": true,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 1,\n      \"component_id\": \"comp-microservice-01\",\n      \"action_type\": \"PREPARATION\",\n      \"preconditions\": [],\n      \"required_validation_gates\": [],\n      \"is_conditional\": true,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    }\n  ],\n  \"blocked_components\": [\n    \"comp-hardware-security-module-01\",\n    \"comp-iot-gateway-03\"\n  ],\n  \"required_actions\": [\n    \"Upgrade or remediate blocked components: ['comp-hardware-security-module-01', 'comp-iot-gateway-03']\",\n    \"Resolve pre-migration verification test failures before cutover.\"\n  ],\n  \"verification_results\": [\n    {\n      \"test_id\": \"test-staging-handshake-lco-01\",\n      \"reported_status\": \"PASSED\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"relevant_component\": \"comp-iot-gateway-01\"\n    },\n    {\n      \"test_id\": \"test-fallback-recovery-lco-01\",\n      \"reported_status\": \"PASSED\",\n      \"evidence_reference\": \"evid-sbom-iot-gateway-01\",\n      \"relevant_component\": \"comp-iot-gateway-01\"\n    }\n  ],\n  \"evidence_references\": [\n    \"evid-sbom-iot-gateway-01\",\n    \"evid-telemetry-iot-gateway-01\",\n    \"evid-sbom-microservice-01\",\n    \"evid-telemetry-microservice-01\",\n    \"evid-hw-audit-hardware-security-module-01\"\n  ],\n  \"assumptions\": [],\n  \"uncertainties\": [],\n  \"explanation\": \"Migration blocked for task task-gen-t03-telco-01. Architectural evaluation detected 2 blocked component(s). Only non-destructive preparatory discovery actions may be scheduled until blockers are cleared.\",\n  \"contract_version\": \"1.0.0\"\n}",
+  "response_id": "resp-mock-valid-migration-4fb289dd",
+  "returned_model_identifier": "mock-valid-migration",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-gen-t03-telco-01",
+  "timestamp": "2026-11-05T06:15:45.097680Z",
+  "token_usage": {
+    "completion_tokens": 398,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1805,
+    "total_tokens": 2203
+  }
+}

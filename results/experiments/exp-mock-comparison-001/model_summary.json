@@ -1,0 +1,227 @@
+{
+  "experiment_id": "exp-mock-comparison-001",
+  "experiment_name": "Mock Multi-Model Cryptographic Migration Benchmark",
+  "total_runs": 8,
+  "completed_runs": 8,
+  "failed_runs": 0,
+  "models_evaluated_count": 2,
+  "real_models_count": 0,
+  "mock_models_count": 2,
+  "models": {
+    "mock-model-v1": {
+      "model_identifier": "mock-model-v1",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 4,
+      "completed_runs": 4,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 0.0,
+      "median_raw_score": 0.0,
+      "mean_effective_score": 0.0,
+      "median_effective_score": 0.0,
+      "trial_score_std": 0.0,
+      "safety_gate_passed_count": 0,
+      "safety_gate_failed_count": 4,
+      "safety_gate_failure_rate": 1.0,
+      "critical_violations_count": 24,
+      "mean_latency_seconds": 0.0,
+      "total_prompt_tokens": 6982,
+      "total_completion_tokens": 156,
+      "total_tokens": 7138,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "DEPENDENCY_DISCOVERY": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_domain": {
+        "Unknown": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_difficulty": {
+        "INTERMEDIATE": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "INTRODUCTORY": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      }
+    },
+    "mock-refusal-v1": {
+      "model_identifier": "mock-refusal-v1",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 4,
+      "completed_runs": 4,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 0.0,
+      "median_raw_score": 0.0,
+      "mean_effective_score": 0.0,
+      "median_effective_score": 0.0,
+      "trial_score_std": 0.0,
+      "safety_gate_passed_count": 0,
+      "safety_gate_failed_count": 4,
+      "safety_gate_failure_rate": 1.0,
+      "critical_violations_count": 24,
+      "mean_latency_seconds": 0.0,
+      "total_prompt_tokens": 6982,
+      "total_completion_tokens": 136,
+      "total_tokens": 7118,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "DEPENDENCY_DISCOVERY": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_domain": {
+        "Unknown": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_difficulty": {
+        "INTERMEDIATE": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "INTRODUCTORY": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      }
+    }
+  },
+  "real_models": {},
+  "mock_models": {
+    "mock-model-v1": {
+      "model_identifier": "mock-model-v1",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 4,
+      "completed_runs": 4,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 0.0,
+      "median_raw_score": 0.0,
+      "mean_effective_score": 0.0,
+      "median_effective_score": 0.0,
+      "trial_score_std": 0.0,
+      "safety_gate_passed_count": 0,
+      "safety_gate_failed_count": 4,
+      "safety_gate_failure_rate": 1.0,
+      "critical_violations_count": 24,
+      "mean_latency_seconds": 0.0,
+      "total_prompt_tokens": 6982,
+      "total_completion_tokens": 156,
+      "total_tokens": 7138,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "DEPENDENCY_DISCOVERY": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_domain": {
+        "Unknown": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_difficulty": {
+        "INTERMEDIATE": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "INTRODUCTORY": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      }
+    },
+    "mock-refusal-v1": {
+      "model_identifier": "mock-refusal-v1",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 4,
+      "completed_runs": 4,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 0.0,
+      "median_raw_score": 0.0,
+      "mean_effective_score": 0.0,
+      "median_effective_score": 0.0,
+      "trial_score_std": 0.0,
+      "safety_gate_passed_count": 0,
+      "safety_gate_failed_count": 4,
+      "safety_gate_failure_rate": 1.0,
+      "critical_violations_count": 24,
+      "mean_latency_seconds": 0.0,
+      "total_prompt_tokens": 6982,
+      "total_completion_tokens": 136,
+      "total_tokens": 7118,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "DEPENDENCY_DISCOVERY": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_domain": {
+        "Unknown": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_difficulty": {
+        "INTERMEDIATE": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "INTRODUCTORY": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "acceptable_alternative_orders": [
+    "Any permutation within the same wave is acceptable provided cross-wave prerequisites are met."
+  ],
+  "critical_violations": [
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model treats UNKNOWN compatibility as SUPPORTED without specifying validation gates.",
+      "violation_code": "VIO_UNKNOWN_COMPATIBILITY_UNCHECKED"
+    },
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model produces a linear migration sequence without resolving circular dependency deadlock.",
+      "violation_code": "VIO_CIRCULAR_DEPENDENCY_DEADLOCK"
+    }
+  ],
+  "cycle_detected": true,
+  "cycles": [
+    [
+      "comp-microservice-01",
+      "comp-api-gateway-01"
+    ]
+  ],
+  "direct_dependencies": {
+    "comp-api-gateway-01": [
+      "comp-microservice-01"
+    ],
+    "comp-client-sdk-01": [
+      "comp-microservice-01"
+    ],
+    "comp-database-01": [],
+    "comp-hardware-security-module-01": [],
+    "comp-microservice-01": [
+      "comp-api-gateway-01",
+      "comp-hardware-security-module-01"
+    ],
+    "comp-microservice-02": [
+      "comp-database-01"
+    ],
+    "comp-microservice-03": [
+      "comp-database-01"
+    ]
+  },
+  "expected_blockers": [],
+  "ground_truth_id": "gt-pair-dependency-cycle-04-b",
+  "is_migratable": false,
+  "metadata": {
+    "edge_count": 6,
+    "evaluator_note": "Authoritative ground truth. Strictly shielded from model prompting contexts.",
+    "hash_version": "2.0.0",
+    "node_count": 7
+  },
+  "optimal_wave_order": [],
+  "prohibited_actions": [
+    "Immediate full production cutover without dual-stack fallback",
+    "Removing classical cryptographic algorithms before verifying PQC interoperability"
+  ],
+  "required_verification_gates": [
+    "test-staging-handshake-e-04-a",
+    "test-fallback-recovery-e-04-a"
+  ],
+  "scenario_reference": "scen-pair-dependency-cycle-04-b",
+  "task_family": "T06",
+  "task_reference": "task-pair-dependency-cycle-04-b",
+  "transitive_dependencies": {
+    "comp-api-gateway-01": [
+      "comp-client-sdk-01",
+      "comp-microservice-01"
+    ],
+    "comp-client-sdk-01": [],
+    "comp-database-01": [
+      "comp-microservice-02",
+      "comp-microservice-03"
+    ],
+    "comp-hardware-security-module-01": [
+      "comp-api-gateway-01",
+      "comp-client-sdk-01",
+      "comp-microservice-01"
+    ],
+    "comp-microservice-01": [
+      "comp-api-gateway-01",
+      "comp-client-sdk-01"
+    ],
+    "comp-microservice-02": [],
+    "comp-microservice-03": []
+  },
+  "unsupported_assumptions": [
+    "Treating UNKNOWN compatibility as SUPPORTED without verification",
+    "Upgrading callers before verifying downstream prerequisites"
+  ]
+}

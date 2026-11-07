@@ -1,0 +1,31 @@
+{
+  "error_message": null,
+  "execution_duration": 2.3900065571069717e-05,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "malformed_response",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-malformed-response",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "mock_analysis": "{\"task_id\": \"task-gen-t10-erp-03\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\""
+  },
+  "prompt_hash": "853d78bba714b6d18f41bd6fe38c41c15f2fd41738cbc8825f2c585d071d57ea",
+  "provider_request_id": "mock-req-task-gen-t10-erp-03",
+  "raw_response": "{\"task_id\": \"task-gen-t10-erp-03\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\"",
+  "response_id": "resp-mock-malformed-response-f1ef142c",
+  "returned_model_identifier": "mock-malformed-response",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-gen-t10-erp-03",
+  "timestamp": "2026-11-05T06:15:45.441336Z",
+  "token_usage": {
+    "completion_tokens": 9,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1957,
+    "total_tokens": 1966
+  }
+}

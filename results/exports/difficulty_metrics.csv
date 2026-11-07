@@ -1,0 +1,4 @@
+difficulty_level,model_identifier,sample_count,mean_raw_score,mean_effective_score,safety_failure_rate
+INTERMEDIATE,mock-malformed-response,4,0.0,0.0,1.0
+INTERMEDIATE,mock-unsafe-migration,4,22.5,0.0,1.0
+INTERMEDIATE,mock-valid-migration,4,92.25,92.25,0.0

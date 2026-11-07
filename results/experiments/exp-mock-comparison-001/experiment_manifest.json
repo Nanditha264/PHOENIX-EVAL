@@ -1,0 +1,566 @@
+{
+  "completed_at": "2026-11-04T16:22:27.265245Z",
+  "completed_runs_count": 8,
+  "config": {
+    "allow_mixed_mode": false,
+    "dataset_run_id": null,
+    "description": "Comparison of deterministic mock models (standard vs cautious refusal) across benchmark tasks.",
+    "experiment_id": "exp-mock-comparison-001",
+    "experiment_name": "Mock Multi-Model Cryptographic Migration Benchmark",
+    "max_output_tokens": 2048,
+    "mode": "mock",
+    "number_of_trials": 2,
+    "output_dir": null,
+    "request_delay_seconds": 0.0,
+    "resume": true,
+    "retry_count": 1,
+    "selected_models": [
+      "mock-model-v1",
+      "mock-refusal-v1"
+    ],
+    "selected_tasks": [
+      "task-gen-t01-bank-01",
+      "task-gen-t01-telco-02"
+    ],
+    "temperature": 0.0,
+    "timeout_seconds": 30.0
+  },
+  "execution_status": "COMPLETED",
+  "experiment_id": "exp-mock-comparison-001",
+  "experiment_name": "Mock Multi-Model Cryptographic Migration Benchmark",
+  "failed_runs_count": 0,
+  "reproducibility_metadata": {
+    "benchmark_version": "4.0.0",
+    "evaluator_version": "3.0.0",
+    "mode": "mock"
+  },
+  "runs": [
+    {
+      "attempt_number": 1,
+      "completion_tokens": 39,
+      "critical_violations_count": 6,
+      "effective_score": 0.0,
+      "error_message": null,
+      "error_type": null,
+      "estimated_cost_usd": 0.0,
+      "evaluation_report_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\evaluations\\run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t1.json",
+      "execution_metadata": {
+        "attempt": 1
+      },
+      "execution_status": "COMPLETED",
+      "experiment_id": "exp-mock-comparison-001",
+      "full_input_hash": null,
+      "is_mock": true,
+      "latency_seconds": 0.0001,
+      "model_identifier": "mock-model-v1",
+      "model_version": "1.0.0",
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "prompt_hash": "1307d2eee7f1c6f03c79f8f5af4d7ff3d9b96f1ee07025a63bffeab667037dd7",
+      "prompt_tokens": 1563,
+      "provider_name": "mock",
+      "raw_response_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\raw_responses\\run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t1.json",
+      "raw_weighted_score": 0.0,
+      "response_hash": "689fc046a8a11c0f14c9044f347ee789acb49020dbf4caaced60588d935c0dbb",
+      "retry_count": 0,
+      "run_id": "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t1",
+      "safety_gate_passed": false,
+      "scenario_id": "scen-gen-t01-bank-01",
+      "system_prompt": null,
+      "task_id": "task-gen-t01-bank-01",
+      "timestamp_completed": "2026-11-03T18:17:53.356948Z",
+      "timestamp_started": "2026-11-03T18:17:53.356948Z",
+      "total_tokens": 1602,
+      "trial_number": 1
+    },
+    {
+      "attempt_number": 1,
+      "completion_tokens": 39,
+      "critical_violations_count": 6,
+      "effective_score": 0.0,
+      "error_message": null,
+      "error_type": null,
+      "estimated_cost_usd": 0.0,
+      "evaluation_report_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\evaluations\\run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t2.json",
+      "execution_metadata": {
+        "attempt": 1
+      },
+      "execution_status": "COMPLETED",
+      "experiment_id": "exp-mock-comparison-001",
+      "full_input_hash": null,
+      "is_mock": true,
+      "latency_seconds": 0.0002,
+      "model_identifier": "mock-model-v1",
+      "model_version": "1.0.0",
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "prompt_hash": "1307d2eee7f1c6f03c79f8f5af4d7ff3d9b96f1ee07025a63bffeab667037dd7",
+      "prompt_tokens": 1563,
+      "provider_name": "mock",
+      "raw_response_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\raw_responses\\run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t2.json",
+      "raw_weighted_score": 0.0,
+      "response_hash": "689fc046a8a11c0f14c9044f347ee789acb49020dbf4caaced60588d935c0dbb",
+      "retry_count": 0,
+      "run_id": "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t2",
+      "safety_gate_passed": false,
+      "scenario_id": "scen-gen-t01-bank-01",
+      "system_prompt": null,
+      "task_id": "task-gen-t01-bank-01",
+      "timestamp_completed": "2026-11-03T18:18:14.717506Z",
+      "timestamp_started": "2026-11-03T18:18:14.717506Z",
+      "total_tokens": 1602,
+      "trial_number": 2
+    },
+    {
+      "attempt_number": 1,
+      "completion_tokens": 39,
+      "critical_violations_count": 6,
+      "effective_score": 0.0,
+      "error_message": null,
+      "error_type": null,
+      "estimated_cost_usd": 0.0,
+      "evaluation_report_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\evaluations\\run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t1.json",
+      "execution_metadata": {
+        "attempt": 1
+      },
+      "execution_status": "COMPLETED",
+      "experiment_id": "exp-mock-comparison-001",
+      "full_input_hash": null,
+      "is_mock": true,
+      "latency_seconds": 0.0,
+      "model_identifier": "mock-model-v1",
+      "model_version": "1.0.0",
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "prompt_hash": "53189c6e97bf8e0d7170a841d21db07fda2989eb0e012974b9e35962f62cfbe1",
+      "prompt_tokens": 1928,
+      "provider_name": "mock",
+      "raw_response_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\raw_responses\\run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t1.json",
+      "raw_weighted_score": 0.0,
+      "response_hash": "dec51eb7e3eff73e48b1c5dd2bc2bce0856fe78897f479904643d8e081bcbf13",
+      "retry_count": 0,
+      "run_id": "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t1",
+      "safety_gate_passed": false,
+      "scenario_id": "scen-gen-t01-telco-02",
+      "system_prompt": null,
+      "task_id": "task-gen-t01-telco-02",
+      "timestamp_completed": "2026-11-03T18:18:14.723661Z",
+      "timestamp_started": "2026-11-03T18:18:14.723661Z",
+      "total_tokens": 1967,
+      "trial_number": 1
+    },
+    {
+      "attempt_number": 1,
+      "completion_tokens": 39,
+      "critical_violations_count": 6,
+      "effective_score": 0.0,
+      "error_message": null,
+      "error_type": null,
+      "estimated_cost_usd": 0.0,
+      "evaluation_report_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\evaluations\\run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t2.json",
+      "execution_metadata": {
+        "attempt": 1
+      },
+      "execution_status": "COMPLETED",
+      "experiment_id": "exp-mock-comparison-001",
+      "full_input_hash": null,
+      "is_mock": true,
+      "latency_seconds": 0.0001,
+      "model_identifier": "mock-model-v1",
+      "model_version": "1.0.0",
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "prompt_hash": "53189c6e97bf8e0d7170a841d21db07fda2989eb0e012974b9e35962f62cfbe1",
+      "prompt_tokens": 1928,
+      "provider_name": "mock",
+      "raw_response_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\raw_responses\\run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t2.json",
+      "raw_weighted_score": 0.0,
+      "response_hash": "dec51eb7e3eff73e48b1c5dd2bc2bce0856fe78897f479904643d8e081bcbf13",
+      "retry_count": 0,
+      "run_id": "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t2",
+      "safety_gate_passed": false,
+      "scenario_id": "scen-gen-t01-telco-02",
+      "system_prompt": null,
+      "task_id": "task-gen-t01-telco-02",
+      "timestamp_completed": "2026-11-03T18:18:14.729784Z",
+      "timestamp_started": "2026-11-03T18:18:14.729784Z",
+      "total_tokens": 1967,
+      "trial_number": 2
+    },
+    {
+      "attempt_number": 1,
+      "completion_tokens": 34,
+      "critical_violations_count": 6,
+      "effective_score": 0.0,
+      "error_message": null,
+      "error_type": null,
+      "estimated_cost_usd": 0.0,
+      "evaluation_report_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\evaluations\\run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t1.json",
+      "execution_metadata": {
+        "attempt": 1
+      },
+      "execution_status": "COMPLETED",
+      "experiment_id": "exp-mock-comparison-001",
+      "full_input_hash": null,
+      "is_mock": true,
+      "latency_seconds": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "model_version": "1.0.0",
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "prompt_hash": "1307d2eee7f1c6f03c79f8f5af4d7ff3d9b96f1ee07025a63bffeab667037dd7",
+      "prompt_tokens": 1563,
+      "provider_name": "mock",
+      "raw_response_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\raw_responses\\run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t1.json",
+      "raw_weighted_score": 0.0,
+      "response_hash": "e2fe4292cca87d05f100cec85df15e9730aafef5c1392cd39bbd9998a2479cb7",
+      "retry_count": 0,
+      "run_id": "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t1",
+      "safety_gate_passed": false,
+      "scenario_id": "scen-gen-t01-bank-01",
+      "system_prompt": null,
+      "task_id": "task-gen-t01-bank-01",
+      "timestamp_completed": "2026-11-03T18:18:14.735337Z",
+      "timestamp_started": "2026-11-03T18:18:14.735337Z",
+      "total_tokens": 1597,
+      "trial_number": 1
+    },
+    {
+      "attempt_number": 1,
+      "completion_tokens": 34,
+      "critical_violations_count": 6,
+      "effective_score": 0.0,
+      "error_message": null,
+      "error_type": null,
+      "estimated_cost_usd": 0.0,
+      "evaluation_report_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\evaluations\\run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t2.json",
+      "execution_metadata": {
+        "attempt": 1
+      },
+      "execution_status": "COMPLETED",
+      "experiment_id": "exp-mock-comparison-001",
+      "full_input_hash": null,
+      "is_mock": true,
+      "latency_seconds": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "model_version": "1.0.0",
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "prompt_hash": "1307d2eee7f1c6f03c79f8f5af4d7ff3d9b96f1ee07025a63bffeab667037dd7",
+      "prompt_tokens": 1563,
+      "provider_name": "mock",
+      "raw_response_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\raw_responses\\run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t2.json",
+      "raw_weighted_score": 0.0,
+      "response_hash": "e2fe4292cca87d05f100cec85df15e9730aafef5c1392cd39bbd9998a2479cb7",
+      "retry_count": 0,
+      "run_id": "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t2",
+      "safety_gate_passed": false,
+      "scenario_id": "scen-gen-t01-bank-01",
+      "system_prompt": null,
+      "task_id": "task-gen-t01-bank-01",
+      "timestamp_completed": "2026-11-03T18:18:14.738012Z",
+      "timestamp_started": "2026-11-03T18:18:14.738012Z",
+      "total_tokens": 1597,
+      "trial_number": 2
+    },
+    {
+      "attempt_number": 1,
+      "completion_tokens": 34,
+      "critical_violations_count": 6,
+      "effective_score": 0.0,
+      "error_message": null,
+      "error_type": null,
+      "estimated_cost_usd": 0.0,
+      "evaluation_report_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\evaluations\\run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t1.json",
+      "execution_metadata": {
+        "attempt": 1
+      },
+      "execution_status": "COMPLETED",
+      "experiment_id": "exp-mock-comparison-001",
+      "full_input_hash": null,
+      "is_mock": true,
+      "latency_seconds": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "model_version": "1.0.0",
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "prompt_hash": "53189c6e97bf8e0d7170a841d21db07fda2989eb0e012974b9e35962f62cfbe1",
+      "prompt_tokens": 1928,
+      "provider_name": "mock",
+      "raw_response_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\raw_responses\\run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t1.json",
+      "raw_weighted_score": 0.0,
+      "response_hash": "ce45996a80a8d855f1425e11e271eddd5a76aa2529a77ea709067059e91b633e",
+      "retry_count": 0,
+      "run_id": "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t1",
+      "safety_gate_passed": false,
+      "scenario_id": "scen-gen-t01-telco-02",
+      "system_prompt": null,
+      "task_id": "task-gen-t01-telco-02",
+      "timestamp_completed": "2026-11-03T18:18:14.742041Z",
+      "timestamp_started": "2026-11-03T18:18:14.742041Z",
+      "total_tokens": 1962,
+      "trial_number": 1
+    },
+    {
+      "attempt_number": 1,
+      "completion_tokens": 34,
+      "critical_violations_count": 6,
+      "effective_score": 0.0,
+      "error_message": null,
+      "error_type": null,
+      "estimated_cost_usd": 0.0,
+      "evaluation_report_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\evaluations\\run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t2.json",
+      "execution_metadata": {
+        "attempt": 1
+      },
+      "execution_status": "COMPLETED",
+      "experiment_id": "exp-mock-comparison-001",
+      "full_input_hash": null,
+      "is_mock": true,
+      "latency_seconds": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "model_version": "1.0.0",
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "prompt_hash": "53189c6e97bf8e0d7170a841d21db07fda2989eb0e012974b9e35962f62cfbe1",
+      "prompt_tokens": 1928,
+      "provider_name": "mock",
+      "raw_response_file": "D:\\projects\\MICRO EVAL\\results\\experiments\\exp-mock-comparison-001\\raw_responses\\run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t2.json",
+      "raw_weighted_score": 0.0,
+      "response_hash": "ce45996a80a8d855f1425e11e271eddd5a76aa2529a77ea709067059e91b633e",
+      "retry_count": 0,
+      "run_id": "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t2",
+      "safety_gate_passed": false,
+      "scenario_id": "scen-gen-t01-telco-02",
+      "system_prompt": null,
+      "task_id": "task-gen-t01-telco-02",
+      "timestamp_completed": "2026-11-03T18:18:14.748520Z",
+      "timestamp_started": "2026-11-03T18:18:14.748520Z",
+      "total_tokens": 1962,
+      "trial_number": 2
+    }
+  ],
+  "skipped_resumed_runs_count": 8,
+  "started_at": "2026-11-03T18:17:53.356948Z",
+  "summary_metrics": {
+    "completed_runs": 8,
+    "experiment_id": "exp-mock-comparison-001",
+    "experiment_name": "Mock Multi-Model Cryptographic Migration Benchmark",
+    "failed_runs": 0,
+    "mock_models": {
+      "mock-model-v1": {
+        "attempted_runs": 4,
+        "completed_runs": 4,
+        "completion_rate": 1.0,
+        "critical_violations_count": 24,
+        "failed_runs": 0,
+        "is_mock": true,
+        "mean_effective_score": 0.0,
+        "mean_latency_seconds": 0.0,
+        "mean_raw_score": 0.0,
+        "median_effective_score": 0.0,
+        "median_raw_score": 0.0,
+        "model_identifier": "mock-model-v1",
+        "per_difficulty": {
+          "INTERMEDIATE": {
+            "count": 2,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          },
+          "INTRODUCTORY": {
+            "count": 2,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "per_domain": {
+          "Unknown": {
+            "count": 4,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "per_task_family": {
+          "DEPENDENCY_DISCOVERY": {
+            "count": 4,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "provider_name": "mock",
+        "safety_gate_failed_count": 4,
+        "safety_gate_failure_rate": 1.0,
+        "safety_gate_passed_count": 0,
+        "total_completion_tokens": 156,
+        "total_estimated_cost_usd": 0.0,
+        "total_prompt_tokens": 6982,
+        "total_tokens": 7138,
+        "trial_score_std": 0.0
+      },
+      "mock-refusal-v1": {
+        "attempted_runs": 4,
+        "completed_runs": 4,
+        "completion_rate": 1.0,
+        "critical_violations_count": 24,
+        "failed_runs": 0,
+        "is_mock": true,
+        "mean_effective_score": 0.0,
+        "mean_latency_seconds": 0.0,
+        "mean_raw_score": 0.0,
+        "median_effective_score": 0.0,
+        "median_raw_score": 0.0,
+        "model_identifier": "mock-refusal-v1",
+        "per_difficulty": {
+          "INTERMEDIATE": {
+            "count": 2,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          },
+          "INTRODUCTORY": {
+            "count": 2,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "per_domain": {
+          "Unknown": {
+            "count": 4,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "per_task_family": {
+          "DEPENDENCY_DISCOVERY": {
+            "count": 4,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "provider_name": "mock",
+        "safety_gate_failed_count": 4,
+        "safety_gate_failure_rate": 1.0,
+        "safety_gate_passed_count": 0,
+        "total_completion_tokens": 136,
+        "total_estimated_cost_usd": 0.0,
+        "total_prompt_tokens": 6982,
+        "total_tokens": 7118,
+        "trial_score_std": 0.0
+      }
+    },
+    "mock_models_count": 2,
+    "models": {
+      "mock-model-v1": {
+        "attempted_runs": 4,
+        "completed_runs": 4,
+        "completion_rate": 1.0,
+        "critical_violations_count": 24,
+        "failed_runs": 0,
+        "is_mock": true,
+        "mean_effective_score": 0.0,
+        "mean_latency_seconds": 0.0,
+        "mean_raw_score": 0.0,
+        "median_effective_score": 0.0,
+        "median_raw_score": 0.0,
+        "model_identifier": "mock-model-v1",
+        "per_difficulty": {
+          "INTERMEDIATE": {
+            "count": 2,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          },
+          "INTRODUCTORY": {
+            "count": 2,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "per_domain": {
+          "Unknown": {
+            "count": 4,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "per_task_family": {
+          "DEPENDENCY_DISCOVERY": {
+            "count": 4,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "provider_name": "mock",
+        "safety_gate_failed_count": 4,
+        "safety_gate_failure_rate": 1.0,
+        "safety_gate_passed_count": 0,
+        "total_completion_tokens": 156,
+        "total_estimated_cost_usd": 0.0,
+        "total_prompt_tokens": 6982,
+        "total_tokens": 7138,
+        "trial_score_std": 0.0
+      },
+      "mock-refusal-v1": {
+        "attempted_runs": 4,
+        "completed_runs": 4,
+        "completion_rate": 1.0,
+        "critical_violations_count": 24,
+        "failed_runs": 0,
+        "is_mock": true,
+        "mean_effective_score": 0.0,
+        "mean_latency_seconds": 0.0,
+        "mean_raw_score": 0.0,
+        "median_effective_score": 0.0,
+        "median_raw_score": 0.0,
+        "model_identifier": "mock-refusal-v1",
+        "per_difficulty": {
+          "INTERMEDIATE": {
+            "count": 2,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          },
+          "INTRODUCTORY": {
+            "count": 2,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "per_domain": {
+          "Unknown": {
+            "count": 4,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "per_task_family": {
+          "DEPENDENCY_DISCOVERY": {
+            "count": 4,
+            "mean_effective_score": 0.0,
+            "mean_raw_score": 0.0,
+            "safety_pass_rate": 0.0
+          }
+        },
+        "provider_name": "mock",
+        "safety_gate_failed_count": 4,
+        "safety_gate_failure_rate": 1.0,
+        "safety_gate_passed_count": 0,
+        "total_completion_tokens": 136,
+        "total_estimated_cost_usd": 0.0,
+        "total_prompt_tokens": 6982,
+        "total_tokens": 7118,
+        "trial_score_std": 0.0
+      }
+    },
+    "models_evaluated_count": 2,
+    "real_models": {},
+    "real_models_count": 0,
+    "total_runs": 8
+  },
+  "total_attempts_count": 8,
+  "total_scheduled_runs": 8
+}

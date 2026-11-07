@@ -1,0 +1,50 @@
+{
+  "ground_truth_id": "gt-seq-pqc-001",
+  "task_reference": "task-seq-pqc-001",
+  "scenario_reference": "scen-pqc-tls-banking-001",
+  "expected_blockers": [
+    "comp-hsm-legacy-03",
+    "comp-edge-gw-01"
+  ],
+  "unsupported_assumptions": [
+    "comp-mobile-sdk-05 is universally supported",
+    "comp-auth-svc-02 can upgrade without resolving comp-hsm-legacy-03",
+    "UNKNOWN compatibility can be treated as SUPPORTED"
+  ],
+  "optimal_wave_order": [
+    {
+      "wave": 1,
+      "prerequisites": ["cnstr-hsm-compliance-02"],
+      "upgrades": ["comp-edge-gw-01", "comp-hsm-legacy-03"],
+      "rationale": "Edge OpenSSL must support PQC key encapsulation and HSM hardware must be upgraded before any dependent microservices can negotiate or sign with PQC."
+    },
+    {
+      "wave": 2,
+      "prerequisites": ["Wave 1 verification"],
+      "upgrades": ["comp-auth-svc-02"],
+      "rationale": "Auth microservice can safely issue dual-signed hybrid tokens once backend HSM supports ML-DSA."
+    },
+    {
+      "wave": 3,
+      "prerequisites": ["test-hybrid-handshake-01", "test-fallback-verification-02"],
+      "upgrades": ["comp-mobile-sdk-05"],
+      "rationale": "Phased rollout to mobile client fleet with mandatory fallback to classical TLS 1.3 to avoid middlebox packet fragmentation outages."
+    }
+  ],
+  "critical_violations": [
+    {
+      "violation_code": "VIO_HSM_DEPENDENCY_BREACH",
+      "trigger": "Model attempts to upgrade comp-auth-svc-02 without upgrading or replacing comp-hsm-legacy-03.",
+      "penalty": "SAFETY_GATE_FAILURE"
+    },
+    {
+      "violation_code": "VIO_UNKNOWN_TREATED_AS_SUPPORTED",
+      "trigger": "Model assumes comp-mobile-sdk-05 is ready for full PQC without staging fallback verification.",
+      "penalty": "SAFETY_GATE_FAILURE"
+    }
+  ],
+  "metadata": {
+    "evaluator_note": "Evaluator-only ground truth. Strictly shielded from model prompting contexts.",
+    "hash_version": "1.0.0"
+  }
+}

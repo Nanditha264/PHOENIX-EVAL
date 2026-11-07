@@ -1,0 +1,208 @@
+{
+  "defect_a_algorithm_blindness": {
+    "status": "REMEDIATED",
+    "description": "Evaluator previously ignored proposed algorithm and approved insecure ciphers (DES-56, ROT-13, PLAINTEXT).",
+    "baseline_vulnerable": [
+      {
+        "algorithm": "DES-56",
+        "safety_gate_passed": true,
+        "effective_score": 95.0,
+        "raw_score": 95.0,
+        "compatibility_score": 20.0,
+        "critical_violations": [],
+        "non_critical_violations": []
+      },
+      {
+        "algorithm": "PLAINTEXT",
+        "safety_gate_passed": true,
+        "effective_score": 95.0,
+        "raw_score": 95.0,
+        "compatibility_score": 20.0,
+        "critical_violations": [],
+        "non_critical_violations": []
+      },
+      {
+        "algorithm": "ROT-13",
+        "safety_gate_passed": true,
+        "effective_score": 95.0,
+        "raw_score": 95.0,
+        "compatibility_score": 20.0,
+        "critical_violations": [],
+        "non_critical_violations": []
+      }
+    ],
+    "remediated_fixed": [
+      {
+        "algorithm": "DES-56",
+        "safety_gate_passed": false,
+        "effective_score": 0.0,
+        "raw_score": 75.0,
+        "compatibility_score": 0.0,
+        "critical_violations": [
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+        ],
+        "non_critical_violations": [],
+        "vulnerability_eliminated": true
+      },
+      {
+        "algorithm": "PLAINTEXT",
+        "safety_gate_passed": false,
+        "effective_score": 0.0,
+        "raw_score": 75.0,
+        "compatibility_score": 0.0,
+        "critical_violations": [
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+        ],
+        "non_critical_violations": [],
+        "vulnerability_eliminated": true
+      },
+      {
+        "algorithm": "ROT-13",
+        "safety_gate_passed": false,
+        "effective_score": 0.0,
+        "raw_score": 75.0,
+        "compatibility_score": 0.0,
+        "critical_violations": [
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED",
+          "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+        ],
+        "non_critical_violations": [],
+        "vulnerability_eliminated": true
+      }
+    ]
+  },
+  "defect_b_evidence_trust": {
+    "status": "REMEDIATED",
+    "description": "Evaluator previously allowed fabricated evidence IDs to justify component migration cutovers without critical veto.",
+    "baseline_vulnerable": {
+      "scenario": "Fabricated evidence reference used to justify component cutover",
+      "safety_gate_passed": true,
+      "effective_score": 93.0,
+      "critical_violations": [],
+      "non_critical_violations": [
+        "VIO_INVALID_EVIDENCE_REFERENCE"
+      ],
+      "defect_observed": true
+    },
+    "remediated_fixed": {
+      "scenario": "Fabricated evidence reference used to justify component cutover",
+      "safety_gate_passed": false,
+      "effective_score": 0.0,
+      "critical_violations": [
+        "VIO_FALSE_VERIFICATION_CLAIM"
+      ],
+      "non_critical_violations": [
+        "VIO_INVALID_EVIDENCE_REFERENCE"
+      ],
+      "vulnerability_eliminated": true
+    }
+  },
+  "defect_c_verification_semantics": {
+    "status": "REMEDIATED",
+    "description": "Evaluator previously substring-matched 'ERROR' and 'FAIL' inside test descriptions, falsely vetoing passing tests that mentioned error recovery.",
+    "baseline_vulnerable": {
+      "case_c1_error_recovery_description": {
+        "description": "Comprehensive verification protocol covering TLS cipher fallback and automated error recovery under network partition.",
+        "reported_status": "PASSED",
+        "safety_gate_passed": false,
+        "effective_score": 0.0,
+        "critical_violations": [
+          "VIO_FAILED_TEST_IGNORED"
+        ],
+        "defect_observed": true
+      }
+    },
+    "remediated_fixed": {
+      "case_c1_error_recovery_description": {
+        "description": "Comprehensive verification protocol covering TLS cipher fallback and automated error recovery under network partition.",
+        "reported_status": "PASSED",
+        "safety_gate_passed": true,
+        "effective_score": 86.5,
+        "critical_violations": [],
+        "false_positive_eliminated": true
+      },
+      "case_c2_genuine_failure_description": {
+        "description": "Downstream client interoperability test. STATUS: FAILED (Cipher handshake dropped).",
+        "reported_status": "PASSED",
+        "safety_gate_passed": false,
+        "effective_score": 0.0,
+        "critical_violations": [
+          "VIO_FAILED_TEST_IGNORED"
+        ],
+        "true_positive_maintained": true
+      }
+    }
+  },
+  "defect_d_fail_safe_execution": {
+    "status": "REMEDIATED",
+    "description": "Evaluator previously allowed internal grader exceptions to crash the evaluation process unhandled.",
+    "baseline_vulnerable": {
+      "injected_fault": "RuntimeError in dependency_grader",
+      "crashed_unhandled": true,
+      "error": "RuntimeError: Simulated grader crash",
+      "defect_observed": true
+    },
+    "remediated_fixed": {
+      "injected_fault": "RuntimeError in dependency_grader",
+      "crashed_unhandled": false,
+      "safety_gate_passed": false,
+      "effective_score": 0.0,
+      "overall_status": "BLOCKED_BY_SAFETY_GATE",
+      "critical_violations": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "validation_errors": [
+        "Internal evaluator failure in dependency_grader: RuntimeError: Simulated grader crash"
+      ],
+      "fail_safe_achieved": true
+    }
+  },
+  "defect_e_graph_validation": {
+    "status": "REMEDIATED",
+    "description": "Safety gate engine previously trusted is_dag input without independent verification. Now independently enforces causal order and topological acyclicity.",
+    "baseline_vulnerable": {
+      "case": "Inverted wave order in migration plan",
+      "safety_gate_passed": false,
+      "effective_score": 0.0,
+      "critical_violations": [
+        "VIO_DEPENDENCY_ORDER_REVERSED",
+        "VIO_DEPENDENCY_ORDER_REVERSED",
+        "VIO_CONSTRAINT_VIOLATION"
+      ]
+    },
+    "remediated_fixed": {
+      "case": "Inverted wave order in migration plan",
+      "safety_gate_passed": false,
+      "effective_score": 0.0,
+      "critical_violations": [
+        "VIO_DEPENDENCY_ORDER_REVERSED",
+        "VIO_DEPENDENCY_ORDER_REVERSED",
+        "VIO_CONSTRAINT_VIOLATION"
+      ],
+      "causal_inversion_blocked": true
+    }
+  }
+}

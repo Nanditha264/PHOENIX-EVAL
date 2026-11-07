@@ -1,0 +1,149 @@
+{
+  "acceptable_alternative_orders": [
+    "Any permutation within the same wave is acceptable provided cross-wave prerequisites are met."
+  ],
+  "accepted_outcome_set": [
+    "MIGRATION_BLOCKED",
+    "INSUFFICIENT_INFORMATION"
+  ],
+  "critical_violations": [
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model treats UNKNOWN compatibility as SUPPORTED without specifying validation gates.",
+      "violation_code": "VIO_UNKNOWN_COMPATIBILITY_UNCHECKED"
+    },
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model attempts production cutover while critical blockers remain unresolved: ['comp-hardware-security-module-01'].",
+      "violation_code": "VIO_DEPENDENCY_BLOCKER_IGNORED"
+    }
+  ],
+  "cycle_detected": false,
+  "cycles": [],
+  "direct_dependencies": {
+    "comp-api-gateway-01": [
+      "comp-database-01",
+      "comp-microservice-01"
+    ],
+    "comp-client-sdk-01": [
+      "comp-microservice-01"
+    ],
+    "comp-database-01": [],
+    "comp-hardware-security-module-01": [],
+    "comp-message-broker-01": [
+      "comp-hardware-security-module-01"
+    ],
+    "comp-microservice-01": [
+      "comp-database-01",
+      "comp-message-broker-01"
+    ],
+    "comp-microservice-02": [
+      "comp-hardware-security-module-01",
+      "comp-message-broker-01"
+    ],
+    "comp-microservice-03": [
+      "comp-database-01"
+    ]
+  },
+  "expected_blockers": [
+    "comp-hardware-security-module-01"
+  ],
+  "ground_truth_id": "gt-hld-t07-bank-03",
+  "is_migratable": false,
+  "metadata": {
+    "edge_count": 9,
+    "evaluator_note": "Authoritative ground truth. Strictly shielded from model prompting contexts.",
+    "hash_version": "2.0.0",
+    "node_count": 8
+  },
+  "optimal_wave_order": [
+    {
+      "prerequisites": [
+        "Baseline infrastructure audit"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-database-01 (DATA_ENCRYPTION_AT_REST), comp-hardware-security-module-01 (KEY_STORAGE).",
+      "upgrades": [
+        "comp-database-01",
+        "comp-hardware-security-module-01"
+      ],
+      "wave": 1
+    },
+    {
+      "prerequisites": [
+        "Wave 1 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-message-broker-01 (DATA_ENCRYPTION_IN_TRANSIT), comp-microservice-03 (DATA_ENCRYPTION_IN_TRANSIT).",
+      "upgrades": [
+        "comp-message-broker-01",
+        "comp-microservice-03"
+      ],
+      "wave": 2
+    },
+    {
+      "prerequisites": [
+        "Wave 2 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-microservice-01 (AUTHENTICATION_TOKEN), comp-microservice-02 (DIGITAL_SIGNATURE).",
+      "upgrades": [
+        "comp-microservice-01",
+        "comp-microservice-02"
+      ],
+      "wave": 3
+    },
+    {
+      "prerequisites": [
+        "Wave 3 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-api-gateway-01 (TLS_TERMINATION), comp-client-sdk-01 (TLS_TERMINATION).",
+      "upgrades": [
+        "comp-api-gateway-01",
+        "comp-client-sdk-01"
+      ],
+      "wave": 4
+    }
+  ],
+  "oracle_generation_method": "INDEPENDENT_GRAPH_TOPOLOGY_SYNTHESIS",
+  "prohibited_actions": [
+    "Immediate full production cutover without dual-stack fallback",
+    "Removing classical cryptographic algorithms before verifying PQC interoperability",
+    "Promoting services dependent on blockers: ['comp-hardware-security-module-01']"
+  ],
+  "required_verification_gates": [],
+  "scenario_reference": "scen-hld-t07-bank-03",
+  "task_family": "T07",
+  "task_reference": "task-hld-t07-bank-03",
+  "transitive_dependencies": {
+    "comp-api-gateway-01": [],
+    "comp-client-sdk-01": [],
+    "comp-database-01": [
+      "comp-api-gateway-01",
+      "comp-client-sdk-01",
+      "comp-microservice-01",
+      "comp-microservice-03"
+    ],
+    "comp-hardware-security-module-01": [
+      "comp-api-gateway-01",
+      "comp-client-sdk-01",
+      "comp-message-broker-01",
+      "comp-microservice-01",
+      "comp-microservice-02"
+    ],
+    "comp-message-broker-01": [
+      "comp-api-gateway-01",
+      "comp-client-sdk-01",
+      "comp-microservice-01",
+      "comp-microservice-02"
+    ],
+    "comp-microservice-01": [
+      "comp-api-gateway-01",
+      "comp-client-sdk-01"
+    ],
+    "comp-microservice-02": [],
+    "comp-microservice-03": []
+  },
+  "unsupported_assumptions": [
+    "Treating UNKNOWN compatibility as SUPPORTED without verification",
+    "Upgrading callers before verifying downstream prerequisites",
+    "Assuming comp-hardware-security-module-01 can be upgraded directly without hardware/library replacement"
+  ]
+}

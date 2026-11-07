@@ -1,0 +1,1052 @@
+{
+  "compatibility_records": [
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-iot-gateway-01",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01",
+        "evid-telemetry-iot-gateway-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Yocto Linux / WolfSSL 5.6' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-microservice-01",
+      "evidence_references": [
+        "evid-sbom-microservice-01",
+        "evid-telemetry-microservice-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-44"
+      },
+      "proposed_target": "ML-DSA-44",
+      "reason": "Runtime environment 'Go 1.21 / 5G Core Stack' supports 'ML-DSA-44' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-hardware-security-module-01",
+      "evidence_references": [
+        "evid-sbom-hardware-security-module-01",
+        "evid-telemetry-hardware-security-module-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Runtime environment 'Telecommunications HSM v5.2' supports 'ML-DSA-65' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-reverse-proxy-01",
+      "evidence_references": [
+        "evid-sbom-reverse-proxy-01",
+        "evid-telemetry-reverse-proxy-01"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'OpenSIPS 3.4 / LibreSSL' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-database-01",
+      "evidence_references": [
+        "evid-sbom-database-01",
+        "evid-telemetry-database-01"
+      ],
+      "metadata": {
+        "target_algorithm": "AES-256-GCM"
+      },
+      "proposed_target": "AES-256-GCM",
+      "reason": "Runtime environment 'PostgreSQL 15 / TDE' supports 'AES-256-GCM' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-iot-gateway-02",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-02",
+        "evid-telemetry-iot-gateway-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Embedded Linux / OpenSSL 1.1.1u' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-microservice-02",
+      "evidence_references": [
+        "evid-sbom-microservice-02",
+        "evid-telemetry-microservice-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-44"
+      },
+      "proposed_target": "ML-DSA-44",
+      "reason": "Runtime environment 'Go 1.21 / 5G Core Stack' supports 'ML-DSA-44' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-hardware-security-module-02",
+      "evidence_references": [
+        "evid-hw-audit-hardware-security-module-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-DSA-65"
+      },
+      "proposed_target": "ML-DSA-65",
+      "reason": "Legacy runtime or firmware in 'FIPS 140-2 Level 4 Telecom Vault' lacks cryptographic primitives for 'ML-DSA-65'.",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-reverse-proxy-02",
+      "evidence_references": [
+        "evid-sbom-reverse-proxy-02",
+        "evid-telemetry-reverse-proxy-02"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Kamailio 5.7 / OpenSSL 3.0' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-database-02",
+      "evidence_references": [
+        "evid-hw-audit-database-02"
+      ],
+      "metadata": {
+        "target_algorithm": "AES-256-GCM"
+      },
+      "proposed_target": "AES-256-GCM",
+      "reason": "Legacy runtime or firmware in 'PostgreSQL 15 / TDE' lacks cryptographic primitives for 'AES-256-GCM'.",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "assessment_source": "cryptographic-readiness-scanner-v2.1",
+      "component_id": "comp-iot-gateway-03",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-03",
+        "evid-telemetry-iot-gateway-03"
+      ],
+      "metadata": {
+        "target_algorithm": "ML-KEM-768"
+      },
+      "proposed_target": "ML-KEM-768",
+      "reason": "Runtime environment 'Embedded Linux / OpenSSL 1.1.1u' supports 'ML-KEM-768' verified via active telemetry.",
+      "status": "SUPPORTED"
+    }
+  ],
+  "dependencies": [
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "AeroLink Mobile Core 5G gNodeB Cell Controller depends on AeroLink Mobile Core 5G Core Access Management (AMF) #2",
+      "edge_id": "edge-iot-gateway-01-to-microservice-02",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-iot-gateway-01",
+      "target_component_id": "comp-microservice-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "AeroLink Mobile Core 5G gNodeB Cell Controller #2 depends on AeroLink Mobile Core IMS SIP Roaming Gateway",
+      "edge_id": "edge-iot-gateway-02-to-reverse-proxy-01",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-iot-gateway-02",
+      "target_component_id": "comp-reverse-proxy-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "AeroLink Mobile Core 5G gNodeB Cell Controller #3 depends on AeroLink Mobile Core 5G Core Access Management (AMF)",
+      "edge_id": "edge-iot-gateway-03-to-microservice-01",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-iot-gateway-03",
+      "target_component_id": "comp-microservice-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "AeroLink Mobile Core 5G Core Access Management (AMF) depends on AeroLink Mobile Core SIM/eSIM OTA Key Vault #2",
+      "edge_id": "edge-microservice-01-to-hardware-security-module-02",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "HARDWARE_DEPENDENCY",
+      "source_component_id": "comp-microservice-01",
+      "target_component_id": "comp-hardware-security-module-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "AeroLink Mobile Core IMS SIP Roaming Gateway depends on AeroLink Mobile Core SIM/eSIM OTA Key Vault",
+      "edge_id": "edge-reverse-proxy-01-to-hardware-security-module-01",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "HARDWARE_DEPENDENCY",
+      "source_component_id": "comp-reverse-proxy-01",
+      "target_component_id": "comp-hardware-security-module-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "AeroLink Mobile Core 5G Core Access Management (AMF) #2 depends on AeroLink Mobile Core SIM/eSIM OTA Key Vault",
+      "edge_id": "edge-microservice-02-to-hardware-security-module-01",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "HARDWARE_DEPENDENCY",
+      "source_component_id": "comp-microservice-02",
+      "target_component_id": "comp-hardware-security-module-01"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "CRITICAL",
+      "description": "AeroLink Mobile Core IMS SIP Roaming Gateway #2 depends on AeroLink Mobile Core SIM/eSIM OTA Key Vault #2",
+      "edge_id": "edge-reverse-proxy-02-to-hardware-security-module-02",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "HARDWARE_DEPENDENCY",
+      "source_component_id": "comp-reverse-proxy-02",
+      "target_component_id": "comp-hardware-security-module-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "AeroLink Mobile Core 5G Core Access Management (AMF) depends on AeroLink Mobile Core Subscriber Profile Registry #2",
+      "edge_id": "edge-microservice-01-to-database-02",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "STORES_DATA_IN",
+      "source_component_id": "comp-microservice-01",
+      "target_component_id": "comp-database-02"
+    },
+    {
+      "confidence": 1.0,
+      "criticality": "HIGH",
+      "description": "AeroLink Mobile Core 5G gNodeB Cell Controller #2 depends on AeroLink Mobile Core IMS SIP Roaming Gateway #2",
+      "edge_id": "edge-iot-gateway-02-to-reverse-proxy-02",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01"
+      ],
+      "is_bidirectional": false,
+      "metadata": {},
+      "relationship_type": "CALLS",
+      "source_component_id": "comp-iot-gateway-02",
+      "target_component_id": "comp-reverse-proxy-02"
+    }
+  ],
+  "description": "Synthetic enterprise architecture evaluating cryptographic migration reasoning for T08.",
+  "evidence_records": [
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Yocto Linux / WolfSSL 5.6' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-iot-gateway-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Yocto Linux / WolfSSL 5.6"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-iot-gateway-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-iot-gateway-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-iot-gateway-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Go 1.21 / 5G Core Stack' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-microservice-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Go 1.21 / 5G Core Stack"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-microservice-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-44'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-microservice-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-44"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-microservice-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Telecommunications HSM v5.2' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-hardware-security-module-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Telecommunications HSM v5.2"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-hardware-security-module-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-hardware-security-module-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-65"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-hardware-security-module-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'OpenSIPS 3.4 / LibreSSL' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-reverse-proxy-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "OpenSIPS 3.4 / LibreSSL"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-reverse-proxy-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-reverse-proxy-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-reverse-proxy-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'PostgreSQL 15 / TDE' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-database-01",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "PostgreSQL 15 / TDE"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-database-01.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'AES-256-GCM'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-database-01",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "AES-256-GCM"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-database-01.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Embedded Linux / OpenSSL 1.1.1u' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-iot-gateway-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Embedded Linux / OpenSSL 1.1.1u"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-iot-gateway-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-iot-gateway-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-iot-gateway-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Go 1.21 / 5G Core Stack' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-microservice-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Go 1.21 / 5G Core Stack"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-microservice-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-DSA-44'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-microservice-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-DSA-44"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-microservice-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 1.0,
+      "description": "Firmware attestation confirms legacy hardware constraints preventing 'ML-DSA-65'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-hw-audit-hardware-security-module-02",
+      "evidence_type": "HARDWARE_ATTESTATION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "firmware_version": "FIPS 140-2 Level 4 Telecom Vault",
+        "pqc_supported": false
+      },
+      "provenance": "audit:fips-attestation/log-1102",
+      "source": "security/attestation/comp-hardware-security-module-02.attest",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Kamailio 5.7 / OpenSSL 3.0' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-reverse-proxy-02",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Kamailio 5.7 / OpenSSL 3.0"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-reverse-proxy-02.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-reverse-proxy-02",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-reverse-proxy-02.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 1.0,
+      "description": "Firmware attestation confirms legacy hardware constraints preventing 'AES-256-GCM'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-hw-audit-database-02",
+      "evidence_type": "HARDWARE_ATTESTATION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "firmware_version": "PostgreSQL 15 / TDE",
+        "pqc_supported": false
+      },
+      "provenance": "audit:fips-attestation/log-1102",
+      "source": "security/attestation/comp-database-02.attest",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.95,
+      "description": "Verified software bill of materials confirms runtime 'Embedded Linux / OpenSSL 1.1.1u' with PQC modules.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-sbom-iot-gateway-03",
+      "evidence_type": "SBOM_INSPECTION",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "pqc_provider": "Enabled",
+        "technology": "Embedded Linux / OpenSSL 1.1.1u"
+      },
+      "provenance": "ci:cd-build/sbom-artifact-9041",
+      "source": "cyclonedx/comp-iot-gateway-03.bom.json",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 0.98,
+      "description": "Runtime telemetry confirms successful staging handshake using 'ML-KEM-768'.",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-telemetry-iot-gateway-03",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "freshness_days": null,
+      "is_stale": false,
+      "metadata": {},
+      "observed_value": {
+        "negotiation": "SUCCESS",
+        "target_algorithm": "ML-KEM-768"
+      },
+      "provenance": "staging:tls-probe/session-5412",
+      "source": "telemetry/traces/comp-iot-gateway-03.log",
+      "target_component_id": null,
+      "timestamp": "2026-01-01T00:00:00Z",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "confidence": 1.0,
+      "description": "Outdated cryptographic audit from deprecated pipeline",
+      "evidence_category": "OBSERVED",
+      "evidence_id": "evid-stale-telco-04",
+      "evidence_type": "CONFIGURATION_AUDIT",
+      "freshness_days": 820,
+      "is_stale": true,
+      "metadata": {},
+      "observed_value": "RSA-2048",
+      "provenance": "archive:audits/2022-q4",
+      "source": "legacy-audit-2022",
+      "target_component_id": null,
+      "timestamp": "2026-11-06T15:16:20.825136Z",
+      "verification_status": "STALE"
+    }
+  ],
+  "metadata": {
+    "author": "PHOENIX-EVAL Phase 2 Synthetic Engine",
+    "created_at": "2026-01-01T00:00:00Z",
+    "custom": {
+      "domain": "TELECOM_NETWORK",
+      "task_family": "T08"
+    },
+    "tags": [
+      "telecom_network",
+      "t08",
+      "medium"
+    ],
+    "updated_at": null,
+    "version": "1.0.0"
+  },
+  "migration_constraints": [
+    {
+      "affected_components": [
+        "comp-iot-gateway-01",
+        "comp-microservice-01",
+        "comp-hardware-security-module-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-no-downtime-lco-04",
+      "constraint_type": "NO_DOWNTIME",
+      "description": "High-availability zero-downtime requirement: continuous caller-callee availability must be maintained throughout all transitional waves.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [
+        "test-staging-handshake-lco-04"
+      ],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": true,
+      "service_availability_sla": "99.99% availability during wave cutovers",
+      "staged_transition_required": true,
+      "transition_deadline": null
+    },
+    {
+      "affected_components": [
+        "comp-iot-gateway-01",
+        "comp-microservice-01",
+        "comp-hardware-security-module-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {
+        "comp-iot-gateway-01": 2
+      },
+      "constraint_id": "cnstr-hw-limit-lco-04",
+      "constraint_type": "HARDWARE_LIMIT",
+      "description": "Hardware security module and accelerator capacity bounds: limit concurrent cutovers and verify cryptographic coprocessor firmware.",
+      "firmware_prerequisites": {
+        "comp-iot-gateway-01": "FW-v4.2+"
+      },
+      "is_mandatory_rollback": false,
+      "max_concurrent_migrations": 3,
+      "policy_id": null,
+      "post_rollback_validation_gate": null,
+      "preserved_relationships": [],
+      "required_accelerator": "QAT-Gen4",
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": null,
+      "required_test_ids": [],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    },
+    {
+      "affected_components": [
+        "comp-iot-gateway-01",
+        "comp-microservice-01",
+        "comp-hardware-security-module-01"
+      ],
+      "coexisting_algorithms": [],
+      "component_capacity_limits": {},
+      "constraint_id": "cnstr-rollback-lco-04",
+      "constraint_type": "ROLLBACK_CAPABILITY",
+      "description": "Mandatory rollback and contingency procedures: all migration steps must specify triggers, automated recovery, and post-rollback health checks.",
+      "firmware_prerequisites": {},
+      "is_mandatory_rollback": true,
+      "max_concurrent_migrations": null,
+      "policy_id": null,
+      "post_rollback_validation_gate": "test-staging-handshake-lco-04",
+      "preserved_relationships": [],
+      "required_accelerator": null,
+      "required_algorithm": null,
+      "required_compatibility_gate": null,
+      "required_evidence_ids": [],
+      "required_hardware_capabilities": [],
+      "required_interop_tests": [],
+      "required_recovery_mechanism": "AUTOMATED_FALLBACK",
+      "required_test_ids": [],
+      "requires_dual_stack": null,
+      "service_availability_sla": null,
+      "staged_transition_required": null,
+      "transition_deadline": null
+    }
+  ],
+  "required_tests": [
+    {
+      "description": "Staging mTLS handshake verification with hybrid ML-KEM key encapsulation.",
+      "target_components": [
+        "comp-iot-gateway-01"
+      ],
+      "test_id": "test-staging-handshake-lco-04",
+      "test_type": "INTEROPERABILITY"
+    },
+    {
+      "description": "Automated cipher downgrade fallback verification to classical algorithms under simulated network drop.",
+      "target_components": [
+        "comp-iot-gateway-01"
+      ],
+      "test_id": "test-fallback-recovery-lco-04",
+      "test_type": "FALLBACK_VERIFICATION"
+    },
+    {
+      "description": "Downstream client interoperability test. STATUS: FAILED (ClientHello payload fragmentation error).",
+      "target_components": [
+        "comp-database-02",
+        "comp-iot-gateway-03"
+      ],
+      "test_id": "test-downstream-interop-lco-04",
+      "test_type": "REGRESSION"
+    }
+  ],
+  "scenario_id": "scen-hld-t08-telco-04",
+  "scenario_name": "Telecom Network - T08 FAILED INTEROP",
+  "system_components": [
+    {
+      "component_id": "comp-iot-gateway-01",
+      "component_name": "AeroLink Mobile Core 5G gNodeB Cell Controller",
+      "component_type": "IOT_GATEWAY",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "ECDSA-P256",
+        "AES-256-GCM"
+      ],
+      "description": "Radio access network edge controller terminating 5G user-plane encryption.",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-01",
+        "evid-telemetry-iot-gateway-01"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 0
+      },
+      "technology": "Yocto Linux / WolfSSL 5.6"
+    },
+    {
+      "component_id": "comp-microservice-01",
+      "component_name": "AeroLink Mobile Core 5G Core Access Management (AMF)",
+      "component_type": "MICROSERVICE",
+      "cryptographic_role": "AUTHENTICATION_TOKEN",
+      "current_algorithms": [
+        "AES-256-GCM"
+      ],
+      "description": "5G Core network function executing 5G-AKA subscriber authentication.",
+      "evidence_references": [
+        "evid-sbom-microservice-01",
+        "evid-telemetry-microservice-01"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-DSA-44",
+        "tier": 1
+      },
+      "technology": "Go 1.21 / 5G Core Stack"
+    },
+    {
+      "component_id": "comp-hardware-security-module-01",
+      "component_name": "AeroLink Mobile Core SIM/eSIM OTA Key Vault",
+      "component_type": "HARDWARE_SECURITY_MODULE",
+      "cryptographic_role": "KEY_STORAGE",
+      "current_algorithms": [
+        "AES-128-GCM",
+        "RSA-2048",
+        "ECDSA-P256"
+      ],
+      "description": "Carrier-grade HSM holding root symmetric and asymmetric Ki subscriber secrets.",
+      "evidence_references": [
+        "evid-sbom-hardware-security-module-01",
+        "evid-telemetry-hardware-security-module-01"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 3
+      },
+      "technology": "Telecommunications HSM v5.2"
+    },
+    {
+      "component_id": "comp-reverse-proxy-01",
+      "component_name": "AeroLink Mobile Core IMS SIP Roaming Gateway",
+      "component_type": "REVERSE_PROXY",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "ECDSA-P256"
+      ],
+      "description": "Border control proxy for voice-over-LTE/5G and cross-carrier roaming.",
+      "evidence_references": [
+        "evid-sbom-reverse-proxy-01",
+        "evid-telemetry-reverse-proxy-01"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 1
+      },
+      "technology": "OpenSIPS 3.4 / LibreSSL"
+    },
+    {
+      "component_id": "comp-database-01",
+      "component_name": "AeroLink Mobile Core Subscriber Profile Registry",
+      "component_type": "DATABASE",
+      "cryptographic_role": "DATA_ENCRYPTION_AT_REST",
+      "current_algorithms": [
+        "AES-256-GCM"
+      ],
+      "description": "High-availability database storing subscriber identity credentials and tariffs.",
+      "evidence_references": [
+        "evid-sbom-database-01",
+        "evid-telemetry-database-01"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "AES-256-GCM",
+        "tier": 3
+      },
+      "technology": "PostgreSQL 15 / TDE"
+    },
+    {
+      "component_id": "comp-iot-gateway-02",
+      "component_name": "AeroLink Mobile Core 5G gNodeB Cell Controller #2",
+      "component_type": "IOT_GATEWAY",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "RSA-2048"
+      ],
+      "description": "Radio access network edge controller terminating 5G user-plane encryption.",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-02",
+        "evid-telemetry-iot-gateway-02"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 0
+      },
+      "technology": "Embedded Linux / OpenSSL 1.1.1u"
+    },
+    {
+      "component_id": "comp-microservice-02",
+      "component_name": "AeroLink Mobile Core 5G Core Access Management (AMF) #2",
+      "component_type": "MICROSERVICE",
+      "cryptographic_role": "AUTHENTICATION_TOKEN",
+      "current_algorithms": [
+        "ECDSA-P256",
+        "SHA-256"
+      ],
+      "description": "5G Core network function executing 5G-AKA subscriber authentication.",
+      "evidence_references": [
+        "evid-sbom-microservice-02",
+        "evid-telemetry-microservice-02"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-DSA-44",
+        "tier": 1
+      },
+      "technology": "Go 1.21 / 5G Core Stack"
+    },
+    {
+      "component_id": "comp-hardware-security-module-02",
+      "component_name": "AeroLink Mobile Core SIM/eSIM OTA Key Vault #2",
+      "component_type": "HARDWARE_SECURITY_MODULE",
+      "cryptographic_role": "KEY_STORAGE",
+      "current_algorithms": [
+        "AES-128-GCM",
+        "RSA-2048",
+        "ECDSA-P256"
+      ],
+      "description": "Carrier-grade HSM holding root symmetric and asymmetric Ki subscriber secrets.",
+      "evidence_references": [
+        "evid-hw-audit-hardware-security-module-02"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-DSA-65",
+        "tier": 3
+      },
+      "technology": "FIPS 140-2 Level 4 Telecom Vault"
+    },
+    {
+      "component_id": "comp-reverse-proxy-02",
+      "component_name": "AeroLink Mobile Core IMS SIP Roaming Gateway #2",
+      "component_type": "REVERSE_PROXY",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "RSA-2048",
+        "AES-128-GCM"
+      ],
+      "description": "Border control proxy for voice-over-LTE/5G and cross-carrier roaming.",
+      "evidence_references": [
+        "evid-sbom-reverse-proxy-02",
+        "evid-telemetry-reverse-proxy-02"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 1
+      },
+      "technology": "Kamailio 5.7 / OpenSSL 3.0"
+    },
+    {
+      "component_id": "comp-database-02",
+      "component_name": "AeroLink Mobile Core Subscriber Profile Registry #2",
+      "component_type": "DATABASE",
+      "cryptographic_role": "DATA_ENCRYPTION_AT_REST",
+      "current_algorithms": [
+        "AES-256-GCM"
+      ],
+      "description": "High-availability database storing subscriber identity credentials and tariffs.",
+      "evidence_references": [
+        "evid-hw-audit-database-02"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "AES-256-GCM",
+        "tier": 3
+      },
+      "technology": "PostgreSQL 15 / TDE"
+    },
+    {
+      "component_id": "comp-iot-gateway-03",
+      "component_name": "AeroLink Mobile Core 5G gNodeB Cell Controller #3",
+      "component_type": "IOT_GATEWAY",
+      "cryptographic_role": "TLS_TERMINATION",
+      "current_algorithms": [
+        "RSA-2048"
+      ],
+      "description": "Radio access network edge controller terminating 5G user-plane encryption.",
+      "evidence_references": [
+        "evid-sbom-iot-gateway-03",
+        "evid-telemetry-iot-gateway-03"
+      ],
+      "metadata": {
+        "domain": "TELECOM_NETWORK",
+        "target_pqc_algorithm": "ML-KEM-768",
+        "tier": 0
+      },
+      "technology": "Embedded Linux / OpenSSL 1.1.1u"
+    }
+  ]
+}

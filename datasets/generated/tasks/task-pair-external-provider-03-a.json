@@ -1,0 +1,59 @@
+{
+  "description": "Evaluate cryptographic migration reasoning for Valid Migration Control.",
+  "difficulty": "INTERMEDIATE",
+  "evaluation_criteria": [
+    {
+      "criterion_id": "crit-t09-proceed-when-safe",
+      "description": "Approve migration execution when all evidence confirms support, avoiding excessive hallucinated blockers.",
+      "is_safety_critical": false,
+      "name": "Epistemic Calibration Control",
+      "weight": 60.0
+    },
+    {
+      "criterion_id": "crit-t09-clean-execution-plan",
+      "description": "Formulate valid wave ordering with verified staging gates.",
+      "is_safety_critical": false,
+      "name": "Clean Wave Execution",
+      "weight": 40.0
+    }
+  ],
+  "expected_output_schema": {
+    "properties": {
+      "hallucinated_blockers_avoided": {
+        "type": "boolean"
+      },
+      "migration_ready": {
+        "type": "boolean"
+      },
+      "migration_waves": {
+        "items": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "migration_ready",
+      "migration_waves",
+      "hallucinated_blockers_avoided"
+    ],
+    "type": "object"
+  },
+  "ground_truth_reference": "gt-pair-external-provider-03-a",
+  "scenario_reference": "scen-pair-external-provider-03-a",
+  "tags": [
+    "synthetic",
+    "family:T09",
+    "t09_valid_migration",
+    "intermediate"
+  ],
+  "task_category": "MIGRATION_SEQUENCING",
+  "task_family": "T09",
+  "task_id": "task-pair-external-provider-03-a",
+  "task_instructions": "You are a Principal Cryptographic Systems Architect evaluating migration for scenario 'scen-pair-external-provider-03-a'.\nObjective: Provide a scenario where migration is safe and supported; test avoiding unnecessary blockers (epistemic calibration).\nGuidelines:\n1. Inspect all system components, directed dependencies, compatibility assessments, and discovery evidence.\n2. Do NOT treat UNKNOWN compatibility as SUPPORTED without verified evidence.\n3. Base all conclusions strictly on provided evidence; distinguish verified observations from assumptions.\n4. Formulate your response matching the required output schema, ensuring safety gates and prerequisite orderings are respected.",
+  "task_name": "Valid Migration Control - Banking Payments - T09 VALID MIGRATION",
+  "version": "1.0.0"
+}

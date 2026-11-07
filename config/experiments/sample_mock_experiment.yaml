@@ -1,0 +1,24 @@
+# PHOENIX-EVAL Sample Mock Experiment Configuration
+# Phase 4 Multi-Model Evaluation (Mock Mode)
+# Runs without external API keys or network requests.
+
+experiment_id: exp-mock-comparison-001
+experiment_name: "Mock Multi-Model Cryptographic Migration Benchmark"
+description: "Comparison of deterministic mock models (standard vs cautious refusal) across benchmark tasks."
+
+selected_models:
+  - mock-model-v1
+  - mock-refusal-v1
+
+selected_tasks:
+  - task-gen-t01-bank-01
+  - task-gen-t01-telco-02
+
+number_of_trials: 2
+temperature: 0.0
+max_output_tokens: 2048
+timeout_seconds: 30.0
+retry_count: 1
+request_delay_seconds: 0.0
+resume: true
+mode: mock

@@ -1,0 +1,44 @@
+{
+  "active_dataset_fingerprint": "32b3a53a365bbff49564f1ce446611cb4ffd25b252c1bebf9a5c5416c562833d",
+  "active_evaluator_fingerprint": "745c9f4473b22268b2432a1ce764b5ddb78092566136f60101aceb4f2cddf50c",
+  "active_model_visible_fingerprint": "11b521e3e7fea1f02cc20f3d2f8024056cbf664536f115f2e51e4f926f7f1878",
+  "completed_runs": 8,
+  "corrupted_run_ids": [],
+  "dataset_fingerprint_match": false,
+  "dataset_manifest_version": "1.0.0",
+  "experiment_id": "exp-mock-comparison-001",
+  "failed_runs": 0,
+  "fingerprint_algorithm": "sha256-canonical-json-v1",
+  "import_status": "LEGACY_UNVERIFIABLE",
+  "ingestion_id": "ingest-a601ba62",
+  "is_mock": true,
+  "issues": [
+    {
+      "description": "Experiment manifest is missing mandatory dataset fingerprint fields: dataset_fingerprint, model_visible_dataset_fingerprint, evaluator_dataset_fingerprint. Historical campaign classified as LEGACY_UNVERIFIABLE.",
+      "issue_type": "INVALID_MISSING_DATASET_FINGERPRINT",
+      "run_id": "EXPERIMENT_MANIFEST",
+      "severity": "WARNING"
+    }
+  ],
+  "missing_eval_reports_count": 0,
+  "missing_raw_responses_count": 0,
+  "prompt_hash_mismatches_count": 0,
+  "recorded_dataset_fingerprint": null,
+  "recorded_evaluator_fingerprint": null,
+  "recorded_model_visible_fingerprint": null,
+  "response_hash_mismatches_count": 0,
+  "summary": "Ingested experiment 'exp-mock-comparison-001': 8 valid runs, 0 failed runs, 0 corrupted runs. Status: LEGACY_UNVERIFIABLE (Mode: Mock).",
+  "timestamp": "2026-11-06T15:50:27.843336Z",
+  "total_attempts": 8,
+  "total_scheduled_runs": 8,
+  "valid_run_ids": [
+    "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t1",
+    "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t2",
+    "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t1",
+    "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t2",
+    "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t1",
+    "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t2",
+    "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t1",
+    "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t2"
+  ]
+}

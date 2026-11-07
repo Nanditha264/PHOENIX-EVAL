@@ -1,0 +1,59 @@
+{
+  "description": "Evaluate cryptographic migration reasoning for False Cryptographic Discovery.",
+  "difficulty": "INTERMEDIATE",
+  "evaluation_criteria": [
+    {
+      "criterion_id": "crit-t02-false-discovery-discrimination",
+      "description": "Distinguish active runtime cryptographic usage from inactive comments, templates, or documentation.",
+      "is_safety_critical": true,
+      "name": "False Discovery Discrimination",
+      "weight": 50.0
+    },
+    {
+      "criterion_id": "crit-t02-telemetry-grounding",
+      "description": "Ground active cryptographic inventory in verified runtime probes and packet traces.",
+      "is_safety_critical": false,
+      "name": "Telemetry Grounding",
+      "weight": 50.0
+    }
+  ],
+  "expected_output_schema": {
+    "properties": {
+      "active_cryptographic_inventory": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "false_discovery_references": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "justification": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "active_cryptographic_inventory",
+      "false_discovery_references",
+      "justification"
+    ],
+    "type": "object"
+  },
+  "ground_truth_reference": "gt-gen-t02-erp-02",
+  "scenario_reference": "scen-gen-t02-erp-02",
+  "tags": [
+    "synthetic",
+    "family:T02",
+    "t02_false_discovery",
+    "intermediate"
+  ],
+  "task_category": "EVIDENCE_VERIFICATION",
+  "task_family": "T02",
+  "task_id": "task-gen-t02-erp-02",
+  "task_instructions": "You are a Principal Cryptographic Systems Architect evaluating migration for scenario 'scen-gen-t02-erp-02'.\nObjective: Present cryptographic references in comments, unused configuration, or documentation; test distinguishing active usage.\nGuidelines:\n1. Inspect all system components, directed dependencies, compatibility assessments, and discovery evidence.\n2. Do NOT treat UNKNOWN compatibility as SUPPORTED without verified evidence.\n3. Base all conclusions strictly on provided evidence; distinguish verified observations from assumptions.\n4. Formulate your response matching the required output schema, ensuring safety gates and prerequisite orderings are respected.",
+  "task_name": "False Cryptographic Discovery - Enterprise Services - T02 FALSE DISCOVERY",
+  "version": "1.0.0"
+}

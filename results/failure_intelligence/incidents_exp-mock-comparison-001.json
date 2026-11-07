@@ -1,0 +1,110 @@
+{
+  "experiment_id": "exp-mock-comparison-001",
+  "frequency_matrix": {
+    "mock-model-v1": {
+      "PARSING": 4
+    },
+    "mock-refusal-v1": {
+      "PARSING": 4
+    }
+  },
+  "incidents": [
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-d60de62a",
+      "model_identifier": "mock-model-v1",
+      "run_id": "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-gen-t01-bank-01",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-b79c328f",
+      "model_identifier": "mock-model-v1",
+      "run_id": "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-gen-t01-bank-01",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-c131ff56",
+      "model_identifier": "mock-model-v1",
+      "run_id": "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-gen-t01-telco-02",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-fd1bc190",
+      "model_identifier": "mock-model-v1",
+      "run_id": "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-gen-t01-telco-02",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-ded50878",
+      "model_identifier": "mock-refusal-v1",
+      "run_id": "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-gen-t01-bank-01",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-101f6add",
+      "model_identifier": "mock-refusal-v1",
+      "run_id": "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-gen-t01-bank-01",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-2c4d2de3",
+      "model_identifier": "mock-refusal-v1",
+      "run_id": "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-gen-t01-telco-02",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-42c79990",
+      "model_identifier": "mock-refusal-v1",
+      "run_id": "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-gen-t01-telco-02",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    }
+  ],
+  "total_incidents": 8
+}

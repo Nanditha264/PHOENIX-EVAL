@@ -1,0 +1,29 @@
+{
+  "analysis_code_version": "5.0.0",
+  "analysis_id": "anal-ca101d8a",
+  "analysis_timestamp": "2026-11-05T05:43:10.807465Z",
+  "benchmark_version": "5.0.0",
+  "dataset_fingerprints": [
+    "5a9f9aaeae32034b6009bc0e68fd7dffa61869ec37f9405325c8f8de0343fbf6"
+  ],
+  "evaluator_version": "3.0.0",
+  "input_artifact_hashes": {
+    "experiment_manifest.json": "9b2c458be5e3a7133c1d44222cbffb3ce1bb9ee2ac7431940f2bea58661db4c1",
+    "runs.jsonl": "ee3f5153064bd06f706368240fa2c7aeb145139e8cb56aaab6d17124fbd49002"
+  },
+  "source_experiment_ids": [
+    "exp-mock-phase5-1-001"
+  ],
+  "summary": {
+    "experiment_id": "exp-mock-phase5-1-001",
+    "is_mock": true,
+    "models_evaluated": [
+      "mock-malformed-response",
+      "mock-unsafe-migration",
+      "mock-valid-migration"
+    ],
+    "total_incidents": 18,
+    "total_patterns": 5,
+    "total_runs_evaluated": 12
+  }
+}

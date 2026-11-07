@@ -1,0 +1,609 @@
+{
+  "advanced_seed": 888999,
+  "base_seed": 777888,
+  "benchmark_type": "HIDDEN_HOLDOUT",
+  "manifest_version": "2.0.0",
+  "tasks": [
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t01-bank-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t01-bank-01",
+      "structural_fingerprint": "6bc5d65aa34a877a14a3111d2fcf7ef06559619631c52293b97cacafd186a57f",
+      "task_family": "T01",
+      "task_id": "task-hld-t01-bank-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t01-telco-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t01-telco-02",
+      "structural_fingerprint": "7a25509eb3d5f784782e276aef03162abb0f7bd74864a84c7af44b9baa6b9e11",
+      "task_family": "T01",
+      "task_id": "task-hld-t01-telco-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t01-idp-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t01-idp-03",
+      "structural_fingerprint": "c0f18afd946f4af497bf16543c93e559f12676973bec53269eafa99b0ddf7c7f",
+      "task_family": "T01",
+      "task_id": "task-hld-t01-idp-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t02-gov-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t02-gov-01",
+      "structural_fingerprint": "34670baab1dbec2de9565fcff1a2d3cc4f6fbb18a147ce133a0989d60057dcfd",
+      "task_family": "T02",
+      "task_id": "task-hld-t02-gov-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t02-erp-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t02-erp-02",
+      "structural_fingerprint": "72d374f9611718516865c9da3a8bf4f56f092603a80789624000c4b9883c47aa",
+      "task_family": "T02",
+      "task_id": "task-hld-t02-erp-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t02-bank-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t02-bank-03",
+      "structural_fingerprint": "ace8fa9830487c4ce3849bdbddfa09867b7ba3883e174f843c915638364a207c",
+      "task_family": "T02",
+      "task_id": "task-hld-t02-bank-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t03-telco-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t03-telco-01",
+      "structural_fingerprint": "508d3579508f2bf0e17f515acd842e251fc3ea631091b8347ad2449ed4044514",
+      "task_family": "T03",
+      "task_id": "task-hld-t03-telco-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t03-idp-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t03-idp-02",
+      "structural_fingerprint": "1e71da93cfc9d1ae5725c4120e2c42e13cf2f68c8cfea40951c2fd3906bcf531",
+      "task_family": "T03",
+      "task_id": "task-hld-t03-idp-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t03-gov-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t03-gov-03",
+      "structural_fingerprint": "c9ad7decde9ec3a313334093dba067d78a9386607a3b48712bb13fb52e01f256",
+      "task_family": "T03",
+      "task_id": "task-hld-t03-gov-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t04-erp-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t04-erp-01",
+      "structural_fingerprint": "e4d4bb1bd53afdb2394b83d95f3c27e586780851c53836c056e037153273f998",
+      "task_family": "T04",
+      "task_id": "task-hld-t04-erp-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t04-bank-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t04-bank-02",
+      "structural_fingerprint": "571796f5e383055a500c75f57097e9499c221d70f86e4fd543d72f02542b7229",
+      "task_family": "T04",
+      "task_id": "task-hld-t04-bank-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t04-telco-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t04-telco-03",
+      "structural_fingerprint": "7403ffb44e666619b9c9d17d1cce5952ee1bf678a7f7313bfe575daa8550e2de",
+      "task_family": "T04",
+      "task_id": "task-hld-t04-telco-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t05-idp-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t05-idp-01",
+      "structural_fingerprint": "b1853392ac63c515c8df1d88137bd129d52045210b575c5d1ac8bc919e997e0e",
+      "task_family": "T05",
+      "task_id": "task-hld-t05-idp-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t05-gov-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t05-gov-02",
+      "structural_fingerprint": "66b766cb8b7eacd9ee4772573e61e329e25acec42f3902688018e6ac8b96302a",
+      "task_family": "T05",
+      "task_id": "task-hld-t05-gov-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t05-erp-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t05-erp-03",
+      "structural_fingerprint": "27eab92002f933998e1aefba8a0f57ec54aece5d42cab0427a7633df5e14b081",
+      "task_family": "T05",
+      "task_id": "task-hld-t05-erp-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t06-bank-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t06-bank-01",
+      "structural_fingerprint": "95b5b886e1c8ea76821502968eb57436dbcf37bd45d01ac579e6392ecd931ad4",
+      "task_family": "T06",
+      "task_id": "task-hld-t06-bank-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t06-telco-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t06-telco-02",
+      "structural_fingerprint": "c8c3c5674690b25391511190b9e4498123c055c2ac31922c9413bae26f22124a",
+      "task_family": "T06",
+      "task_id": "task-hld-t06-telco-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t06-idp-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t06-idp-03",
+      "structural_fingerprint": "b444a479e5946f691bc6db3eb5d271b3991b74203ba6df0c5cca05ab9c5eee54",
+      "task_family": "T06",
+      "task_id": "task-hld-t06-idp-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t07-gov-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t07-gov-01",
+      "structural_fingerprint": "a5b7e624be7511da03723ced707ddbd9c937bbfefe63b31e464a0da4ac2cfeb2",
+      "task_family": "T07",
+      "task_id": "task-hld-t07-gov-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t07-erp-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t07-erp-02",
+      "structural_fingerprint": "608a4c50e7d4c6a2e7a70ee3cc927a29c3e1dcc38aae0c9997ab7006143e7601",
+      "task_family": "T07",
+      "task_id": "task-hld-t07-erp-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t07-bank-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t07-bank-03",
+      "structural_fingerprint": "fba25733e6ab3515bd710db0ae01f1e2ca9ae7670e1d7c8df58768dc518271bc",
+      "task_family": "T07",
+      "task_id": "task-hld-t07-bank-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t08-telco-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t08-telco-01",
+      "structural_fingerprint": "3d2e2b41c96e732ce74923342ce131ad049d7d012a839ea31d52bf5b83801b48",
+      "task_family": "T08",
+      "task_id": "task-hld-t08-telco-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t08-idp-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t08-idp-02",
+      "structural_fingerprint": "5e9210dd8b8506b8122542ae12a3894c01fe6668247c10256f68a27fe078c677",
+      "task_family": "T08",
+      "task_id": "task-hld-t08-idp-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t08-gov-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t08-gov-03",
+      "structural_fingerprint": "551e8b2bd51cbe00eb434fefbfe3c8aef60fa9f904c2403a5e5f9b3e352a529c",
+      "task_family": "T08",
+      "task_id": "task-hld-t08-gov-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t09-erp-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t09-erp-01",
+      "structural_fingerprint": "626cf0b6e302a00a44d4f58455082f45efeb42a433ccbb2d3af1b0a13a07b0a8",
+      "task_family": "T09",
+      "task_id": "task-hld-t09-erp-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t09-bank-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t09-bank-02",
+      "structural_fingerprint": "c890865ab2bd00ad59789b14b15a6b3cd1e06e9dcdad5ad4eecc83be24178172",
+      "task_family": "T09",
+      "task_id": "task-hld-t09-bank-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t09-telco-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t09-telco-03",
+      "structural_fingerprint": "f7e8e0673fb92d2f2f8aa1056ffb4cd45bdf97f99ee2022c17ba0e29187974c5",
+      "task_family": "T09",
+      "task_id": "task-hld-t09-telco-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t10-idp-01",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t10-idp-01",
+      "structural_fingerprint": "1bbf1d6ee215cf28f00574754bdd95846c45795d0126a1fdc8e6d4a746dfd147",
+      "task_family": "T10",
+      "task_id": "task-hld-t10-idp-01"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t10-gov-02",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t10-gov-02",
+      "structural_fingerprint": "24f0f9c61a5dec03d3a3e408a35d12d671cd77baf92105c7ef11467308c12b8f",
+      "task_family": "T10",
+      "task_id": "task-hld-t10-gov-02"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t10-erp-03",
+      "is_advanced_variant": false,
+      "scenario_id": "scen-hld-t10-erp-03",
+      "structural_fingerprint": "ce7b0ccf762f593908357a43f0febe06d70f4486ef48b2dd1423c426dffc67e4",
+      "task_family": "T10",
+      "task_id": "task-hld-t10-erp-03"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t01-bank-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t01-bank-04",
+      "structural_fingerprint": "1c8a7d31890df4495022831206414026ced4c16675be708eac7bccaf89311888",
+      "task_family": "T01",
+      "task_id": "task-hld-t01-bank-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t01-telco-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t01-telco-05",
+      "structural_fingerprint": "71a0804acbb0e7d0f5daee86d8f1010381adce3d433ec8a29a89eb4e5824b687",
+      "task_family": "T01",
+      "task_id": "task-hld-t01-telco-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t01-idp-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t01-idp-06",
+      "structural_fingerprint": "b5c8b97348e64c8c5b89c951e235862dc88f5d7c139e239647baa8dbe2ed1a2c",
+      "task_family": "T01",
+      "task_id": "task-hld-t01-idp-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t02-gov-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t02-gov-04",
+      "structural_fingerprint": "dd8a8cac960a0244390fd72d31da81696f6befa87964b2c8e310b0c89f807553",
+      "task_family": "T02",
+      "task_id": "task-hld-t02-gov-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t02-erp-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t02-erp-05",
+      "structural_fingerprint": "7c48eb825a92357ae554f3632892de58fc279fb801858d827ee3c41fcba26a53",
+      "task_family": "T02",
+      "task_id": "task-hld-t02-erp-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t02-bank-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t02-bank-06",
+      "structural_fingerprint": "7c1f22ab24b5baa8e2f6782ee517e5a328f2c7af69d400b210c8a218b99f35c9",
+      "task_family": "T02",
+      "task_id": "task-hld-t02-bank-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t03-telco-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t03-telco-04",
+      "structural_fingerprint": "5e8d0f8b04220a9d896b3f125c47455b4758d06b689f64ad2e0a650fdeb33918",
+      "task_family": "T03",
+      "task_id": "task-hld-t03-telco-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t03-idp-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t03-idp-05",
+      "structural_fingerprint": "c993dccc542a1be805fa016debf2562795b236f982655bd118755987f60d7168",
+      "task_family": "T03",
+      "task_id": "task-hld-t03-idp-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t03-gov-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t03-gov-06",
+      "structural_fingerprint": "5a7a7d31f1dd4cac7562ae8635af756279b615fd16f6450d4cced4e55216d70d",
+      "task_family": "T03",
+      "task_id": "task-hld-t03-gov-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t04-erp-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t04-erp-04",
+      "structural_fingerprint": "98f9594e193a7c2b8687ae2ef14fc8b6c04e0d7e260da6257535ed3ea3b143e4",
+      "task_family": "T04",
+      "task_id": "task-hld-t04-erp-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t04-bank-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t04-bank-05",
+      "structural_fingerprint": "c571e4264fbc690cdea82588506ab5d04f4dbdf73149574a3e9665a3a296131a",
+      "task_family": "T04",
+      "task_id": "task-hld-t04-bank-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t04-telco-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t04-telco-06",
+      "structural_fingerprint": "420690011875c678eaad983e58e3c936f54ed468c5bd0889ba9712a749728ae9",
+      "task_family": "T04",
+      "task_id": "task-hld-t04-telco-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t05-idp-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t05-idp-04",
+      "structural_fingerprint": "35b21c051ac71e9f73097aba3ee786c8e462eb6374fe94f565f3d532b46eb714",
+      "task_family": "T05",
+      "task_id": "task-hld-t05-idp-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t05-gov-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t05-gov-05",
+      "structural_fingerprint": "2329282c14f34f203d0b6d34beca5459d44f599a1f4fb3ef9427e128a49e2ffc",
+      "task_family": "T05",
+      "task_id": "task-hld-t05-gov-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t05-erp-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t05-erp-06",
+      "structural_fingerprint": "c85bc2601ee42a62bada7fc463121b9bdb7c2321bc5704bdc231aac99c3c1e24",
+      "task_family": "T05",
+      "task_id": "task-hld-t05-erp-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t06-bank-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t06-bank-04",
+      "structural_fingerprint": "aec2508be66961505bac4a6a3ac8c847e027d87d427a4fbf236a42114ed6eb0a",
+      "task_family": "T06",
+      "task_id": "task-hld-t06-bank-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t06-telco-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t06-telco-05",
+      "structural_fingerprint": "3954e594c4e4111ef925ac954c8631212c90a2436cba7e386315f5561f50b1ab",
+      "task_family": "T06",
+      "task_id": "task-hld-t06-telco-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t06-idp-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t06-idp-06",
+      "structural_fingerprint": "5dfc2b45a278b2bd8841141195a56428eecbe78c9297bbf02a2b64f9301db210",
+      "task_family": "T06",
+      "task_id": "task-hld-t06-idp-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t07-gov-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t07-gov-04",
+      "structural_fingerprint": "8ca0017d4a89e37b1fcc6342d2afd3e43fd805086494fff402417aa0b5d24f68",
+      "task_family": "T07",
+      "task_id": "task-hld-t07-gov-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t07-erp-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t07-erp-05",
+      "structural_fingerprint": "9d166f93b6ad61ef7c35ce7bda331c8f439616d99c9317c957820a29b6eb28aa",
+      "task_family": "T07",
+      "task_id": "task-hld-t07-erp-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t07-bank-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t07-bank-06",
+      "structural_fingerprint": "cb239996a69b21d6094ff87c7426025d33f79b3ad1d7e34de73fd7ad2bb820d4",
+      "task_family": "T07",
+      "task_id": "task-hld-t07-bank-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t08-telco-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t08-telco-04",
+      "structural_fingerprint": "e6d6977bd64f81dc85ad371ad2d0d02d60c991bf2fc57804448e83530fbfaad2",
+      "task_family": "T08",
+      "task_id": "task-hld-t08-telco-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t08-idp-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t08-idp-05",
+      "structural_fingerprint": "4c5aee38b0a5c0c3a92e923e1ba6e986c1e71860f4851abe003c646206481e41",
+      "task_family": "T08",
+      "task_id": "task-hld-t08-idp-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t08-gov-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t08-gov-06",
+      "structural_fingerprint": "740fef3976170108c37bc16543d7be8591c5ba2b761c4f799195c98ceb91cb46",
+      "task_family": "T08",
+      "task_id": "task-hld-t08-gov-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t09-erp-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t09-erp-04",
+      "structural_fingerprint": "0cad9e1239f7c143f294f5d5a0217c9f4f53db06458cd0467a6879755d0cb8ee",
+      "task_family": "T09",
+      "task_id": "task-hld-t09-erp-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "BANKING_PAYMENTS",
+      "ground_truth_id": "gt-hld-t09-bank-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t09-bank-05",
+      "structural_fingerprint": "93296c1d95a9dc9c03636ab3e9c72d2a8d244297fe78695c82ebecd09adcd31a",
+      "task_family": "T09",
+      "task_id": "task-hld-t09-bank-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "TELECOM_NETWORK",
+      "ground_truth_id": "gt-hld-t09-telco-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t09-telco-06",
+      "structural_fingerprint": "aa53cbfc0c6371fbf4891150f804f4859d57d413b683530a33feccef8c8a4241",
+      "task_family": "T09",
+      "task_id": "task-hld-t09-telco-06"
+    },
+    {
+      "difficulty": "INTRODUCTORY",
+      "domain": "CLOUD_IDENTITY",
+      "ground_truth_id": "gt-hld-t10-idp-04",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t10-idp-04",
+      "structural_fingerprint": "ffbb11dc8de482364ec4e33d214ef9e2df8971b709301e48e2d15131344b6ba4",
+      "task_family": "T10",
+      "task_id": "task-hld-t10-idp-04"
+    },
+    {
+      "difficulty": "INTERMEDIATE",
+      "domain": "GOVERNMENT_CRITICAL",
+      "ground_truth_id": "gt-hld-t10-gov-05",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t10-gov-05",
+      "structural_fingerprint": "17220fd7b1ff1e46ee85e5806f0bf5f92c38ed7f8e2299c49d1e4ce2e52153b2",
+      "task_family": "T10",
+      "task_id": "task-hld-t10-gov-05"
+    },
+    {
+      "difficulty": "ADVANCED",
+      "domain": "ENTERPRISE_SERVICES",
+      "ground_truth_id": "gt-hld-t10-erp-06",
+      "is_advanced_variant": true,
+      "scenario_id": "scen-hld-t10-erp-06",
+      "structural_fingerprint": "863e87a1c7c703e7efc3b878011a54f5ad0fa7f9fb2a91a238639eb7c5e65dd9",
+      "task_family": "T10",
+      "task_id": "task-hld-t10-erp-06"
+    }
+  ],
+  "total_tasks": 60
+}

@@ -1,0 +1,77 @@
+{
+  "error_message": null,
+  "execution_duration": 0.00010319985449314117,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "unsafe_migration",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-unsafe-migration",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "assumptions": [],
+    "blocked_components": [],
+    "compatibility_assessments": [
+      {
+        "component_id": "comp-api-gateway-01",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": null,
+        "status": "UNSUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      }
+    ],
+    "contract_version": "1.0.0",
+    "decision": "MIGRATION_READY",
+    "evidence_references": [
+      "evid-sbom-api-gateway-01"
+    ],
+    "explanation": "Adversarial mock: cuts over unsupported component directly into production.",
+    "identified_dependencies": [],
+    "migration_plan": [
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-api-gateway-01",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-t-01-a"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 1
+      }
+    ],
+    "required_actions": [],
+    "task_id": "task-pair-hsm-support-01-b",
+    "uncertainties": [],
+    "verification_results": [
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relevant_component": "comp-api-gateway-01",
+        "reported_status": "PASSED",
+        "test_id": "test-staging-handshake-t-01-a"
+      }
+    ]
+  },
+  "prompt_hash": "6a6e72f18e74cd688b4189d2c9c05bdf7fef3dfbff0852258c74bafa82d6bcfe",
+  "provider_request_id": "mock-req-task-pair-hsm-support-01-b",
+  "raw_response": "{\n  \"task_id\": \"task-pair-hsm-support-01-b\",\n  \"decision\": \"MIGRATION_READY\",\n  \"identified_dependencies\": [],\n  \"compatibility_assessments\": [\n    {\n      \"component_id\": \"comp-api-gateway-01\",\n      \"status\": \"UNSUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": null\n    }\n  ],\n  \"migration_plan\": [\n    {\n      \"wave\": 1,\n      \"component_id\": \"comp-api-gateway-01\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-t-01-a\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    }\n  ],\n  \"blocked_components\": [],\n  \"required_actions\": [],\n  \"verification_results\": [\n    {\n      \"test_id\": \"test-staging-handshake-t-01-a\",\n      \"reported_status\": \"PASSED\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"relevant_component\": \"comp-api-gateway-01\"\n    }\n  ],\n  \"evidence_references\": [\n    \"evid-sbom-api-gateway-01\"\n  ],\n  \"assumptions\": [],\n  \"uncertainties\": [],\n  \"explanation\": \"Adversarial mock: cuts over unsupported component directly into production.\",\n  \"contract_version\": \"1.0.0\"\n}",
+  "response_id": "resp-mock-unsafe-migration-d571a322",
+  "returned_model_identifier": "mock-unsafe-migration",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-pair-hsm-support-01-b",
+  "timestamp": "2026-11-05T05:46:32.200890Z",
+  "token_usage": {
+    "completion_tokens": 91,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1388,
+    "total_tokens": 1479
+  }
+}

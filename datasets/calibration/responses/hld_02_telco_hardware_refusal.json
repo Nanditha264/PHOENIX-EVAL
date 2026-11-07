@@ -1,0 +1,95 @@
+{
+  "task_id": "task-gen-t04-telco-03",
+  "decision": "MIGRATION_BLOCKED",
+  "identified_dependencies": [
+    {
+      "source_component_id": "comp-iot-gateway-01",
+      "target_component_id": "comp-reverse-proxy-01"
+    },
+    {
+      "source_component_id": "comp-iot-gateway-02",
+      "target_component_id": "comp-microservice-01"
+    },
+    {
+      "source_component_id": "comp-microservice-01",
+      "target_component_id": "comp-database-01"
+    },
+    {
+      "source_component_id": "comp-reverse-proxy-01",
+      "target_component_id": "comp-hardware-security-module-02"
+    },
+    {
+      "source_component_id": "comp-microservice-02",
+      "target_component_id": "comp-hardware-security-module-01"
+    },
+    {
+      "source_component_id": "comp-iot-gateway-02",
+      "target_component_id": "comp-hardware-security-module-01"
+    },
+    {
+      "source_component_id": "comp-microservice-01",
+      "target_component_id": "comp-hardware-security-module-01"
+    }
+  ],
+  "compatibility_assessments": [
+    {
+      "component_id": "comp-iot-gateway-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-microservice-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-hardware-security-module-01",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "component_id": "comp-reverse-proxy-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-database-01",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-iot-gateway-02",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-microservice-02",
+      "status": "SUPPORTED"
+    },
+    {
+      "component_id": "comp-hardware-security-module-02",
+      "status": "UNKNOWN"
+    }
+  ],
+  "migration_plan": [],
+  "blocked_components": [
+    "comp-hardware-security-module-01",
+    "comp-hardware-security-module-02"
+  ],
+  "required_actions": [
+    "Upgrade legacy telco cryptographic hardware"
+  ],
+  "verification_results": [
+    {
+      "test_id": "test-staging-handshake-lco-03",
+      "reported_status": "PASSED"
+    },
+    {
+      "test_id": "test-fallback-recovery-lco-03",
+      "reported_status": "PASSED"
+    }
+  ],
+  "evidence_references": [
+    "evid-sbom-iot-gateway-01"
+  ],
+  "assumptions": [],
+  "uncertainties": [
+    "Legacy hardware limitations"
+  ],
+  "explanation": "Telco hardware components are UNSUPPORTED. Migration is blocked based on discovery evidence and hardware constraints.",
+  "contract_version": "1.0.0"
+}

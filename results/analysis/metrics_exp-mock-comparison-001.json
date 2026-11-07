@@ -1,0 +1,401 @@
+{
+  "difficulty_metrics": [
+    {
+      "difficulty_level": "INTERMEDIATE",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 2
+    },
+    {
+      "difficulty_level": "INTRODUCTORY",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 2
+    },
+    {
+      "difficulty_level": "INTERMEDIATE",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 2
+    },
+    {
+      "difficulty_level": "INTRODUCTORY",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 2
+    }
+  ],
+  "dimension_metrics": [
+    {
+      "dimension_name": "dependency_identification",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "compatibility_reasoning",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "evidence_and_uncertainty",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 15.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "migration_plan_correctness",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "validation_and_safety_gates",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 15.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "explanation_and_traceability",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 10.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "dependency_identification",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "compatibility_reasoning",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "evidence_and_uncertainty",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 15.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "migration_plan_correctness",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "validation_and_safety_gates",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 15.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "explanation_and_traceability",
+      "highest_performing_family": "T01",
+      "lowest_performing_family": "T01",
+      "max_score": 10.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    }
+  ],
+  "domain_metrics": [
+    {
+      "common_error_categories": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "domain_name": "BANKING_PAYMENTS",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 2
+    },
+    {
+      "common_error_categories": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "domain_name": "TELECOM_NETWORK",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 2
+    },
+    {
+      "common_error_categories": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "domain_name": "BANKING_PAYMENTS",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 2
+    },
+    {
+      "common_error_categories": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "domain_name": "TELECOM_NETWORK",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 2
+    }
+  ],
+  "experiment_id": "exp-mock-comparison-001",
+  "overall_metrics": [
+    {
+      "completion_rate": 1.0,
+      "completion_tokens_total": 156,
+      "critical_violation_count": 24,
+      "estimated_cost_usd_total": 0.0,
+      "evaluated_responses": 4,
+      "evaluation_failures_count": 0,
+      "is_mock": true,
+      "mean_effective_score": 0.0,
+      "mean_latency_seconds": 0.0001,
+      "mean_raw_score": 0.0,
+      "median_effective_score": 0.0,
+      "median_raw_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "model_version": "1.0.0",
+      "parsing_failures_count": 4,
+      "prompt_tokens_total": 6982,
+      "provider_attempts": 4,
+      "provider_failures_count": 0,
+      "safety_gate_failed_count": 4,
+      "safety_gate_failure_rate": 1.0,
+      "safety_gate_failure_rate_ci": [
+        0.5101,
+        1.0
+      ],
+      "safety_gate_passed_count": 0,
+      "scheduled_runs": 4,
+      "std_effective_score": 0.0,
+      "std_raw_score": 0.0,
+      "successful_responses": 4,
+      "total_tokens_total": 7138
+    },
+    {
+      "completion_rate": 1.0,
+      "completion_tokens_total": 136,
+      "critical_violation_count": 24,
+      "estimated_cost_usd_total": 0.0,
+      "evaluated_responses": 4,
+      "evaluation_failures_count": 0,
+      "is_mock": true,
+      "mean_effective_score": 0.0,
+      "mean_latency_seconds": 0.0,
+      "mean_raw_score": 0.0,
+      "median_effective_score": 0.0,
+      "median_raw_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "model_version": "1.0.0",
+      "parsing_failures_count": 4,
+      "prompt_tokens_total": 6982,
+      "provider_attempts": 4,
+      "provider_failures_count": 0,
+      "safety_gate_failed_count": 4,
+      "safety_gate_failure_rate": 1.0,
+      "safety_gate_failure_rate_ci": [
+        0.5101,
+        1.0
+      ],
+      "safety_gate_passed_count": 0,
+      "scheduled_runs": 4,
+      "std_effective_score": 0.0,
+      "std_raw_score": 0.0,
+      "successful_responses": 4,
+      "total_tokens_total": 7118
+    }
+  ],
+  "task_family_metrics": [
+    {
+      "common_error_types": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "critical_violations_count": 24,
+      "evaluated_response_count": 4,
+      "family_id": "T01",
+      "family_name": "Hidden Downstream Dependency",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-model-v1",
+      "safety_gate_failure_rate": 1.0
+    },
+    {
+      "common_error_types": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "critical_violations_count": 24,
+      "evaluated_response_count": 4,
+      "family_id": "T01",
+      "family_name": "Hidden Downstream Dependency",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-refusal-v1",
+      "safety_gate_failure_rate": 1.0
+    }
+  ],
+  "trial_consistency": [
+    {
+      "decision_set": [
+        "BLOCKED_BY_SAFETY_GATE"
+      ],
+      "effective_scores": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Consistently failed safety gates across all 2 trials.",
+      "model_identifier": "mock-model-v1",
+      "outcome": "STABLE_UNSAFE",
+      "safety_gate_passed_set": [
+        false,
+        false
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-gen-t01-bank-01",
+      "trial_count": 2
+    },
+    {
+      "decision_set": [
+        "BLOCKED_BY_SAFETY_GATE"
+      ],
+      "effective_scores": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Consistently failed safety gates across all 2 trials.",
+      "model_identifier": "mock-model-v1",
+      "outcome": "STABLE_UNSAFE",
+      "safety_gate_passed_set": [
+        false,
+        false
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-gen-t01-telco-02",
+      "trial_count": 2
+    },
+    {
+      "decision_set": [
+        "BLOCKED_BY_SAFETY_GATE"
+      ],
+      "effective_scores": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Consistently failed safety gates across all 2 trials.",
+      "model_identifier": "mock-refusal-v1",
+      "outcome": "STABLE_UNSAFE",
+      "safety_gate_passed_set": [
+        false,
+        false
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-gen-t01-bank-01",
+      "trial_count": 2
+    },
+    {
+      "decision_set": [
+        "BLOCKED_BY_SAFETY_GATE"
+      ],
+      "effective_scores": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Consistently failed safety gates across all 2 trials.",
+      "model_identifier": "mock-refusal-v1",
+      "outcome": "STABLE_UNSAFE",
+      "safety_gate_passed_set": [
+        false,
+        false
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-gen-t01-telco-02",
+      "trial_count": 2
+    }
+  ]
+}

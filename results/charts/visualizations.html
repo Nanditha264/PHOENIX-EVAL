@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>PHOENIX-EVAL Benchmark Visualizations</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 2rem; }
+  h1, h2, h3 { color: #38bdf8; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .card { background: #1e293b; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid #334155; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #334155; }
+  th { background: #0f172a; color: #94a3b8; font-weight: 600; }
+  .bar-container { background: #334155; border-radius: 4px; height: 20px; width: 100%; overflow: hidden; }
+  .bar-fill { background: #38bdf8; height: 100%; }
+  .bar-fill.danger { background: #ef4444; }
+  .badge { display: inline-block; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+  .badge-safe { background: #10b981; color: #ffffff; }
+  .badge-danger { background: #ef4444; color: #ffffff; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>PHOENIX-EVAL — Benchmark Analytics & Visualizations</h1>
+  <p style="color: #94a3b8;">Deterministic Cryptographic Migration Intelligence Evaluation</p>
+
+  <div style="background: #1e3a5f; border-left: 4px solid #38bdf8; padding: 1rem; margin-bottom: 2rem; border-radius: 4px;">
+    <strong>SIMULATED BASELINE EXPERIMENTS:</strong> All charts below reflect offline mock provider fixtures (<code>mock-valid-migration</code>, <code>mock-unsafe-migration</code>, <code>mock-malformed-response</code>) evaluated during benchmark pipeline calibration and verification. Zero commercial frontier models were evaluated in this campaign.
+  </div>
+
+  <div class="card">
+    <h2>1. Overall Model Comparison (Effective Score vs Safety Failure Rate)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Model Identifier</th>
+          <th>Raw Score</th>
+          <th>Effective Score</th>
+          <th>Safety Failure Rate</th>
+          <th>Safety Gate Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>mock-malformed-response</strong></td>
+          <td>0.0</td>
+          <td>
+            <div style="display:flex; align-items:center; gap: 8px;">
+              <span>0.0</span>
+              <div class="bar-container" style="width: 150px;">
+                <div class="bar-fill" style="width: 0.0%;"></div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div style="display:flex; align-items:center; gap: 8px;">
+              <span>100.0%</span>
+              <div class="bar-container" style="width: 100px;">
+                <div class="bar-fill danger" style="width: 100.0%;"></div>
+              </div>
+            </div>
+          </td>
+          <td><span class="badge badge-danger">CRITICAL VETO</span></td>
+        </tr>
+        <tr>
+          <td><strong>mock-unsafe-migration</strong></td>
+          <td>19.4</td>
+          <td>
+            <div style="display:flex; align-items:center; gap: 8px;">
+              <span>0.0</span>
+              <div class="bar-container" style="width: 150px;">
+                <div class="bar-fill" style="width: 0.0%;"></div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div style="display:flex; align-items:center; gap: 8px;">
+              <span>100.0%</span>
+              <div class="bar-container" style="width: 100px;">
+                <div class="bar-fill danger" style="width: 100.0%;"></div>
+              </div>
+            </div>
+          </td>
+          <td><span class="badge badge-danger">CRITICAL VETO</span></td>
+        </tr>
+        <tr>
+          <td><strong>mock-valid-migration</strong></td>
+          <td>90.5</td>
+          <td>
+            <div style="display:flex; align-items:center; gap: 8px;">
+              <span>84.6</span>
+              <div class="bar-container" style="width: 150px;">
+                <div class="bar-fill" style="width: 84.6071%;"></div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div style="display:flex; align-items:center; gap: 8px;">
+              <span>7.1%</span>
+              <div class="bar-container" style="width: 100px;">
+                <div class="bar-fill danger" style="width: 7.140000000000001%;"></div>
+              </div>
+            </div>
+          </td>
+          <td><span class="badge badge-safe">RESILIENT</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>2. Enterprise Architecture Domain Vulnerabilities</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th>Model</th>
+          <th>Evaluated Tasks</th>
+          <th>Safety Failure Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>BANKING_PAYMENTS</strong></td>
+          <td><code>mock-malformed-response</code></td>
+          <td>12</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>CLOUD_IDENTITY</strong></td>
+          <td><code>mock-malformed-response</code></td>
+          <td>4</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>ENTERPRISE_SERVICES</strong></td>
+          <td><code>mock-malformed-response</code></td>
+          <td>4</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>GOVERNMENT_CRITICAL</strong></td>
+          <td><code>mock-malformed-response</code></td>
+          <td>4</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>TELECOM_NETWORK</strong></td>
+          <td><code>mock-malformed-response</code></td>
+          <td>4</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>BANKING_PAYMENTS</strong></td>
+          <td><code>mock-unsafe-migration</code></td>
+          <td>12</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>CLOUD_IDENTITY</strong></td>
+          <td><code>mock-unsafe-migration</code></td>
+          <td>4</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>ENTERPRISE_SERVICES</strong></td>
+          <td><code>mock-unsafe-migration</code></td>
+          <td>4</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>GOVERNMENT_CRITICAL</strong></td>
+          <td><code>mock-unsafe-migration</code></td>
+          <td>4</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>TELECOM_NETWORK</strong></td>
+          <td><code>mock-unsafe-migration</code></td>
+          <td>4</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>BANKING_PAYMENTS</strong></td>
+          <td><code>mock-valid-migration</code></td>
+          <td>12</td>
+          <td>16.7%</td>
+        </tr>
+        <tr>
+          <td><strong>CLOUD_IDENTITY</strong></td>
+          <td><code>mock-valid-migration</code></td>
+          <td>4</td>
+          <td>0.0%</td>
+        </tr>
+        <tr>
+          <td><strong>ENTERPRISE_SERVICES</strong></td>
+          <td><code>mock-valid-migration</code></td>
+          <td>4</td>
+          <td>0.0%</td>
+        </tr>
+        <tr>
+          <td><strong>GOVERNMENT_CRITICAL</strong></td>
+          <td><code>mock-valid-migration</code></td>
+          <td>4</td>
+          <td>0.0%</td>
+        </tr>
+        <tr>
+          <td><strong>TELECOM_NETWORK</strong></td>
+          <td><code>mock-valid-migration</code></td>
+          <td>4</td>
+          <td>0.0%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>3. Difficulty Tier Performance Degradation</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Difficulty Level</th>
+          <th>Model</th>
+          <th>Effective Score</th>
+          <th>Safety Failure Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>ADVANCED</strong></td>
+          <td><code>mock-malformed-response</code></td>
+          <td>0.0</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>INTERMEDIATE</strong></td>
+          <td><code>mock-malformed-response</code></td>
+          <td>0.0</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>INTRODUCTORY</strong></td>
+          <td><code>mock-malformed-response</code></td>
+          <td>0.0</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>ADVANCED</strong></td>
+          <td><code>mock-unsafe-migration</code></td>
+          <td>0.0</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>INTERMEDIATE</strong></td>
+          <td><code>mock-unsafe-migration</code></td>
+          <td>0.0</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>INTRODUCTORY</strong></td>
+          <td><code>mock-unsafe-migration</code></td>
+          <td>0.0</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>ADVANCED</strong></td>
+          <td><code>mock-valid-migration</code></td>
+          <td>88.7</td>
+          <td>0.0%</td>
+        </tr>
+        <tr>
+          <td><strong>INTERMEDIATE</strong></td>
+          <td><code>mock-valid-migration</code></td>
+          <td>80.3</td>
+          <td>12.5%</td>
+        </tr>
+        <tr>
+          <td><strong>INTRODUCTORY</strong></td>
+          <td><code>mock-valid-migration</code></td>
+          <td>92.0</td>
+          <td>0.0%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

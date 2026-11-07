@@ -1,0 +1,31 @@
+{
+  "error_message": null,
+  "execution_duration": 2.1300045773386955e-05,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "malformed_response",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-malformed-response",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "mock_analysis": "{\"task_id\": \"task-gen-t05-gov-02\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\""
+  },
+  "prompt_hash": "50bf71a7e2cd27f5e7431c9654efade9477c4c710926bb30eb92e7393b6ccd77",
+  "provider_request_id": "mock-req-task-gen-t05-gov-02",
+  "raw_response": "{\"task_id\": \"task-gen-t05-gov-02\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\"",
+  "response_id": "resp-mock-malformed-response-2963c156",
+  "returned_model_identifier": "mock-malformed-response",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-gen-t05-gov-02",
+  "timestamp": "2026-11-05T06:15:45.391634Z",
+  "token_usage": {
+    "completion_tokens": 9,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1983,
+    "total_tokens": 1992
+  }
+}

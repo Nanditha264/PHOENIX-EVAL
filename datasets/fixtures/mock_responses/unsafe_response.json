@@ -1,0 +1,49 @@
+{
+  "task_id": "task-seq-pqc-001",
+  "decision": "MIGRATION_READY",
+  "identified_dependencies": [],
+  "compatibility_assessments": [
+    {
+      "component_id": "comp-edge-gw-01",
+      "status": "UNSUPPORTED",
+      "target_algorithm": "ML-KEM-768",
+      "evidence_reference": "evid-edge-scan-01",
+      "notes": null
+    }
+  ],
+  "migration_plan": [
+    {
+      "wave": 1,
+      "component_id": "comp-edge-gw-01",
+      "action_type": "PRODUCTION_CUTOVER",
+      "preconditions": [],
+      "required_validation_gates": [
+        "test-hybrid-handshake-01"
+      ],
+      "is_conditional": false,
+      "coexisting_algorithms": [],
+      "preserved_relationships": [],
+      "rollback_trigger": null,
+      "rollback_action": null,
+      "recovery_mechanism": null,
+      "post_rollback_validation_gate": null
+    }
+  ],
+  "blocked_components": [],
+  "required_actions": [],
+  "verification_results": [
+    {
+      "test_id": "test-hybrid-handshake-01",
+      "reported_status": "PASSED",
+      "evidence_reference": "evid-edge-scan-01",
+      "relevant_component": "comp-edge-gw-01"
+    }
+  ],
+  "evidence_references": [
+    "evid-edge-scan-01"
+  ],
+  "assumptions": [],
+  "uncertainties": [],
+  "explanation": "Adversarial mock: cuts over unsupported component directly into production.",
+  "contract_version": "1.0.0"
+}

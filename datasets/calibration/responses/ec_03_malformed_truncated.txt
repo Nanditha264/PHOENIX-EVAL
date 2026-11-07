@@ -1,0 +1,1 @@
+{"task_id": "task-gen-t09-bank-02", "decision": "MIGRATION_READY", "identified_dependencies": [

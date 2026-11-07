@@ -1,0 +1,321 @@
+{
+  "authoritative_readiness_decision": "MIGRATION_BLOCKED",
+  "compatibility_findings": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "incorrect_count": 11,
+    "total_expected": 11
+  },
+  "constraint_findings": {
+    "checks": [
+      {
+        "constraint_id": "cnstr-backward-compat-erp-03",
+        "constraint_type": "BACKWARD_COMPATIBILITY",
+        "missing_information": null,
+        "model_response_evidence": {
+          "plan_action_types": [
+            "PRODUCTION_CUTOVER"
+          ],
+          "plan_coexisting_algorithms": [
+            []
+          ],
+          "plan_preserved_relationships": [
+            []
+          ]
+        },
+        "reason": "Backward-compatibility constraint 'cnstr-backward-compat-erp-03' breached: Model failed to provide structured migration-plan steps for backward compatibility (free-text mention alone is insufficient).; Model plan omits required preserved compatibility relationship(s): ['CONSUMER_CALLS_PRODUCER']..",
+        "relevant_scenario_facts": {
+          "affected_components": [
+            "comp-application-01"
+          ],
+          "coexisting_algorithms": [
+            "RSA-4096",
+            "ML-KEM-768"
+          ],
+          "preserved_relationships": [
+            "CONSUMER_CALLS_PRODUCER"
+          ],
+          "required_compatibility_gate": "test-staging-handshake-erp-03"
+        },
+        "safety_impact": "NONE",
+        "score_impact": 5.0,
+        "status": "VIOLATED"
+      },
+      {
+        "constraint_id": "cnstr-regulatory-erp-03",
+        "constraint_type": "REGULATORY_COMPLIANCE",
+        "missing_information": null,
+        "model_response_evidence": {
+          "cited_evidence": [
+            "evid-vendor-claim-application-01"
+          ],
+          "reported_tests": [
+            "test-staging-handshake-erp-03"
+          ],
+          "target_algorithms": {
+            "comp-application-01": "ML-KEM-768"
+          }
+        },
+        "reason": "Regulatory compliance 'cnstr-regulatory-erp-03' (NIST-SP-800-208) breached: Required compliance evidence citation 'evid-sbom-api-gateway-01' missing from response..",
+        "relevant_scenario_facts": {
+          "affected_components": [
+            "comp-application-01",
+            "comp-api-gateway-01",
+            "comp-message-broker-01"
+          ],
+          "policy_id": "NIST-SP-800-208",
+          "required_algorithm": "ML-KEM-768",
+          "required_evidence_ids": [
+            "evid-vendor-claim-application-01",
+            "evid-sbom-api-gateway-01"
+          ],
+          "required_test_ids": [
+            "test-staging-handshake-erp-03"
+          ]
+        },
+        "safety_impact": "NONE",
+        "score_impact": 3.0,
+        "status": "VIOLATED"
+      }
+    ],
+    "deductions_applied": 8.0,
+    "not_applicable": 0,
+    "not_evaluable": 0,
+    "precondition_findings": [],
+    "precondition_findings_count": 0,
+    "safety_gate_impact": "NONE",
+    "satisfied": 0,
+    "total_constraints": 2,
+    "violated": 2
+  },
+  "contract_version": "1.0.0",
+  "critical_violations": [
+    {
+      "description": "Model scheduled UNKNOWN components ['comp-application-01'] for production cutover without verified support.",
+      "evidence": "Unknown components: ['comp-application-01']",
+      "rule_name": "VIO_UNKNOWN_ASSUMED_SUPPORTED",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_unknown_assumed_supported-b54992d8"
+    },
+    {
+      "description": "Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+      "evidence": "Causal violations: [('comp-application-01', 'comp-legacy-system-01', 1, -1)]",
+      "rule_name": "VIO_DEPENDENCY_ORDER_REVERSED",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_dependency_order_reversed-aa167fbc"
+    },
+    {
+      "description": "Model certified migration readiness without mandatory verification test results for: ['test-fallback-recovery-erp-03'].",
+      "evidence": "Missing mandatory tests: ['test-fallback-recovery-erp-03'], Decision: MIGRATION_READY",
+      "rule_name": "VIO_REQUIRED_TEST_MISSING",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_required_test_missing-2ede4c50"
+    }
+  ],
+  "cross_cutting_deductions": 8.0,
+  "dependency_findings": {
+    "expected_count": 10,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "reported_count": 0
+  },
+  "dimension_scores": {
+    "compatibility_reasoning": {
+      "deductions": [
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Mismatched compatibility for 'comp-application-01': expected UNKNOWN, got UNSUPPORTED."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-api-gateway-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-message-broker-01' (expected UNSUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-database-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-legacy-system-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-application-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-api-gateway-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-message-broker-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-database-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-legacy-system-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.8181818181818181,
+          "reason": "Omitted compatibility assessment for 'comp-application-03' (expected SUPPORTED)."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "dependency_identification": {
+      "deductions": [
+        {
+          "amount": 5.0,
+          "reason": "Omitted 10 critical dependency edge(s): [('comp-api-gateway-01', 'comp-application-01'), ('comp-api-gateway-02', 'comp-application-02'), ('comp-application-01', 'comp-legacy-system-01')]."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "evidence_and_uncertainty": {
+      "deductions": [
+        {
+          "amount": 3.0,
+          "reason": "Failed to state uncertainties or assumptions despite ambiguous telemetry in the scenario."
+        }
+      ],
+      "max_score": 15.0,
+      "normalized_score": 0.8,
+      "raw_score": 12.0,
+      "weighted_contribution": 12.0
+    },
+    "explanation_and_traceability": {
+      "deductions": [
+        {
+          "amount": 3.0,
+          "reason": "Explanation fails to explain identified blocker(s): ['comp-application-01', 'comp-message-broker-01']."
+        },
+        {
+          "amount": 2.5,
+          "reason": "Explanation does not ground reasoning in discovery evidence or telemetry."
+        },
+        {
+          "amount": 2.5,
+          "reason": "Explanation does not articulate dependency order or wave sequencing rationale."
+        },
+        {
+          "amount": 2.0,
+          "reason": "Failed to address unknown status or conditional risks in narrative."
+        }
+      ],
+      "max_score": 10.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "migration_plan_correctness": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "Scheduled 1 UNKNOWN component(s) for production cutover: ['comp-application-01']."
+        },
+        {
+          "amount": 10.0,
+          "reason": "1 causal wave ordering violations (e.g. ('comp-application-01', 'comp-legacy-system-01', 1, -1))."
+        },
+        {
+          "amount": 6.0,
+          "reason": "Omitted 10 component(s) from migration plan: ['comp-api-gateway-01', 'comp-api-gateway-02', 'comp-application-02']."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "validation_and_safety_gates": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "Declared MIGRATION_READY while omitting 1 mandatory verification test(s): ['test-fallback-recovery-erp-03']."
+        }
+      ],
+      "max_score": 15.0,
+      "normalized_score": 0.3333,
+      "raw_score": 5.0,
+      "weighted_contribution": 5.0
+    }
+  },
+  "effective_score": 0.0,
+  "evaluation_id": "eval-task-gen-t10-erp-03-0d9d4636",
+  "evaluation_trace": [
+    "[WARNING] VIO_KNOWN_DEPENDENCY_OMITTED: Model failed to identify active critical prerequisite dependencies.",
+    "[CRITICAL VETO] VIO_UNKNOWN_ASSUMED_SUPPORTED: Model scheduled UNKNOWN components ['comp-application-01'] for production cutover without verified support.",
+    "[CRITICAL VETO] VIO_DEPENDENCY_ORDER_REVERSED: Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+    "[CRITICAL VETO] VIO_REQUIRED_TEST_MISSING: Model certified migration readiness without mandatory verification test results for: ['test-fallback-recovery-erp-03'].",
+    "System contains compatibility blockers ['comp-application-01', 'comp-message-broker-01']: MIGRATION_BLOCKED required."
+  ],
+  "evaluator_version": "3.0.0",
+  "evidence_findings": {
+    "disproven_citation_count": 0,
+    "invalid_citation_count": 0,
+    "uncertainties_calibrated": false,
+    "valid_citation_count": 1
+  },
+  "is_valid_contract": true,
+  "is_valid_json": true,
+  "migration_order_findings": {
+    "causal_violation_count": 1,
+    "cutover_step_count": 1,
+    "omitted_count": 10,
+    "prep_step_count": 0,
+    "step_count": 1,
+    "unknown_cutover_count": 1,
+    "unsupported_cutover_count": 0
+  },
+  "model_identifier": "mock-unsafe-migration",
+  "model_reported_decision": "MIGRATION_READY",
+  "model_version": "1.0.0",
+  "non_critical_violations": [
+    {
+      "description": "Model failed to identify active critical prerequisite dependencies.",
+      "evidence": "Missing critical edges: [('comp-api-gateway-01', 'comp-application-01'), ('comp-api-gateway-02', 'comp-application-02'), ('comp-application-01', 'comp-legacy-system-01'), ('comp-application-02', 'comp-database-02'), ('comp-application-02', 'comp-legacy-system-01'), ('comp-application-02', 'comp-message-broker-01'), ('comp-application-03', 'comp-legacy-system-02'), ('comp-application-03', 'comp-message-broker-01'), ('comp-message-broker-01', 'comp-legacy-system-01'), ('comp-message-broker-02', 'comp-legacy-system-02')]",
+      "rule_name": "VIO_KNOWN_DEPENDENCY_OMITTED",
+      "severity": "HIGH",
+      "violation_id": "viol-vio_known_dependency_omitted-49c783c0"
+    }
+  ],
+  "overall_status": "BLOCKED_BY_SAFETY_GATE",
+  "parsing_errors": [],
+  "raw_weighted_score": 9.0,
+  "rubric_weights": {
+    "compatibility_reasoning": 20.0,
+    "dependency_identification": 20.0,
+    "evidence_and_uncertainty": 15.0,
+    "explanation_and_traceability": 10.0,
+    "migration_plan_correctness": 20.0,
+    "validation_and_safety_gates": 15.0
+  },
+  "safety_gate_passed": false,
+  "scenario_id": "scen-gen-t10-erp-03",
+  "task_id": "task-gen-t10-erp-03",
+  "timestamp": "2026-11-05T06:15:45.320326Z",
+  "validation_errors": [],
+  "verification_gate_findings": {
+    "failed_test_count": 0,
+    "mandatory_test_count": 2,
+    "missing_test_count": 1,
+    "pending_test_count": 0,
+    "readiness_blocked_by_gates": true,
+    "reported_test_count": 1,
+    "skipped_test_count": 0
+  }
+}

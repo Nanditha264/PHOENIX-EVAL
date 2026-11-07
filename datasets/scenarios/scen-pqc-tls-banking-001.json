@@ -1,0 +1,346 @@
+{
+  "scenario_id": "scen-pqc-tls-banking-001",
+  "scenario_name": "Global Retail Bank Core Cryptographic Migration Architecture",
+  "description": "Enterprise banking architecture transitioning from legacy classical public key algorithms (RSA-2048, ECDSA-P256) to NIST Post-Quantum Cryptography standards (FIPS 203 ML-KEM-768 and FIPS 204 ML-DSA-65). Evaluates AI reasoning across edge proxies, token services, legacy hardware security modules, and mobile fleets.",
+  "system_components": [
+    {
+      "component_id": "comp-edge-gw-01",
+      "component_name": "Edge Banking API Gateway",
+      "component_type": "API_GATEWAY",
+      "cryptographic_role": "TLS_TERMINATION",
+      "description": "Public-facing reverse proxy and ingress gateway handling external consumer and mobile TLS connections.",
+      "technology": "Nginx 1.20 / OpenSSL 1.1.1w",
+      "current_algorithms": [
+        "RSA-2048",
+        "ECDHE-RSA-AES256-GCM-SHA384"
+      ],
+      "evidence_references": [
+        "evid-edge-scan-01"
+      ],
+      "metadata": {
+        "network_zone": "DMZ",
+        "criticality": "TIER_1"
+      }
+    },
+    {
+      "component_id": "comp-auth-svc-02",
+      "component_name": "Authentication and Token Microservice",
+      "component_type": "MICROSERVICE",
+      "cryptographic_role": "AUTHENTICATION_TOKEN",
+      "description": "Authenticates customers, generates and verifies JWT access tokens, and manages cryptographic session state.",
+      "technology": "Java 17 / Spring Boot / BouncyCastle 1.70",
+      "current_algorithms": [
+        "RSA-2048",
+        "SHA-256"
+      ],
+      "evidence_references": [
+        "evid-auth-audit-02"
+      ],
+      "metadata": {
+        "network_zone": "Internal Secure",
+        "criticality": "TIER_1"
+      }
+    },
+    {
+      "component_id": "comp-hsm-legacy-03",
+      "component_name": "Thales Luna HSM Module",
+      "component_type": "HARDWARE_SECURITY_MODULE",
+      "cryptographic_role": "KEY_STORAGE",
+      "description": "FIPS 140-2 Level 3 hardware security module holding the root token signing keys.",
+      "technology": "Firmware 7.4.2 Classical Crypto Only",
+      "current_algorithms": [
+        "RSA-2048",
+        "ECDSA-P256"
+      ],
+      "evidence_references": [
+        "evid-hsm-cert-03"
+      ],
+      "metadata": {
+        "physical_location": "Primary Data Center Vault",
+        "compliance": "PCI-DSS 4.0"
+      }
+    },
+    {
+      "component_id": "comp-core-db-04",
+      "component_name": "Core Banking Ledger Database",
+      "component_type": "DATABASE",
+      "cryptographic_role": "DATA_ENCRYPTION_AT_REST",
+      "description": "High-throughput PostgreSQL transactional ledger database storing accounts, balances, and ledger journals.",
+      "technology": "PostgreSQL 15 / TDE pgcrypto",
+      "current_algorithms": [
+        "AES-256-GCM"
+      ],
+      "evidence_references": [
+        "evid-db-audit-04"
+      ],
+      "metadata": {
+        "network_zone": "Restricted Vault",
+        "criticality": "TIER_0"
+      }
+    },
+    {
+      "component_id": "comp-mobile-sdk-05",
+      "component_name": "Mobile Banking Client Fleet",
+      "component_type": "CLIENT_SDK",
+      "cryptographic_role": "TLS_TERMINATION",
+      "description": "Customer mobile applications installed on iOS and Android consumer devices connecting over public cellular networks.",
+      "technology": "Swift 5.9 (iOS) / Kotlin 1.9 (Android)",
+      "current_algorithms": [
+        "ECDSA-P256",
+        "X25519"
+      ],
+      "evidence_references": [
+        "evid-mobile-telemetry-05"
+      ],
+      "metadata": {
+        "active_installs": 4500000,
+        "fleet_spread": "Heterogeneous Mobile OS"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "edge_id": "edge-mobile-to-gw-01",
+      "source_component_id": "comp-mobile-sdk-05",
+      "target_component_id": "comp-edge-gw-01",
+      "relationship_type": "CALLS",
+      "evidence_references": [
+        "evid-mobile-telemetry-05"
+      ],
+      "confidence": 1.0,
+      "description": "Mobile applications establish external TLS sessions to the edge gateway.",
+      "is_bidirectional": false,
+      "criticality": "CRITICAL"
+    },
+    {
+      "edge_id": "edge-gw-to-auth-02",
+      "source_component_id": "comp-edge-gw-01",
+      "target_component_id": "comp-auth-svc-02",
+      "relationship_type": "CALLS",
+      "evidence_references": [
+        "evid-edge-scan-01"
+      ],
+      "confidence": 1.0,
+      "description": "Gateway routes customer authentication requests to the token microservice.",
+      "is_bidirectional": false,
+      "criticality": "CRITICAL"
+    },
+    {
+      "edge_id": "edge-auth-to-hsm-03",
+      "source_component_id": "comp-auth-svc-02",
+      "target_component_id": "comp-hsm-legacy-03",
+      "relationship_type": "HARDWARE_DEPENDENCY",
+      "evidence_references": [
+        "evid-auth-audit-02",
+        "evid-hsm-cert-03"
+      ],
+      "confidence": 1.0,
+      "description": "Auth service offloads JWT signing operations and master key operations to the hardware security module.",
+      "is_bidirectional": false,
+      "criticality": "CRITICAL"
+    },
+    {
+      "edge_id": "edge-auth-to-db-04",
+      "source_component_id": "comp-auth-svc-02",
+      "target_component_id": "comp-core-db-04",
+      "relationship_type": "STORES_DATA_IN",
+      "evidence_references": [
+        "evid-auth-audit-02"
+      ],
+      "confidence": 0.95,
+      "description": "Auth service persists active customer session credentials in the database.",
+      "is_bidirectional": false,
+      "criticality": "HIGH"
+    },
+    {
+      "edge_id": "edge-gw-to-db-05",
+      "source_component_id": "comp-edge-gw-01",
+      "target_component_id": "comp-core-db-04",
+      "relationship_type": "CALLS",
+      "evidence_references": [
+        "evid-edge-scan-01"
+      ],
+      "confidence": 1.0,
+      "description": "Gateway proxies authorized banking ledger transactions to core database services.",
+      "is_bidirectional": false,
+      "criticality": "CRITICAL"
+    }
+  ],
+  "compatibility_records": [
+    {
+      "component_id": "comp-edge-gw-01",
+      "proposed_target": "ML-KEM-768",
+      "status": "UNSUPPORTED",
+      "evidence_references": [
+        "evid-edge-scan-01"
+      ],
+      "reason": "Nginx runs OpenSSL 1.1.1 which is end-of-life and lacks PQC key encapsulation support. Requires upgrade to OpenSSL 3.2+.",
+      "assessment_source": "Automated SBOM Static Scan"
+    },
+    {
+      "component_id": "comp-auth-svc-02",
+      "proposed_target": "ML-DSA-65",
+      "status": "UNKNOWN",
+      "evidence_references": [
+        "evid-auth-audit-02"
+      ],
+      "reason": "Spring Boot service can be updated to BouncyCastle 1.78, but depends on hardware HSM which does not support ML-DSA.",
+      "assessment_source": "Architecture Review"
+    },
+    {
+      "component_id": "comp-hsm-legacy-03",
+      "proposed_target": "ML-DSA-65",
+      "status": "UNSUPPORTED",
+      "evidence_references": [
+        "evid-hsm-cert-03"
+      ],
+      "reason": "Firmware 7.4.2 only supports RSA and standard elliptic curves. Hardware security module replacement or sidecar proxy required.",
+      "assessment_source": "Vendor Hardware Security Specification"
+    },
+    {
+      "component_id": "comp-core-db-04",
+      "proposed_target": "AES-256-GCM",
+      "status": "SUPPORTED",
+      "evidence_references": [
+        "evid-db-audit-04"
+      ],
+      "reason": "AES-256 provides 128-bit quantum security against Grover's algorithm and meets post-quantum data-at-rest requirements.",
+      "assessment_source": "NIST SP 800-208 / CNSA 2.0"
+    },
+    {
+      "component_id": "comp-mobile-sdk-05",
+      "proposed_target": "X25519+ML-KEM-768",
+      "status": "UNKNOWN",
+      "evidence_references": [
+        "evid-mobile-telemetry-05"
+      ],
+      "reason": "35% of customer devices operate on legacy OS versions; hybrid TLS handshakes with large key sizes trigger MTU packet drops in carrier middleboxes.",
+      "assessment_source": "Network Capture Telemetry"
+    }
+  ],
+  "evidence_records": [
+    {
+      "evidence_id": "evid-edge-scan-01",
+      "evidence_type": "STATIC_CODE_ANALYSIS",
+      "source": "Syft SBOM Scanner v0.84",
+      "description": "Detected libssl.so.1.1 linked by Nginx process binary.",
+      "observed_value": "OpenSSL 1.1.1w (EOL Sept 2023)",
+      "confidence": 1.0,
+      "timestamp": "2026-10-15T08:30:00Z",
+      "provenance": "sha256:d8a23e9f823101b4c79802",
+      "verification_status": "VERIFIED",
+      "evidence_category": "OBSERVED",
+      "metadata": {
+        "scan_tool": "syft"
+      }
+    },
+    {
+      "evidence_id": "evid-auth-audit-02",
+      "evidence_type": "CONFIGURATION_AUDIT",
+      "source": "CIS Benchmark Auditor v2.1",
+      "description": "Auth service configuration inspects JCE security providers.",
+      "observed_value": "BouncyCastle v1.70 configured as Provider #2",
+      "confidence": 0.95,
+      "timestamp": "2026-10-16T11:20:00Z",
+      "provenance": "audit-run-9842",
+      "verification_status": "VERIFIED",
+      "evidence_category": "OBSERVED",
+      "metadata": {
+        "jce_provider": "BC"
+      }
+    },
+    {
+      "evidence_id": "evid-hsm-cert-03",
+      "evidence_type": "HARDWARE_ATTESTATION",
+      "source": "Thales Luna CA Certificate Audit",
+      "description": "Cryptographic hardware attestation statement from primary HSM.",
+      "observed_value": "Model: Luna-7000; Firmware: 7.4.2; FIPS: 140-2 Level 3",
+      "confidence": 1.0,
+      "timestamp": "2026-10-14T14:00:00Z",
+      "provenance": "pki-audit-hsm-03",
+      "verification_status": "VERIFIED",
+      "evidence_category": "OBSERVED",
+      "metadata": {
+        "fips_level": 3
+      }
+    },
+    {
+      "evidence_id": "evid-db-audit-04",
+      "evidence_type": "CONFIGURATION_AUDIT",
+      "source": "PostgreSQL pg_crypto Extension Audit",
+      "description": "Verification of tablespace encryption cipher suite.",
+      "observed_value": "AES-256-GCM via hardware AES-NI instructions",
+      "confidence": 1.0,
+      "timestamp": "2026-10-15T09:10:00Z",
+      "provenance": "sql-query-audit-run",
+      "verification_status": "VERIFIED",
+      "evidence_category": "OBSERVED",
+      "metadata": {}
+    },
+    {
+      "evidence_id": "evid-mobile-telemetry-05",
+      "evidence_type": "RUNTIME_TELEMETRY",
+      "source": "Splunk Mobile Network Gateway APM",
+      "description": "Analysis of customer handshake packet drops across cellular carriers.",
+      "observed_value": "Handshakes exceeding 2048 bytes experienced 14.2% drop rate on 3G/4G cellular networks.",
+      "confidence": 0.9,
+      "timestamp": "2026-10-18T16:45:00Z",
+      "provenance": "apm-session-oct26",
+      "verification_status": "VERIFIED",
+      "evidence_category": "OBSERVED",
+      "metadata": {
+        "sample_size": 250000
+      }
+    }
+  ],
+  "migration_constraints": [
+    {
+      "constraint_id": "cnstr-zero-downtime-01",
+      "constraint_type": "NO_DOWNTIME",
+      "description": "Core transaction database and edge gateway must maintain 99.999% availability during migration waves.",
+      "affected_components": [
+        "comp-edge-gw-01",
+        "comp-core-db-04"
+      ]
+    },
+    {
+      "constraint_id": "cnstr-hsm-compliance-02",
+      "constraint_type": "REGULATORY_COMPLIANCE",
+      "description": "HSM cryptographic key replacements require dual-control master key ceremony under PCI-DSS compliance.",
+      "affected_components": [
+        "comp-hsm-legacy-03"
+      ]
+    }
+  ],
+  "required_tests": [
+    {
+      "test_id": "test-hybrid-handshake-01",
+      "test_type": "INTEROPERABILITY",
+      "description": "Verify dual-stack X25519+ML-KEM-768 TLS handshake between mobile SDK and edge gateway.",
+      "target_components": [
+        "comp-mobile-sdk-05",
+        "comp-edge-gw-01"
+      ]
+    },
+    {
+      "test_id": "test-fallback-verification-02",
+      "test_type": "FALLBACK_VERIFICATION",
+      "description": "Ensure clients that cannot negotiate PQC algorithms seamlessly fall back to classic TLS 1.3 without connection termination.",
+      "target_components": [
+        "comp-edge-gw-01"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "PHOENIX-EVAL Benchmark Engineering Team",
+    "tags": [
+      "pqc",
+      "banking",
+      "tls-migration",
+      "hsm",
+      "fips-203",
+      "fips-204"
+    ]
+  }
+}

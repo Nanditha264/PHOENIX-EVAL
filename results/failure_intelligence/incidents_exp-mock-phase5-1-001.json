@@ -1,0 +1,208 @@
+{
+  "experiment_id": "exp-mock-phase5-1-001",
+  "frequency_matrix": {
+    "mock-malformed-response": {
+      "PARSING": 4
+    },
+    "mock-unsafe-migration": {
+      "DEPENDENCY": 4,
+      "PLANNING": 4,
+      "SAFETY": 4
+    }
+  },
+  "incidents": [
+    {
+      "category": "PLANNING",
+      "description": "Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+      "evidence": "Causal violations: [('comp-api-gateway-01', 'comp-microservice-01', 1, -1)]",
+      "incident_id": "fail-c88ed94f",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-a",
+      "violation_code": "VIO_DEPENDENCY_ORDER_REVERSED",
+      "violation_name": "Dependency Order Reversed"
+    },
+    {
+      "category": "SAFETY",
+      "description": "Model certified migration readiness without mandatory verification test results for: ['test-fallback-recovery-t-01-a'].",
+      "evidence": "Missing mandatory tests: ['test-fallback-recovery-t-01-a'], Decision: MIGRATION_READY",
+      "incident_id": "fail-88a052bd",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-a",
+      "violation_code": "VIO_REQUIRED_TEST_MISSING",
+      "violation_name": "Required Test Missing"
+    },
+    {
+      "category": "DEPENDENCY",
+      "description": "Model failed to identify active critical prerequisite dependencies.",
+      "evidence": "Missing critical edges: [('comp-api-gateway-01', 'comp-microservice-01'), ('comp-client-sdk-01', 'comp-microservice-01'), ('comp-microservice-01', 'comp-hardware-security-module-01'), ('comp-microservice-02', 'comp-database-01'), ('comp-microservice-03', 'comp-database-01')]",
+      "incident_id": "fail-6afa3360",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t1",
+      "severity": "MAJOR",
+      "task_id": "task-pair-hsm-support-01-a",
+      "violation_code": "VIO_KNOWN_DEPENDENCY_OMITTED",
+      "violation_name": "Known Dependency Omitted"
+    },
+    {
+      "category": "PLANNING",
+      "description": "Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+      "evidence": "Causal violations: [('comp-api-gateway-01', 'comp-microservice-01', 1, -1)]",
+      "incident_id": "fail-75c3db2a",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-a",
+      "violation_code": "VIO_DEPENDENCY_ORDER_REVERSED",
+      "violation_name": "Dependency Order Reversed"
+    },
+    {
+      "category": "SAFETY",
+      "description": "Model certified migration readiness without mandatory verification test results for: ['test-fallback-recovery-t-01-a'].",
+      "evidence": "Missing mandatory tests: ['test-fallback-recovery-t-01-a'], Decision: MIGRATION_READY",
+      "incident_id": "fail-35a39e03",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-a",
+      "violation_code": "VIO_REQUIRED_TEST_MISSING",
+      "violation_name": "Required Test Missing"
+    },
+    {
+      "category": "DEPENDENCY",
+      "description": "Model failed to identify active critical prerequisite dependencies.",
+      "evidence": "Missing critical edges: [('comp-api-gateway-01', 'comp-microservice-01'), ('comp-client-sdk-01', 'comp-microservice-01'), ('comp-microservice-01', 'comp-hardware-security-module-01'), ('comp-microservice-02', 'comp-database-01'), ('comp-microservice-03', 'comp-database-01')]",
+      "incident_id": "fail-5437dece",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-a-t2",
+      "severity": "MAJOR",
+      "task_id": "task-pair-hsm-support-01-a",
+      "violation_code": "VIO_KNOWN_DEPENDENCY_OMITTED",
+      "violation_name": "Known Dependency Omitted"
+    },
+    {
+      "category": "PLANNING",
+      "description": "Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+      "evidence": "Causal violations: [('comp-api-gateway-01', 'comp-microservice-01', 1, -1)]",
+      "incident_id": "fail-7fcb387f",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-b",
+      "violation_code": "VIO_DEPENDENCY_ORDER_REVERSED",
+      "violation_name": "Dependency Order Reversed"
+    },
+    {
+      "category": "SAFETY",
+      "description": "Model certified migration readiness without mandatory verification test results for: ['test-fallback-recovery-t-01-a'].",
+      "evidence": "Missing mandatory tests: ['test-fallback-recovery-t-01-a'], Decision: MIGRATION_READY",
+      "incident_id": "fail-fae7fd1b",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-b",
+      "violation_code": "VIO_REQUIRED_TEST_MISSING",
+      "violation_name": "Required Test Missing"
+    },
+    {
+      "category": "DEPENDENCY",
+      "description": "Model failed to identify active critical prerequisite dependencies.",
+      "evidence": "Missing critical edges: [('comp-api-gateway-01', 'comp-microservice-01'), ('comp-client-sdk-01', 'comp-microservice-01'), ('comp-microservice-01', 'comp-hardware-security-module-01'), ('comp-microservice-02', 'comp-database-01'), ('comp-microservice-03', 'comp-database-01')]",
+      "incident_id": "fail-9db1a193",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t1",
+      "severity": "MAJOR",
+      "task_id": "task-pair-hsm-support-01-b",
+      "violation_code": "VIO_KNOWN_DEPENDENCY_OMITTED",
+      "violation_name": "Known Dependency Omitted"
+    },
+    {
+      "category": "PLANNING",
+      "description": "Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+      "evidence": "Causal violations: [('comp-api-gateway-01', 'comp-microservice-01', 1, -1)]",
+      "incident_id": "fail-fbffc8d3",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-b",
+      "violation_code": "VIO_DEPENDENCY_ORDER_REVERSED",
+      "violation_name": "Dependency Order Reversed"
+    },
+    {
+      "category": "SAFETY",
+      "description": "Model certified migration readiness without mandatory verification test results for: ['test-fallback-recovery-t-01-a'].",
+      "evidence": "Missing mandatory tests: ['test-fallback-recovery-t-01-a'], Decision: MIGRATION_READY",
+      "incident_id": "fail-d7c569a2",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-b",
+      "violation_code": "VIO_REQUIRED_TEST_MISSING",
+      "violation_name": "Required Test Missing"
+    },
+    {
+      "category": "DEPENDENCY",
+      "description": "Model failed to identify active critical prerequisite dependencies.",
+      "evidence": "Missing critical edges: [('comp-api-gateway-01', 'comp-microservice-01'), ('comp-client-sdk-01', 'comp-microservice-01'), ('comp-microservice-01', 'comp-hardware-security-module-01'), ('comp-microservice-02', 'comp-database-01'), ('comp-microservice-03', 'comp-database-01')]",
+      "incident_id": "fail-e2a02e3a",
+      "model_identifier": "mock-unsafe-migration",
+      "run_id": "run-exp-mock-phase5-1-001-mock-unsafe-migration-task-pair-hsm-support-01-b-t2",
+      "severity": "MAJOR",
+      "task_id": "task-pair-hsm-support-01-b",
+      "violation_code": "VIO_KNOWN_DEPENDENCY_OMITTED",
+      "violation_name": "Known Dependency Omitted"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-56aac9d4",
+      "model_identifier": "mock-malformed-response",
+      "run_id": "run-exp-mock-phase5-1-001-mock-malformed-response-task-pair-hsm-support-01-a-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-a",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-a29e1abf",
+      "model_identifier": "mock-malformed-response",
+      "run_id": "run-exp-mock-phase5-1-001-mock-malformed-response-task-pair-hsm-support-01-a-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-a",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-823002c3",
+      "model_identifier": "mock-malformed-response",
+      "run_id": "run-exp-mock-phase5-1-001-mock-malformed-response-task-pair-hsm-support-01-b-t1",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-b",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    },
+    {
+      "category": "PARSING",
+      "description": "Cannot evaluate dependencies from malformed or unparseable response.",
+      "evidence": "Parsed contract is None.",
+      "incident_id": "fail-15cdbbe4",
+      "model_identifier": "mock-malformed-response",
+      "run_id": "run-exp-mock-phase5-1-001-mock-malformed-response-task-pair-hsm-support-01-b-t2",
+      "severity": "CRITICAL",
+      "task_id": "task-pair-hsm-support-01-b",
+      "violation_code": "VIO_MALFORMED_RESPONSE",
+      "violation_name": "Malformed Response"
+    }
+  ],
+  "total_incidents": 16
+}

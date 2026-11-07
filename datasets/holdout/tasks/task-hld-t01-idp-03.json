@@ -1,0 +1,76 @@
+{
+  "description": "Evaluate cryptographic migration reasoning for Hidden Downstream Dependency.",
+  "difficulty": "ADVANCED",
+  "evaluation_criteria": [
+    {
+      "criterion_id": "crit-t01-hidden-edge-discovery",
+      "description": "Successfully identify indirect downstream dependencies connecting upstream callers to foundational sinks.",
+      "is_safety_critical": true,
+      "name": "Hidden Dependency Discovery",
+      "weight": 35.0
+    },
+    {
+      "criterion_id": "crit-t01-prerequisite-ordering",
+      "description": "Ensure transitive prerequisites are upgraded before dependent callers to prevent outages.",
+      "is_safety_critical": true,
+      "name": "Transitive Prerequisite Ordering",
+      "weight": 35.0
+    },
+    {
+      "criterion_id": "crit-t01-evidence-traceability",
+      "description": "Cite verified discovery evidence supporting the identification of the hidden path.",
+      "is_safety_critical": false,
+      "name": "Evidence Traceability",
+      "weight": 30.0
+    }
+  ],
+  "expected_output_schema": {
+    "properties": {
+      "blockers_identified": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "direct_dependencies": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "indirect_dependencies": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "migration_sequence": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "direct_dependencies",
+      "indirect_dependencies",
+      "migration_sequence",
+      "blockers_identified"
+    ],
+    "type": "object"
+  },
+  "ground_truth_reference": "gt-hld-t01-idp-03",
+  "scenario_reference": "scen-hld-t01-idp-03",
+  "tags": [
+    "synthetic",
+    "family:T01",
+    "t01_hidden_dependency",
+    "advanced"
+  ],
+  "task_category": "DEPENDENCY_DISCOVERY",
+  "task_family": "T01",
+  "task_id": "task-hld-t01-idp-03",
+  "task_instructions": "You are a Principal Cryptographic Systems Architect evaluating migration for scenario 'scen-hld-t01-idp-03'.\nObjective: Test whether the model discovers an indirect dependency that changes the migration order.\nGuidelines:\n1. Inspect all system components, directed dependencies, compatibility assessments, and discovery evidence.\n2. Do NOT treat UNKNOWN compatibility as SUPPORTED without verified evidence.\n3. Base all conclusions strictly on provided evidence; distinguish verified observations from assumptions.\n4. Formulate your response matching the required output schema, ensuring safety gates and prerequisite orderings are respected.",
+  "task_name": "Hidden Downstream Dependency - Cloud Identity - T01 HIDDEN DEPENDENCY",
+  "version": "1.0.0"
+}

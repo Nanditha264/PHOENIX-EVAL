@@ -1,0 +1,157 @@
+{
+  "acceptable_alternative_orders": [
+    "Any permutation within the same wave is acceptable provided cross-wave prerequisites are met."
+  ],
+  "accepted_outcome_set": [
+    "MIGRATION_READY",
+    "CONDITIONAL"
+  ],
+  "critical_violations": [
+    {
+      "penalty": "SAFETY_GATE_FAILURE",
+      "trigger": "Model treats UNKNOWN compatibility as SUPPORTED without specifying validation gates.",
+      "violation_code": "VIO_UNKNOWN_COMPATIBILITY_UNCHECKED"
+    }
+  ],
+  "cycle_detected": false,
+  "cycles": [],
+  "direct_dependencies": {
+    "comp-api-gateway-01": [
+      "comp-application-02"
+    ],
+    "comp-api-gateway-02": [
+      "comp-application-01"
+    ],
+    "comp-application-01": [
+      "comp-legacy-system-01",
+      "comp-message-broker-02"
+    ],
+    "comp-application-02": [
+      "comp-database-01",
+      "comp-message-broker-01"
+    ],
+    "comp-database-01": [],
+    "comp-database-02": [],
+    "comp-legacy-system-01": [],
+    "comp-legacy-system-02": [],
+    "comp-message-broker-01": [
+      "comp-database-02",
+      "comp-legacy-system-02"
+    ],
+    "comp-message-broker-02": [
+      "comp-legacy-system-02"
+    ]
+  },
+  "expected_blockers": [],
+  "ground_truth_id": "gt-hld-t09-erp-04",
+  "is_migratable": true,
+  "metadata": {
+    "edge_count": 9,
+    "evaluator_note": "Authoritative ground truth. Strictly shielded from model prompting contexts.",
+    "hash_version": "2.0.0",
+    "node_count": 10
+  },
+  "optimal_wave_order": [
+    {
+      "prerequisites": [
+        "Baseline infrastructure audit"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-database-01 (DATA_ENCRYPTION_AT_REST), comp-database-02 (DATA_ENCRYPTION_AT_REST), comp-legacy-system-01 (KEY_STORAGE), comp-legacy-system-02 (KEY_STORAGE).",
+      "upgrades": [
+        "comp-database-01",
+        "comp-database-02",
+        "comp-legacy-system-01",
+        "comp-legacy-system-02"
+      ],
+      "wave": 1
+    },
+    {
+      "prerequisites": [
+        "Wave 1 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-message-broker-01 (DATA_ENCRYPTION_IN_TRANSIT), comp-message-broker-02 (DATA_ENCRYPTION_IN_TRANSIT).",
+      "upgrades": [
+        "comp-message-broker-01",
+        "comp-message-broker-02"
+      ],
+      "wave": 2
+    },
+    {
+      "prerequisites": [
+        "Wave 2 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-application-01 (DATA_ENCRYPTION_IN_TRANSIT), comp-application-02 (DATA_ENCRYPTION_IN_TRANSIT).",
+      "upgrades": [
+        "comp-application-01",
+        "comp-application-02"
+      ],
+      "wave": 3
+    },
+    {
+      "prerequisites": [
+        "Wave 3 completion and verification"
+      ],
+      "rationale": "Upgrade foundational prerequisites before callers: comp-api-gateway-01 (DIGITAL_SIGNATURE), comp-api-gateway-02 (DIGITAL_SIGNATURE).",
+      "upgrades": [
+        "comp-api-gateway-01",
+        "comp-api-gateway-02"
+      ],
+      "wave": 4
+    }
+  ],
+  "oracle_generation_method": "INDEPENDENT_GRAPH_TOPOLOGY_SYNTHESIS",
+  "prohibited_actions": [
+    "Immediate full production cutover without dual-stack fallback",
+    "Removing classical cryptographic algorithms before verifying PQC interoperability"
+  ],
+  "required_verification_gates": [
+    "test-staging-handshake-erp-04",
+    "test-fallback-recovery-erp-04"
+  ],
+  "scenario_reference": "scen-hld-t09-erp-04",
+  "task_family": "T09",
+  "task_reference": "task-hld-t09-erp-04",
+  "transitive_dependencies": {
+    "comp-api-gateway-01": [],
+    "comp-api-gateway-02": [],
+    "comp-application-01": [
+      "comp-api-gateway-02"
+    ],
+    "comp-application-02": [
+      "comp-api-gateway-01"
+    ],
+    "comp-database-01": [
+      "comp-api-gateway-01",
+      "comp-application-02"
+    ],
+    "comp-database-02": [
+      "comp-api-gateway-01",
+      "comp-application-02",
+      "comp-message-broker-01"
+    ],
+    "comp-legacy-system-01": [
+      "comp-api-gateway-02",
+      "comp-application-01"
+    ],
+    "comp-legacy-system-02": [
+      "comp-api-gateway-01",
+      "comp-api-gateway-02",
+      "comp-application-01",
+      "comp-application-02",
+      "comp-message-broker-01",
+      "comp-message-broker-02"
+    ],
+    "comp-message-broker-01": [
+      "comp-api-gateway-01",
+      "comp-application-02"
+    ],
+    "comp-message-broker-02": [
+      "comp-api-gateway-02",
+      "comp-application-01"
+    ]
+  },
+  "unsupported_assumptions": [
+    "Treating UNKNOWN compatibility as SUPPORTED without verification",
+    "Upgrading callers before verifying downstream prerequisites"
+  ]
+}

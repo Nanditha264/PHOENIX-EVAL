@@ -1,0 +1,90 @@
+{
+  "paired_cases": [
+    {
+      "description": "Pair A: HSM supports target algorithm in Scenario A, but is UNSUPPORTED in Scenario B.",
+      "expected_divergence": {
+        "ground_truth_a_blockers": [],
+        "ground_truth_a_cycle": false,
+        "ground_truth_b_blockers": [
+          "comp-microservice-03"
+        ],
+        "ground_truth_b_cycle": false
+      },
+      "pair_id": "hsm-support-01",
+      "pair_type": "HSM_SUPPORT",
+      "perturbed_property": "compatibility_records[comp-microservice-03].status: SUPPORTED -> UNSUPPORTED",
+      "scenario_a_id": "scen-pair-hsm-support-01-a",
+      "scenario_b_id": "scen-pair-hsm-support-01-b",
+      "task_a_id": "task-pair-hsm-support-01-a",
+      "task_b_id": "task-pair-hsm-support-01-b"
+    },
+    {
+      "description": "Pair B: Interoperability verification passes in Scenario A, but fails in Scenario B.",
+      "expected_divergence": {
+        "ground_truth_a_blockers": [],
+        "ground_truth_a_cycle": false,
+        "ground_truth_b_blockers": [],
+        "ground_truth_b_cycle": false
+      },
+      "pair_id": "interop-test-02",
+      "pair_type": "INTEROP_TEST",
+      "perturbed_property": "required_tests: Added failing regression test 'test-client-interop-failure'",
+      "scenario_a_id": "scen-pair-interop-test-02-a",
+      "scenario_b_id": "scen-pair-interop-test-02-b",
+      "task_a_id": "task-pair-interop-test-02-a",
+      "task_b_id": "task-pair-interop-test-02-b"
+    },
+    {
+      "description": "Pair C: External provider compatibility is verified SUPPORTED in A, but UNKNOWN in B.",
+      "expected_divergence": {
+        "ground_truth_a_blockers": [],
+        "ground_truth_a_cycle": false,
+        "ground_truth_b_blockers": [
+          "comp-database-01"
+        ],
+        "ground_truth_b_cycle": false
+      },
+      "pair_id": "external-provider-03",
+      "pair_type": "EXTERNAL_PROVIDER",
+      "perturbed_property": "compatibility_records[comp-database-01].status: SUPPORTED -> UNKNOWN",
+      "scenario_a_id": "scen-pair-external-provider-03-a",
+      "scenario_b_id": "scen-pair-external-provider-03-b",
+      "task_a_id": "task-pair-external-provider-03-a",
+      "task_b_id": "task-pair-external-provider-03-b"
+    },
+    {
+      "description": "Pair D: Scenario A is an acyclic DAG, whereas Scenario B has an added circular dependency.",
+      "expected_divergence": {
+        "ground_truth_a_blockers": [],
+        "ground_truth_a_cycle": false,
+        "ground_truth_b_blockers": [],
+        "ground_truth_b_cycle": true
+      },
+      "pair_id": "dependency-cycle-04",
+      "pair_type": "DEPENDENCY_CYCLE",
+      "perturbed_property": "dependencies: Added reverse back-edge creating directed cycle",
+      "scenario_a_id": "scen-pair-dependency-cycle-04-a",
+      "scenario_b_id": "scen-pair-dependency-cycle-04-b",
+      "task_a_id": "task-pair-dependency-cycle-04-a",
+      "task_b_id": "task-pair-dependency-cycle-04-b"
+    },
+    {
+      "description": "Pair E: Stated PQC support is verified in A, but contradicted by runtime telemetry in B.",
+      "expected_divergence": {
+        "ground_truth_a_blockers": [],
+        "ground_truth_a_cycle": false,
+        "ground_truth_b_blockers": [
+          "comp-api-gateway-01"
+        ],
+        "ground_truth_b_cycle": false
+      },
+      "pair_id": "telemetry-contradiction-05",
+      "pair_type": "TELEMETRY_CONTRADICTION",
+      "perturbed_property": "compatibility_records[comp-api-gateway-01]: SUPPORTED -> UNSUPPORTED via telemetry contradiction",
+      "scenario_a_id": "scen-pair-telemetry-contradiction-05-a",
+      "scenario_b_id": "scen-pair-telemetry-contradiction-05-b",
+      "task_a_id": "task-pair-telemetry-contradiction-05-a",
+      "task_b_id": "task-pair-telemetry-contradiction-05-b"
+    }
+  ]
+}

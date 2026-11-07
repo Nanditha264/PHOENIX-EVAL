@@ -1,0 +1,765 @@
+{
+  "experiment_id": "exp-phase6-balanced-001",
+  "experiment_name": "PHOENIX-EVAL Phase 6 Balanced Evaluation Campaign",
+  "total_runs": 84,
+  "completed_runs": 84,
+  "failed_runs": 0,
+  "models_evaluated_count": 3,
+  "real_models_count": 0,
+  "mock_models_count": 3,
+  "models": {
+    "mock-valid-migration": {
+      "model_identifier": "mock-valid-migration",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 28,
+      "completed_runs": 28,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 90.5,
+      "median_raw_score": 92.0,
+      "mean_effective_score": 84.61,
+      "median_effective_score": 92.0,
+      "trial_score_std": 23.97,
+      "safety_gate_passed_count": 26,
+      "safety_gate_failed_count": 2,
+      "safety_gate_failure_rate": 0.0714,
+      "critical_violations_count": 2,
+      "mean_latency_seconds": 0.001,
+      "total_prompt_tokens": 47290,
+      "total_completion_tokens": 11800,
+      "total_tokens": 59090,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "T01": {
+          "count": 2,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T02": {
+          "count": 2,
+          "mean_raw_score": 89.0,
+          "mean_effective_score": 89.0,
+          "safety_pass_rate": 1.0
+        },
+        "T03": {
+          "count": 4,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T04": {
+          "count": 2,
+          "mean_raw_score": 87.0,
+          "mean_effective_score": 87.0,
+          "safety_pass_rate": 1.0
+        },
+        "T05": {
+          "count": 2,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T06": {
+          "count": 4,
+          "mean_raw_score": 87.25,
+          "mean_effective_score": 46.0,
+          "safety_pass_rate": 0.5
+        },
+        "T07": {
+          "count": 2,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T08": {
+          "count": 2,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T09": {
+          "count": 6,
+          "mean_raw_score": 92.5,
+          "mean_effective_score": 92.5,
+          "safety_pass_rate": 1.0
+        },
+        "T10": {
+          "count": 2,
+          "mean_raw_score": 87.0,
+          "mean_effective_score": 87.0,
+          "safety_pass_rate": 1.0
+        }
+      },
+      "per_domain": {
+        "BANKING_PAYMENTS": {
+          "count": 12,
+          "mean_raw_score": 90.67,
+          "mean_effective_score": 76.92,
+          "safety_pass_rate": 0.8333
+        },
+        "CLOUD_IDENTITY": {
+          "count": 4,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "ENTERPRISE_SERVICES": {
+          "count": 4,
+          "mean_raw_score": 88.0,
+          "mean_effective_score": 88.0,
+          "safety_pass_rate": 1.0
+        },
+        "GOVERNMENT_CRITICAL": {
+          "count": 4,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "TELECOM_NETWORK": {
+          "count": 4,
+          "mean_raw_score": 89.5,
+          "mean_effective_score": 89.5,
+          "safety_pass_rate": 1.0
+        }
+      },
+      "per_difficulty": {
+        "Unknown": {
+          "count": 28,
+          "mean_raw_score": 90.5,
+          "mean_effective_score": 84.61,
+          "safety_pass_rate": 0.9286
+        }
+      }
+    },
+    "mock-unsafe-migration": {
+      "model_identifier": "mock-unsafe-migration",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 28,
+      "completed_runs": 28,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 19.42,
+      "median_raw_score": 20.0,
+      "mean_effective_score": 0.0,
+      "median_effective_score": 0.0,
+      "trial_score_std": 0.0,
+      "safety_gate_passed_count": 0,
+      "safety_gate_failed_count": 28,
+      "safety_gate_failure_rate": 1.0,
+      "critical_violations_count": 66,
+      "mean_latency_seconds": 0.0,
+      "total_prompt_tokens": 47290,
+      "total_completion_tokens": 2548,
+      "total_tokens": 49838,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "T01": {
+          "count": 2,
+          "mean_raw_score": 16.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T02": {
+          "count": 2,
+          "mean_raw_score": 17.82,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T03": {
+          "count": 4,
+          "mean_raw_score": 19.5,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T04": {
+          "count": 2,
+          "mean_raw_score": 21.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T05": {
+          "count": 2,
+          "mean_raw_score": 28.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T06": {
+          "count": 4,
+          "mean_raw_score": 16.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T07": {
+          "count": 2,
+          "mean_raw_score": 24.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T08": {
+          "count": 2,
+          "mean_raw_score": 13.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T09": {
+          "count": 6,
+          "mean_raw_score": 24.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T10": {
+          "count": 2,
+          "mean_raw_score": 9.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_domain": {
+        "BANKING_PAYMENTS": {
+          "count": 12,
+          "mean_raw_score": 21.33,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "CLOUD_IDENTITY": {
+          "count": 4,
+          "mean_raw_score": 13.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "ENTERPRISE_SERVICES": {
+          "count": 4,
+          "mean_raw_score": 13.41,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "GOVERNMENT_CRITICAL": {
+          "count": 4,
+          "mean_raw_score": 26.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "TELECOM_NETWORK": {
+          "count": 4,
+          "mean_raw_score": 19.5,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_difficulty": {
+        "Unknown": {
+          "count": 28,
+          "mean_raw_score": 19.42,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      }
+    },
+    "mock-malformed-response": {
+      "model_identifier": "mock-malformed-response",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 28,
+      "completed_runs": 28,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 0.0,
+      "median_raw_score": 0.0,
+      "mean_effective_score": 0.0,
+      "median_effective_score": 0.0,
+      "trial_score_std": 0.0,
+      "safety_gate_passed_count": 0,
+      "safety_gate_failed_count": 28,
+      "safety_gate_failure_rate": 1.0,
+      "critical_violations_count": 168,
+      "mean_latency_seconds": 0.0,
+      "total_prompt_tokens": 47290,
+      "total_completion_tokens": 252,
+      "total_tokens": 47542,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "T01": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T02": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T03": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T04": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T05": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T06": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T07": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T08": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T09": {
+          "count": 6,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T10": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_domain": {
+        "BANKING_PAYMENTS": {
+          "count": 12,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "CLOUD_IDENTITY": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "ENTERPRISE_SERVICES": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "GOVERNMENT_CRITICAL": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "TELECOM_NETWORK": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_difficulty": {
+        "Unknown": {
+          "count": 28,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      }
+    }
+  },
+  "real_models": {},
+  "mock_models": {
+    "mock-valid-migration": {
+      "model_identifier": "mock-valid-migration",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 28,
+      "completed_runs": 28,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 90.5,
+      "median_raw_score": 92.0,
+      "mean_effective_score": 84.61,
+      "median_effective_score": 92.0,
+      "trial_score_std": 23.97,
+      "safety_gate_passed_count": 26,
+      "safety_gate_failed_count": 2,
+      "safety_gate_failure_rate": 0.0714,
+      "critical_violations_count": 2,
+      "mean_latency_seconds": 0.001,
+      "total_prompt_tokens": 47290,
+      "total_completion_tokens": 11800,
+      "total_tokens": 59090,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "T01": {
+          "count": 2,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T02": {
+          "count": 2,
+          "mean_raw_score": 89.0,
+          "mean_effective_score": 89.0,
+          "safety_pass_rate": 1.0
+        },
+        "T03": {
+          "count": 4,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T04": {
+          "count": 2,
+          "mean_raw_score": 87.0,
+          "mean_effective_score": 87.0,
+          "safety_pass_rate": 1.0
+        },
+        "T05": {
+          "count": 2,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T06": {
+          "count": 4,
+          "mean_raw_score": 87.25,
+          "mean_effective_score": 46.0,
+          "safety_pass_rate": 0.5
+        },
+        "T07": {
+          "count": 2,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T08": {
+          "count": 2,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "T09": {
+          "count": 6,
+          "mean_raw_score": 92.5,
+          "mean_effective_score": 92.5,
+          "safety_pass_rate": 1.0
+        },
+        "T10": {
+          "count": 2,
+          "mean_raw_score": 87.0,
+          "mean_effective_score": 87.0,
+          "safety_pass_rate": 1.0
+        }
+      },
+      "per_domain": {
+        "BANKING_PAYMENTS": {
+          "count": 12,
+          "mean_raw_score": 90.67,
+          "mean_effective_score": 76.92,
+          "safety_pass_rate": 0.8333
+        },
+        "CLOUD_IDENTITY": {
+          "count": 4,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "ENTERPRISE_SERVICES": {
+          "count": 4,
+          "mean_raw_score": 88.0,
+          "mean_effective_score": 88.0,
+          "safety_pass_rate": 1.0
+        },
+        "GOVERNMENT_CRITICAL": {
+          "count": 4,
+          "mean_raw_score": 92.0,
+          "mean_effective_score": 92.0,
+          "safety_pass_rate": 1.0
+        },
+        "TELECOM_NETWORK": {
+          "count": 4,
+          "mean_raw_score": 89.5,
+          "mean_effective_score": 89.5,
+          "safety_pass_rate": 1.0
+        }
+      },
+      "per_difficulty": {
+        "Unknown": {
+          "count": 28,
+          "mean_raw_score": 90.5,
+          "mean_effective_score": 84.61,
+          "safety_pass_rate": 0.9286
+        }
+      }
+    },
+    "mock-unsafe-migration": {
+      "model_identifier": "mock-unsafe-migration",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 28,
+      "completed_runs": 28,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 19.42,
+      "median_raw_score": 20.0,
+      "mean_effective_score": 0.0,
+      "median_effective_score": 0.0,
+      "trial_score_std": 0.0,
+      "safety_gate_passed_count": 0,
+      "safety_gate_failed_count": 28,
+      "safety_gate_failure_rate": 1.0,
+      "critical_violations_count": 66,
+      "mean_latency_seconds": 0.0,
+      "total_prompt_tokens": 47290,
+      "total_completion_tokens": 2548,
+      "total_tokens": 49838,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "T01": {
+          "count": 2,
+          "mean_raw_score": 16.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T02": {
+          "count": 2,
+          "mean_raw_score": 17.82,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T03": {
+          "count": 4,
+          "mean_raw_score": 19.5,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T04": {
+          "count": 2,
+          "mean_raw_score": 21.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T05": {
+          "count": 2,
+          "mean_raw_score": 28.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T06": {
+          "count": 4,
+          "mean_raw_score": 16.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T07": {
+          "count": 2,
+          "mean_raw_score": 24.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T08": {
+          "count": 2,
+          "mean_raw_score": 13.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T09": {
+          "count": 6,
+          "mean_raw_score": 24.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T10": {
+          "count": 2,
+          "mean_raw_score": 9.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_domain": {
+        "BANKING_PAYMENTS": {
+          "count": 12,
+          "mean_raw_score": 21.33,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "CLOUD_IDENTITY": {
+          "count": 4,
+          "mean_raw_score": 13.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "ENTERPRISE_SERVICES": {
+          "count": 4,
+          "mean_raw_score": 13.41,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "GOVERNMENT_CRITICAL": {
+          "count": 4,
+          "mean_raw_score": 26.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "TELECOM_NETWORK": {
+          "count": 4,
+          "mean_raw_score": 19.5,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_difficulty": {
+        "Unknown": {
+          "count": 28,
+          "mean_raw_score": 19.42,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      }
+    },
+    "mock-malformed-response": {
+      "model_identifier": "mock-malformed-response",
+      "provider_name": "mock",
+      "is_mock": true,
+      "attempted_runs": 28,
+      "completed_runs": 28,
+      "failed_runs": 0,
+      "completion_rate": 1.0,
+      "mean_raw_score": 0.0,
+      "median_raw_score": 0.0,
+      "mean_effective_score": 0.0,
+      "median_effective_score": 0.0,
+      "trial_score_std": 0.0,
+      "safety_gate_passed_count": 0,
+      "safety_gate_failed_count": 28,
+      "safety_gate_failure_rate": 1.0,
+      "critical_violations_count": 168,
+      "mean_latency_seconds": 0.0,
+      "total_prompt_tokens": 47290,
+      "total_completion_tokens": 252,
+      "total_tokens": 47542,
+      "total_estimated_cost_usd": 0.0,
+      "per_task_family": {
+        "T01": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T02": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T03": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T04": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T05": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T06": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T07": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T08": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T09": {
+          "count": 6,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "T10": {
+          "count": 2,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_domain": {
+        "BANKING_PAYMENTS": {
+          "count": 12,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "CLOUD_IDENTITY": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "ENTERPRISE_SERVICES": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "GOVERNMENT_CRITICAL": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        },
+        "TELECOM_NETWORK": {
+          "count": 4,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      },
+      "per_difficulty": {
+        "Unknown": {
+          "count": 28,
+          "mean_raw_score": 0.0,
+          "mean_effective_score": 0.0,
+          "safety_pass_rate": 0.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+model_identifier,model_version,is_mock,completion_rate,mean_raw_score,std_raw_score,mean_effective_score,std_effective_score,safety_gate_passed,safety_gate_failed,safety_failure_rate,safety_failure_rate_ci_lower,safety_failure_rate_ci_upper,critical_violations,mean_latency_s,total_tokens,cost_usd
+mock-malformed-response,1.0.0,True,1.0,0.0,0.0,0.0,0.0,0,4,1.0,0.5101,1.0,24,0.0,5562,0.0
+mock-unsafe-migration,1.0.0,True,1.0,22.5,1.7321,0.0,0.0,0,4,1.0,0.5101,1.0,8,0.0001,5890,0.0
+mock-valid-migration,1.0.0,True,1.0,92.25,0.2887,92.25,0.2887,4,0,0.0,0.0,0.4899,0,0.0012,7062,0.0

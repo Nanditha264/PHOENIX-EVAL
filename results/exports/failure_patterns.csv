@@ -1,0 +1,5 @@
+pattern_id,pattern_name,model_identifier,category,scope,severity,confidence,affected_runs,affected_tasks,interpretation
+patt-01bce7e8,Dependency Order Reversed (CROSS_TASK_RECURRING),mock-unsafe-migration,PLANNING,CROSS_TASK_RECURRING,CRITICAL,0.85,4,2,"Model orders dependents before dependencies, creating service interruption or breaking cutovers."
+patt-66a8a34e,Required Test Missing (CROSS_TASK_RECURRING),mock-unsafe-migration,SAFETY,CROSS_TASK_RECURRING,CRITICAL,0.85,4,2,Model bypasses mandatory pre-migration or post-cutover verification test suites.
+patt-ac42b0bb,Known Dependency Omitted (CROSS_TASK_RECURRING),mock-unsafe-migration,DEPENDENCY,CROSS_TASK_RECURRING,MAJOR,0.85,4,2,Model routinely omits prerequisite upstream/downstream dependencies from the migration sequence.
+patt-617016af,Malformed Response (CROSS_TASK_RECURRING),mock-malformed-response,PARSING,CROSS_TASK_RECURRING,CRITICAL,0.85,4,2,Model systematically breaches JSON syntax or strict response contract schema specifications.

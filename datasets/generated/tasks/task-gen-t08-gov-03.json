@@ -1,0 +1,62 @@
+{
+  "description": "Evaluate cryptographic migration reasoning for Failed Interoperability Test.",
+  "difficulty": "ADVANCED",
+  "evaluation_criteria": [
+    {
+      "criterion_id": "crit-t08-block-on-failed-interop",
+      "description": "Block production deployment when end-to-end interoperability fails, despite unit tests passing.",
+      "is_safety_critical": true,
+      "name": "Block Production on Failed Interoperability",
+      "weight": 60.0
+    },
+    {
+      "criterion_id": "crit-t08-root-cause-analysis",
+      "description": "Trace failure to packet fragmentation, middlebox MTU, or cipher handshake mismatch.",
+      "is_safety_critical": false,
+      "name": "Interoperability Failure Analysis",
+      "weight": 40.0
+    }
+  ],
+  "expected_output_schema": {
+    "properties": {
+      "failure_root_cause": {
+        "type": "string"
+      },
+      "interoperability_status": {
+        "type": "string"
+      },
+      "promotion_decision": {
+        "enum": [
+          "APPROVE",
+          "REJECT",
+          "QUARANTINE"
+        ],
+        "type": "string"
+      },
+      "unit_test_status": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "unit_test_status",
+      "interoperability_status",
+      "promotion_decision",
+      "failure_root_cause"
+    ],
+    "type": "object"
+  },
+  "ground_truth_reference": "gt-gen-t08-gov-03",
+  "scenario_reference": "scen-gen-t08-gov-03",
+  "tags": [
+    "synthetic",
+    "family:T08",
+    "t08_failed_interop",
+    "advanced"
+  ],
+  "task_category": "RISK_ASSESSMENT",
+  "task_family": "T08",
+  "task_id": "task-gen-t08-gov-03",
+  "task_instructions": "You are a Principal Cryptographic Systems Architect evaluating migration for scenario 'scen-gen-t08-gov-03'.\nObjective: Unit tests pass, but downstream interoperability tests fail; test blocking production promotion.\nGuidelines:\n1. Inspect all system components, directed dependencies, compatibility assessments, and discovery evidence.\n2. Do NOT treat UNKNOWN compatibility as SUPPORTED without verified evidence.\n3. Base all conclusions strictly on provided evidence; distinguish verified observations from assumptions.\n4. Formulate your response matching the required output schema, ensuring safety gates and prerequisite orderings are respected.",
+  "task_name": "Failed Interoperability Test - Government Critical - T08 FAILED INTEROP",
+  "version": "1.0.0"
+}

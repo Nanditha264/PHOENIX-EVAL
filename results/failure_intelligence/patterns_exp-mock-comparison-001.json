@@ -1,0 +1,60 @@
+{
+  "experiment_id": "exp-mock-comparison-001",
+  "patterns": [
+    {
+      "category": "PARSING",
+      "confidence": 0.91,
+      "description": "Model 'mock-model-v1' demonstrated VIO_MALFORMED_RESPONSE across 4 run(s) spanning 2 task(s) and 2 domain(s).",
+      "model_identifier": "mock-model-v1",
+      "number_of_affected_runs": 4,
+      "number_of_affected_trials": 4,
+      "pattern_id": "patt-7db2191f",
+      "pattern_name": "Malformed Response (CROSS_DOMAIN_RECURRING)",
+      "relevant_dimension": "parsing",
+      "scope": "CROSS_DOMAIN_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model systematically breaches JSON syntax or strict response contract schema specifications.",
+      "supporting_run_ids": [
+        "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t1",
+        "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-bank-01-t2",
+        "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t1",
+        "run-exp-mock-comparison-001-mock-model-v1-task-gen-t01-telco-02-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t01-bank-01",
+        "task-gen-t01-telco-02"
+      ],
+      "supporting_violation_codes": [
+        "VIO_MALFORMED_RESPONSE"
+      ]
+    },
+    {
+      "category": "PARSING",
+      "confidence": 0.91,
+      "description": "Model 'mock-refusal-v1' demonstrated VIO_MALFORMED_RESPONSE across 4 run(s) spanning 2 task(s) and 2 domain(s).",
+      "model_identifier": "mock-refusal-v1",
+      "number_of_affected_runs": 4,
+      "number_of_affected_trials": 4,
+      "pattern_id": "patt-285c5c15",
+      "pattern_name": "Malformed Response (CROSS_DOMAIN_RECURRING)",
+      "relevant_dimension": "parsing",
+      "scope": "CROSS_DOMAIN_RECURRING",
+      "severity": "CRITICAL",
+      "suggested_interpretation": "Model systematically breaches JSON syntax or strict response contract schema specifications.",
+      "supporting_run_ids": [
+        "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t1",
+        "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-bank-01-t2",
+        "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t1",
+        "run-exp-mock-comparison-001-mock-refusal-v1-task-gen-t01-telco-02-t2"
+      ],
+      "supporting_task_ids": [
+        "task-gen-t01-bank-01",
+        "task-gen-t01-telco-02"
+      ],
+      "supporting_violation_codes": [
+        "VIO_MALFORMED_RESPONSE"
+      ]
+    }
+  ],
+  "total_patterns": 2
+}

@@ -1,0 +1,315 @@
+{
+  "authoritative_readiness_decision": "CONDITIONAL",
+  "compatibility_findings": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "incorrect_count": 9,
+    "total_expected": 9
+  },
+  "constraint_findings": {
+    "checks": [
+      {
+        "constraint_id": "cnstr-order-ank-02",
+        "constraint_type": "ORDERING",
+        "missing_information": null,
+        "model_response_evidence": {
+          "cutover_waves": {
+            "comp-api-gateway-01": 1
+          }
+        },
+        "reason": "All affected components preserve topological prerequisite wave ordering.",
+        "relevant_scenario_facts": {
+          "affected_components": [
+            "comp-api-gateway-01",
+            "comp-microservice-01",
+            "comp-microservice-02",
+            "comp-hardware-security-module-01"
+          ],
+          "direct_dependencies": {
+            "comp-api-gateway-01": [
+              "comp-microservice-03"
+            ],
+            "comp-hardware-security-module-01": [],
+            "comp-microservice-01": [
+              "comp-database-01"
+            ],
+            "comp-microservice-02": [
+              "comp-database-01",
+              "comp-message-broker-01"
+            ]
+          }
+        },
+        "safety_impact": "NONE",
+        "score_impact": 0.0,
+        "status": "SATISFIED"
+      },
+      {
+        "constraint_id": "cnstr-backward-compat-ank-02",
+        "constraint_type": "BACKWARD_COMPATIBILITY",
+        "missing_information": null,
+        "model_response_evidence": {
+          "plan_action_types": [
+            "PRODUCTION_CUTOVER"
+          ],
+          "plan_coexisting_algorithms": [
+            []
+          ],
+          "plan_preserved_relationships": [
+            []
+          ]
+        },
+        "reason": "Backward-compatibility constraint 'cnstr-backward-compat-ank-02' breached: Model failed to provide structured migration-plan steps for backward compatibility (free-text mention alone is insufficient).; Model plan omits required preserved compatibility relationship(s): ['CONSUMER_CALLS_PRODUCER']..",
+        "relevant_scenario_facts": {
+          "affected_components": [
+            "comp-api-gateway-01"
+          ],
+          "coexisting_algorithms": [
+            "RSA-4096",
+            "ML-KEM-768"
+          ],
+          "preserved_relationships": [
+            "CONSUMER_CALLS_PRODUCER"
+          ],
+          "required_compatibility_gate": "test-staging-handshake-ank-02"
+        },
+        "safety_impact": "NONE",
+        "score_impact": 5.0,
+        "status": "VIOLATED"
+      },
+      {
+        "constraint_id": "cnstr-hw-limit-ank-02",
+        "constraint_type": "HARDWARE_LIMIT",
+        "missing_information": null,
+        "model_response_evidence": {
+          "cutover_counts_by_wave": {
+            "1": 1
+          },
+          "scheduled_hardware": [
+            "comp-api-gateway-01"
+          ]
+        },
+        "reason": "Hardware capacity and capability limits verified.",
+        "relevant_scenario_facts": {
+          "affected_components": [
+            "comp-api-gateway-01",
+            "comp-microservice-01",
+            "comp-microservice-02"
+          ],
+          "firmware_prerequisites": {},
+          "max_concurrent_migrations": 3,
+          "required_accelerator": "QAT-Gen4",
+          "required_hardware_capabilities": []
+        },
+        "safety_impact": "NONE",
+        "score_impact": 0.0,
+        "status": "SATISFIED"
+      }
+    ],
+    "deductions_applied": 5.0,
+    "not_applicable": 0,
+    "not_evaluable": 0,
+    "precondition_findings": [],
+    "precondition_findings_count": 0,
+    "safety_gate_impact": "NONE",
+    "satisfied": 2,
+    "total_constraints": 3,
+    "violated": 1
+  },
+  "contract_version": "1.0.0",
+  "critical_violations": [
+    {
+      "description": "Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+      "evidence": "Causal violations: [('comp-api-gateway-01', 'comp-microservice-03', 1, -1)]",
+      "rule_name": "VIO_DEPENDENCY_ORDER_REVERSED",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_dependency_order_reversed-053dc42d"
+    },
+    {
+      "description": "Model certified migration readiness without mandatory verification test results for: ['test-fallback-recovery-ank-02'].",
+      "evidence": "Missing mandatory tests: ['test-fallback-recovery-ank-02'], Decision: MIGRATION_READY",
+      "rule_name": "VIO_REQUIRED_TEST_MISSING",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_required_test_missing-579d8a75"
+    }
+  ],
+  "cross_cutting_deductions": 5.0,
+  "dependency_findings": {
+    "expected_count": 9,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "reported_count": 0
+  },
+  "dimension_scores": {
+    "compatibility_reasoning": {
+      "deductions": [
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Mismatched compatibility for 'comp-api-gateway-01': expected SUPPORTED, got UNSUPPORTED."
+        },
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Omitted compatibility assessment for 'comp-microservice-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Omitted compatibility assessment for 'comp-microservice-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Omitted compatibility assessment for 'comp-hardware-security-module-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Omitted compatibility assessment for 'comp-database-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Omitted compatibility assessment for 'comp-client-sdk-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Omitted compatibility assessment for 'comp-microservice-03' (expected SUPPORTED)."
+        },
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Omitted compatibility assessment for 'comp-message-broker-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 2.2222222222222223,
+          "reason": "Omitted compatibility assessment for 'comp-api-gateway-02' (expected SUPPORTED)."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "dependency_identification": {
+      "deductions": [
+        {
+          "amount": 5.0,
+          "reason": "Omitted 9 critical dependency edge(s): [('comp-api-gateway-01', 'comp-microservice-03'), ('comp-api-gateway-02', 'comp-message-broker-01'), ('comp-api-gateway-02', 'comp-microservice-03')]."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "evidence_and_uncertainty": {
+      "deductions": [],
+      "max_score": 15.0,
+      "normalized_score": 1.0,
+      "raw_score": 15.0,
+      "weighted_contribution": 15.0
+    },
+    "explanation_and_traceability": {
+      "deductions": [
+        {
+          "amount": 2.5,
+          "reason": "Explanation does not ground reasoning in discovery evidence or telemetry."
+        },
+        {
+          "amount": 2.5,
+          "reason": "Explanation does not articulate dependency order or wave sequencing rationale."
+        }
+      ],
+      "max_score": 10.0,
+      "normalized_score": 0.5,
+      "raw_score": 5.0,
+      "weighted_contribution": 5.0
+    },
+    "migration_plan_correctness": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "1 causal wave ordering violations (e.g. ('comp-api-gateway-01', 'comp-microservice-03', 1, -1))."
+        },
+        {
+          "amount": 6.0,
+          "reason": "Omitted 8 component(s) from migration plan: ['comp-api-gateway-02', 'comp-client-sdk-01', 'comp-database-01']."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.2,
+      "raw_score": 4.0,
+      "weighted_contribution": 4.0
+    },
+    "validation_and_safety_gates": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "Declared MIGRATION_READY while omitting 1 mandatory verification test(s): ['test-fallback-recovery-ank-02']."
+        }
+      ],
+      "max_score": 15.0,
+      "normalized_score": 0.3333,
+      "raw_score": 5.0,
+      "weighted_contribution": 5.0
+    }
+  },
+  "effective_score": 0.0,
+  "evaluation_id": "eval-task-gen-t09-bank-02-3379d4b6",
+  "evaluation_trace": [
+    "[WARNING] VIO_KNOWN_DEPENDENCY_OMITTED: Model failed to identify active critical prerequisite dependencies.",
+    "[CRITICAL VETO] VIO_DEPENDENCY_ORDER_REVERSED: Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+    "[CRITICAL VETO] VIO_REQUIRED_TEST_MISSING: Model certified migration readiness without mandatory verification test results for: ['test-fallback-recovery-ank-02'].",
+    "System verification gates pending or failed: unconditional cutover forbidden."
+  ],
+  "evaluator_version": "3.0.0",
+  "evidence_findings": {
+    "disproven_citation_count": 0,
+    "invalid_citation_count": 0,
+    "uncertainties_calibrated": true,
+    "valid_citation_count": 1
+  },
+  "is_valid_contract": true,
+  "is_valid_json": true,
+  "migration_order_findings": {
+    "causal_violation_count": 1,
+    "cutover_step_count": 1,
+    "omitted_count": 8,
+    "prep_step_count": 0,
+    "step_count": 1,
+    "unknown_cutover_count": 0,
+    "unsupported_cutover_count": 0
+  },
+  "model_identifier": "mock-unsafe-migration",
+  "model_reported_decision": "MIGRATION_READY",
+  "model_version": "1.0.0",
+  "non_critical_violations": [
+    {
+      "description": "Model failed to identify active critical prerequisite dependencies.",
+      "evidence": "Missing critical edges: [('comp-api-gateway-01', 'comp-microservice-03'), ('comp-api-gateway-02', 'comp-message-broker-01'), ('comp-api-gateway-02', 'comp-microservice-03'), ('comp-client-sdk-01', 'comp-microservice-02'), ('comp-message-broker-01', 'comp-database-01'), ('comp-microservice-01', 'comp-database-01'), ('comp-microservice-02', 'comp-database-01'), ('comp-microservice-02', 'comp-message-broker-01'), ('comp-microservice-03', 'comp-database-01')]",
+      "rule_name": "VIO_KNOWN_DEPENDENCY_OMITTED",
+      "severity": "HIGH",
+      "violation_id": "viol-vio_known_dependency_omitted-e41e9d70"
+    }
+  ],
+  "overall_status": "BLOCKED_BY_SAFETY_GATE",
+  "parsing_errors": [],
+  "raw_weighted_score": 24.0,
+  "rubric_weights": {
+    "compatibility_reasoning": 20.0,
+    "dependency_identification": 20.0,
+    "evidence_and_uncertainty": 15.0,
+    "explanation_and_traceability": 10.0,
+    "migration_plan_correctness": 20.0,
+    "validation_and_safety_gates": 15.0
+  },
+  "safety_gate_passed": false,
+  "scenario_id": "scen-gen-t09-bank-02",
+  "task_id": "task-gen-t09-bank-02",
+  "timestamp": "2026-11-05T06:15:45.314227Z",
+  "validation_errors": [],
+  "verification_gate_findings": {
+    "failed_test_count": 0,
+    "mandatory_test_count": 2,
+    "missing_test_count": 1,
+    "pending_test_count": 0,
+    "readiness_blocked_by_gates": true,
+    "reported_test_count": 1,
+    "skipped_test_count": 0
+  }
+}

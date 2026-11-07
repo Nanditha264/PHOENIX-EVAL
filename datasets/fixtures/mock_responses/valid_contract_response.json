@@ -1,0 +1,136 @@
+{
+  "task_id": "task-seq-pqc-001",
+  "decision": "MIGRATION_BLOCKED",
+  "identified_dependencies": [
+    {
+      "source_component_id": "comp-mobile-sdk-05",
+      "target_component_id": "comp-edge-gw-01",
+      "relationship_type": "CALLS",
+      "evidence_reference": "evid-edge-scan-01"
+    },
+    {
+      "source_component_id": "comp-edge-gw-01",
+      "target_component_id": "comp-auth-svc-02",
+      "relationship_type": "CALLS",
+      "evidence_reference": "evid-edge-scan-01"
+    },
+    {
+      "source_component_id": "comp-auth-svc-02",
+      "target_component_id": "comp-hsm-legacy-03",
+      "relationship_type": "HARDWARE_DEPENDENCY",
+      "evidence_reference": "evid-edge-scan-01"
+    },
+    {
+      "source_component_id": "comp-auth-svc-02",
+      "target_component_id": "comp-core-db-04",
+      "relationship_type": "STORES_DATA_IN",
+      "evidence_reference": "evid-edge-scan-01"
+    },
+    {
+      "source_component_id": "comp-edge-gw-01",
+      "target_component_id": "comp-core-db-04",
+      "relationship_type": "CALLS",
+      "evidence_reference": "evid-edge-scan-01"
+    }
+  ],
+  "compatibility_assessments": [
+    {
+      "component_id": "comp-edge-gw-01",
+      "status": "UNSUPPORTED",
+      "target_algorithm": "ML-KEM-768",
+      "evidence_reference": "evid-edge-scan-01",
+      "notes": "Identified compatibility blocker preventing direct migration."
+    },
+    {
+      "component_id": "comp-auth-svc-02",
+      "status": "UNKNOWN",
+      "target_algorithm": "ML-KEM-768",
+      "evidence_reference": "evid-edge-scan-01",
+      "notes": "Compatibility status unconfirmed in architectural discovery."
+    },
+    {
+      "component_id": "comp-hsm-legacy-03",
+      "status": "UNSUPPORTED",
+      "target_algorithm": "ML-KEM-768",
+      "evidence_reference": "evid-edge-scan-01",
+      "notes": "Identified compatibility blocker preventing direct migration."
+    },
+    {
+      "component_id": "comp-core-db-04",
+      "status": "SUPPORTED",
+      "target_algorithm": "ML-KEM-768",
+      "evidence_reference": "evid-edge-scan-01",
+      "notes": "Direct PQC algorithm compatibility certified."
+    },
+    {
+      "component_id": "comp-mobile-sdk-05",
+      "status": "UNKNOWN",
+      "target_algorithm": "ML-KEM-768",
+      "evidence_reference": "evid-edge-scan-01",
+      "notes": "Compatibility status unconfirmed in architectural discovery."
+    }
+  ],
+  "migration_plan": [
+    {
+      "wave": 1,
+      "component_id": "comp-auth-svc-02",
+      "action_type": "PREPARATION",
+      "preconditions": [],
+      "required_validation_gates": [],
+      "is_conditional": true,
+      "coexisting_algorithms": [],
+      "preserved_relationships": [],
+      "rollback_trigger": null,
+      "rollback_action": null,
+      "recovery_mechanism": null,
+      "post_rollback_validation_gate": null
+    },
+    {
+      "wave": 1,
+      "component_id": "comp-core-db-04",
+      "action_type": "PREPARATION",
+      "preconditions": [],
+      "required_validation_gates": [],
+      "is_conditional": true,
+      "coexisting_algorithms": [],
+      "preserved_relationships": [],
+      "rollback_trigger": null,
+      "rollback_action": null,
+      "recovery_mechanism": null,
+      "post_rollback_validation_gate": null
+    }
+  ],
+  "blocked_components": [
+    "comp-edge-gw-01",
+    "comp-hsm-legacy-03"
+  ],
+  "required_actions": [
+    "Upgrade or remediate blocked components: ['comp-edge-gw-01', 'comp-hsm-legacy-03']",
+    "Resolve pre-migration verification test failures before cutover."
+  ],
+  "verification_results": [
+    {
+      "test_id": "test-hybrid-handshake-01",
+      "reported_status": "PASSED",
+      "evidence_reference": "evid-edge-scan-01",
+      "relevant_component": "comp-mobile-sdk-05"
+    },
+    {
+      "test_id": "test-fallback-verification-02",
+      "reported_status": "PASSED",
+      "evidence_reference": "evid-edge-scan-01",
+      "relevant_component": "comp-edge-gw-01"
+    }
+  ],
+  "evidence_references": [
+    "evid-edge-scan-01",
+    "evid-auth-audit-02",
+    "evid-hsm-cert-03",
+    "evid-db-audit-04",
+    "evid-mobile-telemetry-05"
+  ],
+  "assumptions": [],
+  "uncertainties": [],
+  "explanation": "Migration blocked for task task-seq-pqc-001. Architectural evaluation detected 2 blocked component(s). Only non-destructive preparatory discovery actions may be scheduled until blockers are cleared.",
+  "contract_version": "1.0.0"
+}

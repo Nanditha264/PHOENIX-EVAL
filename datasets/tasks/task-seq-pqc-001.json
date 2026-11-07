@@ -1,0 +1,72 @@
+{
+  "task_id": "task-seq-pqc-001",
+  "task_name": "Sequence Post-Quantum Cryptographic Migration for Retail Banking Architecture",
+  "task_category": "MIGRATION_SEQUENCING",
+  "difficulty": "ADVANCED",
+  "description": "Analyze the banking enterprise architecture (scen-pqc-tls-banking-001), identify critical migration blockers, resolve dependencies, and produce a multi-wave cryptographic migration plan that guarantees zero downtime and enforces strict validation gates.",
+  "scenario_reference": "scen-pqc-tls-banking-001",
+  "task_instructions": "You are a Principal Cryptographic Systems Architect. Inspect scenario 'scen-pqc-tls-banking-001'. Formulate a multi-stage migration sequence to transition the banking system to NIST PQC standards (ML-KEM-768 for TLS and ML-DSA-65 for token authentication). You must:\n1. Identify all direct and indirect architectural dependencies.\n2. Explicitly flag components with UNSUPPORTED or UNKNOWN compatibility as migration blockers.\n3. Do NOT assume that UNKNOWN compatibility means SUPPORTED.\n4. Design a wave sequence that avoids breaking dependencies or causing downtime.\n5. Specify mandatory verification tests before promoting each wave to production.",
+  "expected_output_schema": {
+    "type": "object",
+    "properties": {
+      "identified_blockers": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "migration_waves": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "wave_number": { "type": "integer" },
+            "components": { "type": "array", "items": { "type": "string" } },
+            "actions": { "type": "string" },
+            "required_tests": { "type": "array", "items": { "type": "string" } }
+          },
+          "required": ["wave_number", "components", "actions"]
+        }
+      },
+      "fallback_strategy": { "type": "string" }
+    },
+    "required": ["identified_blockers", "migration_waves", "fallback_strategy"]
+  },
+  "evaluation_criteria": [
+    {
+      "criterion_id": "crit-blocker-id-01",
+      "name": "Blocker Identification",
+      "description": "Identify all hardware and software components whose current compatibility status or technology constraints prevent direct migration to target algorithms.",
+      "weight": 25.0,
+      "is_safety_critical": true
+    },
+    {
+      "criterion_id": "crit-epistemic-unknown-02",
+      "name": "Strict Unknown Status Handling",
+      "description": "Strictly distinguish between verified supported algorithms and unknown or unverified compatibility, avoiding unsupported assumptions.",
+      "weight": 25.0,
+      "is_safety_critical": true
+    },
+    {
+      "criterion_id": "crit-dependency-order-03",
+      "name": "Dependency-Aware Sequencing",
+      "description": "Formulate a wave sequence that satisfies topological prerequisites, upgrading dependency targets before callers.",
+      "weight": 25.0,
+      "is_safety_critical": false
+    },
+    {
+      "criterion_id": "crit-validation-gates-04",
+      "name": "Validation and Fallback Gates",
+      "description": "Incorporate required staging interoperability tests and fallback capabilities before production cutover.",
+      "weight": 25.0,
+      "is_safety_critical": false
+    }
+  ],
+  "ground_truth_reference": "gt-seq-pqc-001",
+  "tags": [
+    "migration-sequencing",
+    "pqc",
+    "hsm-blocker",
+    "zero-downtime",
+    "fips-203"
+  ],
+  "version": "1.0.0"
+}

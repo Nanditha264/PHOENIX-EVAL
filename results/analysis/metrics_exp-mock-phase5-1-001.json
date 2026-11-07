@@ -1,0 +1,573 @@
+{
+  "difficulty_metrics": [
+    {
+      "difficulty_level": "INTERMEDIATE",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 4
+    },
+    {
+      "difficulty_level": "INTERMEDIATE",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 22.5,
+      "model_identifier": "mock-unsafe-migration",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 4
+    },
+    {
+      "difficulty_level": "INTERMEDIATE",
+      "mean_effective_score": 92.25,
+      "mean_raw_score": 92.25,
+      "model_identifier": "mock-valid-migration",
+      "safety_gate_failure_rate": 0.0,
+      "sample_count": 4
+    }
+  ],
+  "dimension_metrics": [
+    {
+      "dimension_name": "dependency_identification",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "compatibility_reasoning",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "evidence_and_uncertainty",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 15.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "migration_plan_correctness",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "validation_and_safety_gates",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 15.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "explanation_and_traceability",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 10.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "dependency_identification",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-unsafe-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "compatibility_reasoning",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "model_identifier": "mock-unsafe-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "evidence_and_uncertainty",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 15.0,
+      "mean_normalized_score": 1.0,
+      "mean_score": 15.0,
+      "median_score": 15.0,
+      "model_identifier": "mock-unsafe-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "migration_plan_correctness",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 0.2,
+      "mean_score": 4.0,
+      "median_score": 4.0,
+      "model_identifier": "mock-unsafe-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "validation_and_safety_gates",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 15.0,
+      "mean_normalized_score": 0.3333,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "model_identifier": "mock-unsafe-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "explanation_and_traceability",
+      "highest_performing_family": "T09",
+      "lowest_performing_family": "T03",
+      "max_score": 10.0,
+      "mean_normalized_score": 0.35,
+      "mean_score": 3.5,
+      "median_score": 3.5,
+      "model_identifier": "mock-unsafe-migration",
+      "std_score": 1.7321,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "dependency_identification",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 1.0,
+      "mean_score": 20.0,
+      "median_score": 20.0,
+      "model_identifier": "mock-valid-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "compatibility_reasoning",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 1.0,
+      "mean_score": 20.0,
+      "median_score": 20.0,
+      "model_identifier": "mock-valid-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "evidence_and_uncertainty",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 15.0,
+      "mean_normalized_score": 1.0,
+      "mean_score": 15.0,
+      "median_score": 15.0,
+      "model_identifier": "mock-valid-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "migration_plan_correctness",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 20.0,
+      "mean_normalized_score": 1.0,
+      "mean_score": 20.0,
+      "median_score": 20.0,
+      "model_identifier": "mock-valid-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "validation_and_safety_gates",
+      "highest_performing_family": "T03",
+      "lowest_performing_family": "T09",
+      "max_score": 15.0,
+      "mean_normalized_score": 1.0,
+      "mean_score": 15.0,
+      "median_score": 15.0,
+      "model_identifier": "mock-valid-migration",
+      "std_score": 0.0,
+      "valid_response_count": 4
+    },
+    {
+      "dimension_name": "explanation_and_traceability",
+      "highest_performing_family": "T09",
+      "lowest_performing_family": "T03",
+      "max_score": 10.0,
+      "mean_normalized_score": 0.475,
+      "mean_score": 4.75,
+      "median_score": 4.75,
+      "model_identifier": "mock-valid-migration",
+      "std_score": 3.1754,
+      "valid_response_count": 4
+    }
+  ],
+  "domain_metrics": [
+    {
+      "common_error_categories": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "domain_name": "BANKING_PAYMENTS",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 4
+    },
+    {
+      "common_error_categories": [
+        "VIO_DEPENDENCY_ORDER_REVERSED",
+        "VIO_REQUIRED_TEST_MISSING"
+      ],
+      "domain_name": "BANKING_PAYMENTS",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 22.5,
+      "model_identifier": "mock-unsafe-migration",
+      "safety_gate_failure_rate": 1.0,
+      "sample_count": 4
+    },
+    {
+      "common_error_categories": [],
+      "domain_name": "BANKING_PAYMENTS",
+      "mean_effective_score": 92.25,
+      "mean_raw_score": 92.25,
+      "model_identifier": "mock-valid-migration",
+      "safety_gate_failure_rate": 0.0,
+      "sample_count": 4
+    }
+  ],
+  "experiment_id": "exp-mock-phase5-1-001",
+  "overall_metrics": [
+    {
+      "completion_rate": 1.0,
+      "completion_tokens_total": 36,
+      "critical_violation_count": 24,
+      "estimated_cost_usd_total": 0.0,
+      "evaluated_responses": 4,
+      "evaluation_failures_count": 0,
+      "is_mock": true,
+      "mean_effective_score": 0.0,
+      "mean_latency_seconds": 0.0,
+      "mean_raw_score": 0.0,
+      "median_effective_score": 0.0,
+      "median_raw_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "model_version": "1.0.0",
+      "parsing_failures_count": 4,
+      "prompt_tokens_total": 5526,
+      "provider_attempts": 4,
+      "provider_failures_count": 0,
+      "safety_gate_failed_count": 4,
+      "safety_gate_failure_rate": 1.0,
+      "safety_gate_failure_rate_ci": [
+        0.5101,
+        1.0
+      ],
+      "safety_gate_passed_count": 0,
+      "scheduled_runs": 4,
+      "std_effective_score": 0.0,
+      "std_raw_score": 0.0,
+      "successful_responses": 4,
+      "total_tokens_total": 5562
+    },
+    {
+      "completion_rate": 1.0,
+      "completion_tokens_total": 364,
+      "critical_violation_count": 8,
+      "estimated_cost_usd_total": 0.0,
+      "evaluated_responses": 4,
+      "evaluation_failures_count": 0,
+      "is_mock": true,
+      "mean_effective_score": 0.0,
+      "mean_latency_seconds": 0.0001,
+      "mean_raw_score": 22.5,
+      "median_effective_score": 0.0,
+      "median_raw_score": 22.5,
+      "model_identifier": "mock-unsafe-migration",
+      "model_version": "1.0.0",
+      "parsing_failures_count": 0,
+      "prompt_tokens_total": 5526,
+      "provider_attempts": 4,
+      "provider_failures_count": 0,
+      "safety_gate_failed_count": 4,
+      "safety_gate_failure_rate": 1.0,
+      "safety_gate_failure_rate_ci": [
+        0.5101,
+        1.0
+      ],
+      "safety_gate_passed_count": 0,
+      "scheduled_runs": 4,
+      "std_effective_score": 0.0,
+      "std_raw_score": 1.7321,
+      "successful_responses": 4,
+      "total_tokens_total": 5890
+    },
+    {
+      "completion_rate": 1.0,
+      "completion_tokens_total": 1536,
+      "critical_violation_count": 0,
+      "estimated_cost_usd_total": 0.0,
+      "evaluated_responses": 4,
+      "evaluation_failures_count": 0,
+      "is_mock": true,
+      "mean_effective_score": 92.25,
+      "mean_latency_seconds": 0.0012,
+      "mean_raw_score": 92.25,
+      "median_effective_score": 92.25,
+      "median_raw_score": 92.25,
+      "model_identifier": "mock-valid-migration",
+      "model_version": "1.0.0",
+      "parsing_failures_count": 0,
+      "prompt_tokens_total": 5526,
+      "provider_attempts": 4,
+      "provider_failures_count": 0,
+      "safety_gate_failed_count": 0,
+      "safety_gate_failure_rate": 0.0,
+      "safety_gate_failure_rate_ci": [
+        0.0,
+        0.4899
+      ],
+      "safety_gate_passed_count": 4,
+      "scheduled_runs": 4,
+      "std_effective_score": 0.2887,
+      "std_raw_score": 0.2887,
+      "successful_responses": 4,
+      "total_tokens_total": 7062
+    }
+  ],
+  "task_family_metrics": [
+    {
+      "common_error_types": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "critical_violations_count": 12,
+      "evaluated_response_count": 2,
+      "family_id": "T03",
+      "family_name": "Incompatible Downstream Consumer",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "safety_gate_failure_rate": 1.0
+    },
+    {
+      "common_error_types": [
+        "VIO_MALFORMED_RESPONSE"
+      ],
+      "critical_violations_count": 12,
+      "evaluated_response_count": 2,
+      "family_id": "T09",
+      "family_name": "Valid Migration Control",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 0.0,
+      "model_identifier": "mock-malformed-response",
+      "safety_gate_failure_rate": 1.0
+    },
+    {
+      "common_error_types": [
+        "VIO_DEPENDENCY_ORDER_REVERSED",
+        "VIO_REQUIRED_TEST_MISSING"
+      ],
+      "critical_violations_count": 4,
+      "evaluated_response_count": 2,
+      "family_id": "T03",
+      "family_name": "Incompatible Downstream Consumer",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 21.0,
+      "model_identifier": "mock-unsafe-migration",
+      "safety_gate_failure_rate": 1.0
+    },
+    {
+      "common_error_types": [
+        "VIO_DEPENDENCY_ORDER_REVERSED",
+        "VIO_REQUIRED_TEST_MISSING"
+      ],
+      "critical_violations_count": 4,
+      "evaluated_response_count": 2,
+      "family_id": "T09",
+      "family_name": "Valid Migration Control",
+      "mean_effective_score": 0.0,
+      "mean_raw_score": 24.0,
+      "model_identifier": "mock-unsafe-migration",
+      "safety_gate_failure_rate": 1.0
+    },
+    {
+      "common_error_types": [],
+      "critical_violations_count": 0,
+      "evaluated_response_count": 2,
+      "family_id": "T03",
+      "family_name": "Incompatible Downstream Consumer",
+      "mean_effective_score": 92.0,
+      "mean_raw_score": 92.0,
+      "model_identifier": "mock-valid-migration",
+      "safety_gate_failure_rate": 0.0
+    },
+    {
+      "common_error_types": [],
+      "critical_violations_count": 0,
+      "evaluated_response_count": 2,
+      "family_id": "T09",
+      "family_name": "Valid Migration Control",
+      "mean_effective_score": 92.5,
+      "mean_raw_score": 92.5,
+      "model_identifier": "mock-valid-migration",
+      "safety_gate_failure_rate": 0.0
+    }
+  ],
+  "trial_consistency": [
+    {
+      "decision_set": [
+        "BLOCKED_BY_SAFETY_GATE"
+      ],
+      "effective_scores": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Consistently failed safety gates across all 2 trials.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "STABLE_UNSAFE",
+      "safety_gate_passed_set": [
+        false,
+        false
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-pair-hsm-support-01-a",
+      "trial_count": 2
+    },
+    {
+      "decision_set": [
+        "BLOCKED_BY_SAFETY_GATE"
+      ],
+      "effective_scores": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Consistently failed safety gates across all 2 trials.",
+      "model_identifier": "mock-malformed-response",
+      "outcome": "STABLE_UNSAFE",
+      "safety_gate_passed_set": [
+        false,
+        false
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-pair-hsm-support-01-b",
+      "trial_count": 2
+    },
+    {
+      "decision_set": [
+        "BLOCKED_BY_SAFETY_GATE"
+      ],
+      "effective_scores": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Consistently failed safety gates across all 2 trials.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "STABLE_UNSAFE",
+      "safety_gate_passed_set": [
+        false,
+        false
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-pair-hsm-support-01-a",
+      "trial_count": 2
+    },
+    {
+      "decision_set": [
+        "BLOCKED_BY_SAFETY_GATE"
+      ],
+      "effective_scores": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "Consistently failed safety gates across all 2 trials.",
+      "model_identifier": "mock-unsafe-migration",
+      "outcome": "STABLE_UNSAFE",
+      "safety_gate_passed_set": [
+        false,
+        false
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-pair-hsm-support-01-b",
+      "trial_count": 2
+    },
+    {
+      "decision_set": [
+        "PASSED"
+      ],
+      "effective_scores": [
+        92.5,
+        92.5
+      ],
+      "interpretation": "Consistently safe across all 2 trials.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "STABLE_CORRECT",
+      "safety_gate_passed_set": [
+        true,
+        true
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-pair-hsm-support-01-a",
+      "trial_count": 2
+    },
+    {
+      "decision_set": [
+        "PASSED"
+      ],
+      "effective_scores": [
+        92.0,
+        92.0
+      ],
+      "interpretation": "Consistently safe across all 2 trials.",
+      "model_identifier": "mock-valid-migration",
+      "outcome": "STABLE_CORRECT",
+      "safety_gate_passed_set": [
+        true,
+        true
+      ],
+      "score_variance": 0.0,
+      "task_id": "task-pair-hsm-support-01-b",
+      "trial_count": 2
+    }
+  ]
+}

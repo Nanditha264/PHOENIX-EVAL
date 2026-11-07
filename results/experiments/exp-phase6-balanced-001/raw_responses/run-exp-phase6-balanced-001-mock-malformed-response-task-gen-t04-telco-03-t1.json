@@ -1,0 +1,31 @@
+{
+  "error_message": null,
+  "execution_duration": 2.1099811419844627e-05,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "malformed_response",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-malformed-response",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "mock_analysis": "{\"task_id\": \"task-gen-t04-telco-03\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\""
+  },
+  "prompt_hash": "7000b25c8c4ac24b2ac0368c1a1901ed28c4235c75cc54772bb4bdc742ef9c64",
+  "provider_request_id": "mock-req-task-gen-t04-telco-03",
+  "raw_response": "{\"task_id\": \"task-gen-t04-telco-03\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\"",
+  "response_id": "resp-mock-malformed-response-2c17404e",
+  "returned_model_identifier": "mock-malformed-response",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-gen-t04-telco-03",
+  "timestamp": "2026-11-05T06:15:45.389614Z",
+  "token_usage": {
+    "completion_tokens": 9,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1471,
+    "total_tokens": 1480
+  }
+}

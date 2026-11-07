@@ -1,0 +1,30 @@
+# PHOENIX-EVAL Central Application Settings
+app_name: "PHOENIX-EVAL"
+app_version: "0.1.0"
+environment: "development"
+
+# Directory layout relative to project root
+datasets_dir: "datasets"
+results_dir: "results"
+
+# Benchmark execution parameters
+execution:
+  random_seed: 42
+  request_timeout: 60.0
+  max_retries: 3
+  output_format: "json"
+
+# Logging configuration
+logging:
+  level: "INFO"
+  format: "structured"
+  file_enabled: true
+  file_name: "phoenix_eval.log"
+
+# Model provider defaults (Phase 1 mock provider defaults)
+providers:
+  default_provider: "mock"
+  default_model: "mock-model-v1"
+  mock:
+    deterministic: true
+    default_latency_seconds: 0.05

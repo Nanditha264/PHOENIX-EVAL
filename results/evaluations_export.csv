@@ -1,0 +1,8 @@
+evaluation_id,task_id,scenario_id,model_identifier,raw_weighted_score,effective_score,safety_gate_passed,overall_status,authoritative_readiness_decision,model_reported_decision,critical_violations_count,dependency_score,compatibility_score,plan_score,evidence_score,gate_score,explanation_score,timestamp
+eval-task-gen-t08-gov-03-dd320280,task-gen-t08-gov-03,scen-gen-t08-gov-03,unknown,23.0,0.0,False,BLOCKED_BY_SAFETY_GATE,MIGRATION_BLOCKED,MIGRATION_READY,4,0.0,0.0,10.0,10.0,1.0,2.0,2026-11-02T16:50:04.107587+00:00
+eval-task-gen-t09-bank-02-16886161,task-gen-t09-bank-02,scen-gen-t09-bank-02,unknown,100.0,100.0,True,PASSED,MIGRATION_READY,MIGRATION_READY,0,20.0,20.0,20.0,15.0,15.0,10.0,2026-11-02T16:32:04.262207+00:00
+eval-task-gen-t09-bank-02-2211bc22,task-gen-t09-bank-02,scen-gen-t09-bank-02,unknown,100.0,100.0,True,PASSED,MIGRATION_READY,MIGRATION_READY,0,20.0,20.0,20.0,15.0,15.0,10.0,2026-11-03T16:16:44.012515+00:00
+eval-task-gen-t09-bank-02-56e114a4,task-gen-t09-bank-02,scen-gen-t09-bank-02,unknown,97.5,97.5,True,PASSED,MIGRATION_READY,MIGRATION_READY,0,20.0,20.0,20.0,15.0,15.0,7.5,2026-11-02T16:49:55.892329+00:00
+eval-task-gen-t09-bank-02-bd8f1b04,task-gen-t09-bank-02,scen-gen-t09-bank-02,unknown,100.0,100.0,True,PASSED,MIGRATION_READY,MIGRATION_READY,0,20.0,20.0,20.0,15.0,15.0,10.0,2026-11-02T16:48:45.766630+00:00
+eval-task-gen-t09-bank-02-eaa95e88,task-gen-t09-bank-02,scen-gen-t09-bank-02,unknown,85.0,0.0,False,BLOCKED_BY_SAFETY_GATE,MIGRATION_READY,MIGRATION_READY,1,20.0,20.0,10.0,15.0,15.0,5.0,2026-11-02T16:48:54.078618+00:00
+eval-task-gen-t09-bank-02-f6b8908a,task-gen-t09-bank-02,scen-gen-t09-bank-02,unknown,0.0,0.0,False,BLOCKED_BY_SAFETY_GATE,MIGRATION_BLOCKED,,6,0.0,0.0,0.0,0.0,0.0,0.0,2026-11-02T16:50:10.948585+00:00

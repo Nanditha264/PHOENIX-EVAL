@@ -1,0 +1,22 @@
+{
+  "experiment_id": "exp-mock-comparison-001",
+  "metadata": {},
+  "paired_comparisons": [
+    {
+      "bootstrap_ci": [
+        0.0,
+        0.0
+      ],
+      "common_tasks_count": 2,
+      "interpretation": "No statistically significant difference between mock-model-v1 and mock-refusal-v1 (95% bootstrap CI [0.0, 0.0] spans zero). Small sample size (N=2 < 30); interpret inferential statistics with caution.",
+      "mean_difference": 0.0,
+      "model_a": "mock-model-v1",
+      "model_a_trial_count": 4,
+      "model_b": "mock-refusal-v1",
+      "model_b_trial_count": 4,
+      "p_value": null,
+      "std_difference": 0.0,
+      "t_statistic": null
+    }
+  ]
+}

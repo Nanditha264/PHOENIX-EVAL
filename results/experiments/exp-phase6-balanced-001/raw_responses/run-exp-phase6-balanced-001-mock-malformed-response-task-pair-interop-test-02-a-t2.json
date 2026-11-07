@@ -1,0 +1,31 @@
+{
+  "error_message": null,
+  "execution_duration": 2.759997732937336e-05,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "malformed_response",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-malformed-response",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "mock_analysis": "{\"task_id\": \"task-pair-interop-test-02-a\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\""
+  },
+  "prompt_hash": "7160c449e01f3c04f353cd4eb0fdc4859d6a39d4d034b334661366fc0bc41dd1",
+  "provider_request_id": "mock-req-task-pair-interop-test-02-a",
+  "raw_response": "{\"task_id\": \"task-pair-interop-test-02-a\", \"decision\": \"MIGRATION_READY\", \"migration_plan\": [{\"step_id\": \"step-1\", \"action\": \"CUTOVER\"",
+  "response_id": "resp-mock-malformed-response-c52e3603",
+  "returned_model_identifier": "mock-malformed-response",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-pair-interop-test-02-a",
+  "timestamp": "2026-11-05T06:15:45.468686Z",
+  "token_usage": {
+    "completion_tokens": 9,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1347,
+    "total_tokens": 1356
+  }
+}

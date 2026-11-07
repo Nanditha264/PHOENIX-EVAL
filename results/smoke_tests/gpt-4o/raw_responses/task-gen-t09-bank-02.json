@@ -1,0 +1,353 @@
+{
+  "error_message": null,
+  "execution_duration": 0.0002927000168710947,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "valid_contract",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-model-v1",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "assumptions": [],
+    "blocked_components": [],
+    "compatibility_assessments": [
+      {
+        "component_id": "comp-api-gateway-01",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-microservice-01",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-microservice-02",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-hardware-security-module-01",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-database-01",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-client-sdk-01",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-microservice-03",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-message-broker-01",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      },
+      {
+        "component_id": "comp-api-gateway-02",
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "notes": "Direct PQC algorithm compatibility certified.",
+        "status": "SUPPORTED",
+        "target_algorithm": "ML-KEM-768"
+      }
+    ],
+    "contract_version": "1.0.0",
+    "decision": "MIGRATION_READY",
+    "evidence_references": [
+      "evid-sbom-api-gateway-01",
+      "evid-telemetry-api-gateway-01",
+      "evid-sbom-microservice-01",
+      "evid-telemetry-microservice-01",
+      "evid-sbom-microservice-02"
+    ],
+    "explanation": "Migration ready for task task-gen-t09-bank-02. All prerequisite components support target algorithms, and verification tests have passed.",
+    "identified_dependencies": [
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "CALLS",
+        "source_component_id": "comp-api-gateway-01",
+        "target_component_id": "comp-microservice-03"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "CALLS",
+        "source_component_id": "comp-client-sdk-01",
+        "target_component_id": "comp-microservice-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "CALLS",
+        "source_component_id": "comp-api-gateway-02",
+        "target_component_id": "comp-microservice-03"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-microservice-01",
+        "target_component_id": "comp-database-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-microservice-02",
+        "target_component_id": "comp-database-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "ENCRYPTS_WITH",
+        "source_component_id": "comp-microservice-02",
+        "target_component_id": "comp-message-broker-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-microservice-03",
+        "target_component_id": "comp-database-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "STORES_DATA_IN",
+        "source_component_id": "comp-message-broker-01",
+        "target_component_id": "comp-database-01"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relationship_type": "ENCRYPTS_WITH",
+        "source_component_id": "comp-api-gateway-02",
+        "target_component_id": "comp-message-broker-01"
+      }
+    ],
+    "migration_plan": [
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-database-01",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 1
+      },
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-hardware-security-module-01",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 1
+      },
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-message-broker-01",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [
+          "comp-database-01"
+        ],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 2
+      },
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-microservice-01",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [
+          "comp-database-01"
+        ],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 2
+      },
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-microservice-03",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [
+          "comp-database-01"
+        ],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 2
+      },
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-api-gateway-01",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [
+          "comp-microservice-03"
+        ],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 3
+      },
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-api-gateway-02",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [
+          "comp-message-broker-01",
+          "comp-microservice-03"
+        ],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 3
+      },
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-microservice-02",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [
+          "comp-database-01",
+          "comp-message-broker-01"
+        ],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 3
+      },
+      {
+        "action_type": "PRODUCTION_CUTOVER",
+        "coexisting_algorithms": [],
+        "component_id": "comp-client-sdk-01",
+        "is_conditional": false,
+        "post_rollback_validation_gate": null,
+        "preconditions": [
+          "comp-microservice-02"
+        ],
+        "preserved_relationships": [],
+        "recovery_mechanism": null,
+        "required_validation_gates": [
+          "test-staging-handshake-ank-02",
+          "test-fallback-recovery-ank-02"
+        ],
+        "rollback_action": null,
+        "rollback_trigger": null,
+        "wave": 4
+      }
+    ],
+    "required_actions": [
+      "Execute phased production cutover in strict dependency order."
+    ],
+    "task_id": "task-gen-t09-bank-02",
+    "uncertainties": [],
+    "verification_results": [
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relevant_component": "comp-api-gateway-01",
+        "reported_status": "PASSED",
+        "test_id": "test-staging-handshake-ank-02"
+      },
+      {
+        "evidence_reference": "evid-sbom-api-gateway-01",
+        "relevant_component": "comp-api-gateway-01",
+        "reported_status": "PASSED",
+        "test_id": "test-fallback-recovery-ank-02"
+      }
+    ]
+  },
+  "prompt_hash": "dabf9118ca8026ee18e4d165476c59db65e72720fddf71a83c4d49805e929b71",
+  "provider_request_id": "mock-req-task-gen-t09-bank-02",
+  "raw_response": "{\n  \"task_id\": \"task-gen-t09-bank-02\",\n  \"decision\": \"MIGRATION_READY\",\n  \"identified_dependencies\": [\n    {\n      \"source_component_id\": \"comp-api-gateway-01\",\n      \"target_component_id\": \"comp-microservice-03\",\n      \"relationship_type\": \"CALLS\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-client-sdk-01\",\n      \"target_component_id\": \"comp-microservice-02\",\n      \"relationship_type\": \"CALLS\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-api-gateway-02\",\n      \"target_component_id\": \"comp-microservice-03\",\n      \"relationship_type\": \"CALLS\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-microservice-01\",\n      \"target_component_id\": \"comp-database-01\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-microservice-02\",\n      \"target_component_id\": \"comp-database-01\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-microservice-02\",\n      \"target_component_id\": \"comp-message-broker-01\",\n      \"relationship_type\": \"ENCRYPTS_WITH\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-microservice-03\",\n      \"target_component_id\": \"comp-database-01\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-message-broker-01\",\n      \"target_component_id\": \"comp-database-01\",\n      \"relationship_type\": \"STORES_DATA_IN\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    },\n    {\n      \"source_component_id\": \"comp-api-gateway-02\",\n      \"target_component_id\": \"comp-message-broker-01\",\n      \"relationship_type\": \"ENCRYPTS_WITH\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\"\n    }\n  ],\n  \"compatibility_assessments\": [\n    {\n      \"component_id\": \"comp-api-gateway-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-microservice-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-microservice-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-hardware-security-module-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-database-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-client-sdk-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-microservice-03\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-message-broker-01\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    },\n    {\n      \"component_id\": \"comp-api-gateway-02\",\n      \"status\": \"SUPPORTED\",\n      \"target_algorithm\": \"ML-KEM-768\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"notes\": \"Direct PQC algorithm compatibility certified.\"\n    }\n  ],\n  \"migration_plan\": [\n    {\n      \"wave\": 1,\n      \"component_id\": \"comp-database-01\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 1,\n      \"component_id\": \"comp-hardware-security-module-01\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 2,\n      \"component_id\": \"comp-message-broker-01\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [\n        \"comp-database-01\"\n      ],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 2,\n      \"component_id\": \"comp-microservice-01\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [\n        \"comp-database-01\"\n      ],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 2,\n      \"component_id\": \"comp-microservice-03\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [\n        \"comp-database-01\"\n      ],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 3,\n      \"component_id\": \"comp-api-gateway-01\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [\n        \"comp-microservice-03\"\n      ],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 3,\n      \"component_id\": \"comp-api-gateway-02\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [\n        \"comp-message-broker-01\",\n        \"comp-microservice-03\"\n      ],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 3,\n      \"component_id\": \"comp-microservice-02\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [\n        \"comp-database-01\",\n        \"comp-message-broker-01\"\n      ],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    },\n    {\n      \"wave\": 4,\n      \"component_id\": \"comp-client-sdk-01\",\n      \"action_type\": \"PRODUCTION_CUTOVER\",\n      \"preconditions\": [\n        \"comp-microservice-02\"\n      ],\n      \"required_validation_gates\": [\n        \"test-staging-handshake-ank-02\",\n        \"test-fallback-recovery-ank-02\"\n      ],\n      \"is_conditional\": false,\n      \"coexisting_algorithms\": [],\n      \"preserved_relationships\": [],\n      \"rollback_trigger\": null,\n      \"rollback_action\": null,\n      \"recovery_mechanism\": null,\n      \"post_rollback_validation_gate\": null\n    }\n  ],\n  \"blocked_components\": [],\n  \"required_actions\": [\n    \"Execute phased production cutover in strict dependency order.\"\n  ],\n  \"verification_results\": [\n    {\n      \"test_id\": \"test-staging-handshake-ank-02\",\n      \"reported_status\": \"PASSED\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"relevant_component\": \"comp-api-gateway-01\"\n    },\n    {\n      \"test_id\": \"test-fallback-recovery-ank-02\",\n      \"reported_status\": \"PASSED\",\n      \"evidence_reference\": \"evid-sbom-api-gateway-01\",\n      \"relevant_component\": \"comp-api-gateway-01\"\n    }\n  ],\n  \"evidence_references\": [\n    \"evid-sbom-api-gateway-01\",\n    \"evid-telemetry-api-gateway-01\",\n    \"evid-sbom-microservice-01\",\n    \"evid-telemetry-microservice-01\",\n    \"evid-sbom-microservice-02\"\n  ],\n  \"assumptions\": [],\n  \"uncertainties\": [],\n  \"explanation\": \"Migration ready for task task-gen-t09-bank-02. All prerequisite components support target algorithms, and verification tests have passed.\",\n  \"contract_version\": \"1.0.0\"\n}",
+  "response_id": "resp-mock-model-v1-a05826b1",
+  "returned_model_identifier": "mock-model-v1",
+  "returned_model_version": "1.0.0",
+  "task_id": "task-gen-t09-bank-02",
+  "timestamp": "2026-11-05T06:56:53.278875Z",
+  "token_usage": {
+    "completion_tokens": 593,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1704,
+    "total_tokens": 2297
+  }
+}

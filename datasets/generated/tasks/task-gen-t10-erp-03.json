@@ -1,0 +1,62 @@
+{
+  "description": "Evaluate cryptographic migration reasoning for Conditional Plan Under Uncertainty.",
+  "difficulty": "ADVANCED",
+  "evaluation_criteria": [
+    {
+      "criterion_id": "crit-t10-stage-preparatory-actions",
+      "description": "Authorize safe non-breaking preparatory actions (e.g. dual-stack library deployment, staging tests).",
+      "is_safety_critical": false,
+      "name": "Preparatory Action Staging",
+      "weight": 50.0
+    },
+    {
+      "criterion_id": "crit-t10-block-irreversible-cutover",
+      "description": "Condition final production cutover on explicit resolution of unverified client or provider telemetry.",
+      "is_safety_critical": true,
+      "name": "Block Irreversible Production Cutover",
+      "weight": 50.0
+    }
+  ],
+  "expected_output_schema": {
+    "properties": {
+      "activation_conditions": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "blocked_cutover_actions": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "safe_preparatory_actions": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "safe_preparatory_actions",
+      "blocked_cutover_actions",
+      "activation_conditions"
+    ],
+    "type": "object"
+  },
+  "ground_truth_reference": "gt-gen-t10-erp-03",
+  "scenario_reference": "scen-gen-t10-erp-03",
+  "tags": [
+    "synthetic",
+    "family:T10",
+    "t10_conditional_plan",
+    "advanced"
+  ],
+  "task_category": "RISK_ASSESSMENT",
+  "task_family": "T10",
+  "task_id": "task-gen-t10-erp-03",
+  "task_instructions": "You are a Principal Cryptographic Systems Architect evaluating migration for scenario 'scen-gen-t10-erp-03'.\nObjective: Allow safe preparatory actions but block irreversible cutover until evidence is obtained; test staged uncertainty reasoning.\nGuidelines:\n1. Inspect all system components, directed dependencies, compatibility assessments, and discovery evidence.\n2. Do NOT treat UNKNOWN compatibility as SUPPORTED without verified evidence.\n3. Base all conclusions strictly on provided evidence; distinguish verified observations from assumptions.\n4. Formulate your response matching the required output schema, ensuring safety gates and prerequisite orderings are respected.",
+  "task_name": "Conditional Plan Under Uncertainty - Enterprise Services - T10 CONDITIONAL PLAN",
+  "version": "1.0.0"
+}

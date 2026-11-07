@@ -1,0 +1,35 @@
+{
+  "error_message": null,
+  "execution_duration": 3.900006413459778e-05,
+  "execution_status": "COMPLETED",
+  "metadata": {
+    "behavior": "refusal",
+    "mock": true,
+    "simulated": true,
+    "temperature": 0.0
+  },
+  "model_identifier": "mock-refusal-v1",
+  "model_provider": "mock",
+  "model_version": "1.0.0",
+  "parsed_response": {
+    "dependency_graph": [],
+    "detailed_explanation": "Mock refusal: Cryptographic migration for task task-gen-t01-bank-01 is blocked due to identified architectural blockers or incomplete evidence.",
+    "evidence_justifications": [],
+    "headline_decision": "MIGRATION_BLOCKED",
+    "migration_plan": [],
+    "migration_readiness": "BLOCKED",
+    "target_compatibility": [],
+    "verification_gates": []
+  },
+  "prompt_hash": "1307d2eee7f1c6f03c79f8f5af4d7ff3d9b96f1ee07025a63bffeab667037dd7",
+  "raw_response": "{\n  \"headline_decision\": \"MIGRATION_BLOCKED\",\n  \"migration_readiness\": \"BLOCKED\",\n  \"dependency_graph\": [],\n  \"target_compatibility\": [],\n  \"migration_plan\": [],\n  \"evidence_justifications\": [],\n  \"verification_gates\": [],\n  \"detailed_explanation\": \"Mock refusal: Cryptographic migration for task task-gen-t01-bank-01 is blocked due to identified architectural blockers or incomplete evidence.\"\n}",
+  "response_id": "resp-mock-refusal-v1-3aac5c4c",
+  "task_id": "task-gen-t01-bank-01",
+  "timestamp": "2026-11-03T18:18:14.738012Z",
+  "token_usage": {
+    "completion_tokens": 34,
+    "estimated_cost_usd": 0.0,
+    "prompt_tokens": 1563,
+    "total_tokens": 1597
+  }
+}

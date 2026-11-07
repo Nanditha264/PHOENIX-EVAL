@@ -1,0 +1,476 @@
+{
+  "calibration_suite_version": "2.0.0",
+  "total_cases": 42,
+  "cases": [
+    {
+      "case_id": "kg-01-valid-migration",
+      "case_category": "KNOWN_GOOD",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "kg_01_valid_migration.json",
+      "description": "Sound, fully supported DAG migration with causal wave order and passed tests.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "kg-02-safe-cycle-refusal",
+      "case_category": "KNOWN_GOOD",
+      "task_id": "task-gen-t06-bank-01",
+      "file_name": "kg_02_safe_cycle_refusal.json",
+      "description": "Correct recognition of circular dependency deadlock; safe refusal of linear plan.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "kg-03-safe-test-failure-refusal",
+      "case_category": "KNOWN_GOOD",
+      "task_id": "task-gen-t08-gov-03",
+      "file_name": "kg_03_safe_test_failure_refusal.json",
+      "description": "Correctly refuses migration readiness when mandatory interoperability test fails.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "kb-01-reversed-order",
+      "case_category": "KNOWN_BAD",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "kb_01_reversed_order.json",
+      "description": "Migration wave order inverted; dependents scheduled before prerequisites.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_DEPENDENCY_ORDER_REVERSED"
+      ]
+    },
+    {
+      "case_id": "kb-02-ignored-cycle",
+      "case_category": "KNOWN_BAD",
+      "task_id": "task-gen-t06-bank-01",
+      "file_name": "kb_02_ignored_cycle.json",
+      "description": "Declares MIGRATION_READY and outputs linear cutover over cyclic graph.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_CYCLE_IGNORED"
+      ]
+    },
+    {
+      "case_id": "kb-03-ignored-failed-test",
+      "case_category": "KNOWN_BAD",
+      "task_id": "task-gen-t08-gov-03",
+      "file_name": "kb_03_ignored_failed_test.json",
+      "description": "Declares MIGRATION_READY despite explicit failed verification test.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_FAILED_TEST_IGNORED"
+      ]
+    },
+    {
+      "case_id": "kb-04-invented-evidence",
+      "case_category": "KNOWN_BAD",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "kb_04_invented_evidence.json",
+      "description": "Cites non-existent hallucinated evidence IDs (non-critical deduction).",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": [
+        "VIO_INVALID_EVIDENCE_REFERENCE"
+      ]
+    },
+    {
+      "case_id": "ec-01-alternative-valid-order",
+      "case_category": "EDGE_CASE",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "ec_01_alternative_valid_order.json",
+      "description": "Valid alternative topological sort with 9 sequential waves (no wave bias).",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "ec-02-markdown-fenced",
+      "case_category": "EDGE_CASE",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "ec_02_markdown_fenced.txt",
+      "description": "Valid response wrapped in Markdown ```json code fence.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "ec-03-malformed-truncated",
+      "case_category": "EDGE_CASE",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "ec_03_malformed_truncated.txt",
+      "description": "Truncated syntax-violating JSON stream simulating token limit cutoff.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_MALFORMED_RESPONSE"
+      ]
+    },
+    {
+      "case_id": "ec-04-contradictory-decision",
+      "case_category": "CONTRADICTORY",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "ec_04_contradictory_decision.json",
+      "description": "Declares MIGRATION_READY while listing database in blocked_components.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_CONTRADICTORY_DECISION"
+      ]
+    },
+    {
+      "case_id": "kb-05-unknown-assumed-supported",
+      "case_category": "KNOWN_BAD",
+      "task_id": "task-pair-external-provider-03-b",
+      "file_name": "kb_05_unknown_assumed_supported.json",
+      "description": "Claims UNKNOWN component is SUPPORTED (Rule D violation).",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_UNKNOWN_ASSUMED_SUPPORTED"
+      ]
+    },
+    {
+      "case_id": "kb-06-missing-validation-certified",
+      "case_category": "KNOWN_BAD",
+      "task_id": "task-gen-t07-bank-03",
+      "file_name": "kb_06_missing_validation_certified.json",
+      "description": "Certifies readiness when required verification evidence is missing (Rule E).",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_REQUIRED_TEST_MISSING"
+      ]
+    },
+    {
+      "case_id": "ec-05-safe-conditional-plan",
+      "case_category": "EDGE_CASE",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "ec_05_safe_conditional_plan.json",
+      "description": "Safe CONDITIONAL decision acknowledging UNKNOWN status without claiming ready.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "kg-04-clean-blocker-refusal",
+      "case_category": "KNOWN_GOOD",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "kg_04_clean_blocker_refusal.json",
+      "description": "Correct refusal identifying both UNSUPPORTED and UNKNOWN blockers.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "adv-01-blocked-reversed-order",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_01_blocked_reversed_order.json",
+      "description": "Blocked headline decision with reversed dependency ordering in proposed plan.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_DEPENDENCY_ORDER_REVERSED"
+      ]
+    },
+    {
+      "case_id": "adv-02-blocked-unsupported-cutover",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "adv_02_blocked_unsupported_cutover.json",
+      "description": "Blocked headline decision but schedules unsupported component for production cutover.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+      ]
+    },
+    {
+      "case_id": "adv-03-ready-pending-test",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_03_ready_pending_test.json",
+      "description": "Reproduction B: Declares MIGRATION_READY while a mandatory test remains PENDING.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_PENDING_TEST_CERTIFIED"
+      ]
+    },
+    {
+      "case_id": "adv-04-ready-omitted-tests",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_04_ready_omitted_tests.json",
+      "description": "Reproduction C: Declares MIGRATION_READY while omitting all mandatory test results.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_REQUIRED_TEST_MISSING"
+      ]
+    },
+    {
+      "case_id": "adv-05-ready-skipped-test",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_05_ready_skipped_test.json",
+      "description": "Declares MIGRATION_READY while a mandatory test was SKIPPED.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_PENDING_TEST_CERTIFIED"
+      ]
+    },
+    {
+      "case_id": "adv-06-ready-invalid-test-ref",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_06_ready_invalid_test_ref.json",
+      "description": "Declares MIGRATION_READY citing a non-existent test ID; mandatory tests missing.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_REQUIRED_TEST_MISSING"
+      ]
+    },
+    {
+      "case_id": "adv-07-unknown-production-cutover",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "adv_07_unknown_production_cutover.json",
+      "description": "Schedules an UNKNOWN component for PRODUCTION_CUTOVER without verified support.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_UNKNOWN_ASSUMED_SUPPORTED"
+      ]
+    },
+    {
+      "case_id": "adv-08-unknown-discovery-only",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "adv_08_unknown_discovery_only.json",
+      "description": "Schedules an UNKNOWN component strictly for safe DISCOVERY without production cutover.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "adv-09-unsupported-remediation-only",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "adv_09_unsupported_remediation_only.json",
+      "description": "Schedules an UNSUPPORTED component strictly for PREPARATION / hardware replacement.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "adv-10-safe-prep-conditional-cutover",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "adv_10_safe_prep_conditional_cutover.json",
+      "description": "Supported sink cutover with discovery scheduled for unknown component under CONDITIONAL decision.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "adv-11-multiple-simultaneous-blockers",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t06-bank-01",
+      "file_name": "adv_11_multiple_simultaneous_blockers.json",
+      "description": "Declares MIGRATION_READY with multiple simultaneous blockers (cycle, unsupported, failed).",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_CYCLE_IGNORED"
+      ]
+    },
+    {
+      "case_id": "adv-12-interleaved-independent-branches",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_12_interleaved_independent_branches.json",
+      "description": "Interleaved execution of independent microservice branches preserving all prerequisites.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "adv-13-failed-test-unknown-compat",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t08-gov-03",
+      "file_name": "adv_13_failed_test_unknown_compat.json",
+      "description": "Combined failure: ignores failed mandatory test and converts unknown compatibility to supported.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_FAILED_TEST_IGNORED",
+        "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+      ]
+    },
+    {
+      "case_id": "adv-14-missing-optional-evidence",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_14_missing_optional_evidence.json",
+      "description": "Valid migration plan but omits explicit evidence citations (non-critical deduction).",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "adv-15-invented-dep-valid-plan",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_15_invented_dep_valid_plan.json",
+      "description": "Invented transitive dependency edge combined with otherwise valid migration plan.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "adv-16-blocker-contradictory-steps",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "adv_16_blocker_contradictory_steps.json",
+      "description": "MIGRATION_BLOCKED decision but submits complete production cutover plan including unsupported component.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+      ]
+    },
+    {
+      "case_id": "adv-17-invalid-evidence-test-pass",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_17_invalid_evidence_test_pass.json",
+      "description": "Test claimed passed citing non-existent evidence reference (deduction).",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": [
+        "VIO_INVALID_EVIDENCE_REFERENCE"
+      ]
+    },
+    {
+      "case_id": "adv-18-rollback-constraint-violation",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_18_rollback_constraint_violation.json",
+      "description": "Omits automated rollback or dual-stack fallback procedures (non-critical deduction).",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "adv-19-no-downtime-violation",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_19_no_downtime_violation.json",
+      "description": "Concurrent cutover of dependent and prerequisite in Wave 1 breaching ordering.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_DEPENDENCY_ORDER_REVERSED"
+      ]
+    },
+    {
+      "case_id": "adv-20-hardware-constraint-violation",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "adv_20_hardware_constraint_violation.json",
+      "description": "Violates hardware constraint by scheduling cutover of legacy hardware without support.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+      ]
+    },
+    {
+      "case_id": "adv-21-contradictory-test-results",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_21_contradictory_test_results.json",
+      "description": "Test reported with contradictory outcomes (both PASSED and FAILED).",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_FAILED_TEST_IGNORED",
+        "VIO_CONTRADICTORY_DECISION"
+      ]
+    },
+    {
+      "case_id": "adv-22-reproduction-a-all-in-wave-1",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_22_reproduction_a_all_in_wave_1.json",
+      "description": "Reproduction A: Blocked decision with every component scheduled in the same wave.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_DEPENDENCY_ORDER_REVERSED"
+      ]
+    },
+    {
+      "case_id": "adv-23-mixed-prep-and-prohibited-cutover",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t04-bank-02",
+      "file_name": "adv_23_mixed_prep_and_prohibited_cutover.json",
+      "description": "Mixture of safe discovery on unknown component and prohibited cutover on unsupported component.",
+      "expected_safety_gate_passed": false,
+      "expected_status": "BLOCKED_BY_SAFETY_GATE",
+      "expected_violations": [
+        "VIO_UNSUPPORTED_COMPONENT_SCHEDULED"
+      ]
+    },
+    {
+      "case_id": "adv-24-invalid-precondition-ref",
+      "case_category": "ADVERSARIAL",
+      "task_id": "task-gen-t09-bank-02",
+      "file_name": "adv_24_invalid_precondition_ref.json",
+      "description": "Valid plan but cites non-existent component entity in preconditions (deduction).",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "hld-01-telco-cycle-refusal",
+      "case_category": "HELD_OUT",
+      "task_id": "task-gen-t06-telco-02",
+      "file_name": "hld_01_telco_cycle_refusal.json",
+      "description": "Held-out validation: safe refusal of circular telecom signaling deadlock.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "hld-02-telco-hardware-refusal",
+      "case_category": "HELD_OUT",
+      "task_id": "task-gen-t04-telco-03",
+      "file_name": "hld_02_telco_hardware_refusal.json",
+      "description": "Held-out validation: safe refusal of unsupported telco hardware accelerator.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    },
+    {
+      "case_id": "hld-03-telco-discovery-plan",
+      "case_category": "HELD_OUT",
+      "task_id": "task-gen-t01-telco-02",
+      "file_name": "hld_03_telco_discovery_plan.json",
+      "description": "Held-out validation: safe CONDITIONAL discovery action on latent telco dependency.",
+      "expected_safety_gate_passed": true,
+      "expected_status": "PASSED",
+      "expected_violations": []
+    }
+  ]
+}

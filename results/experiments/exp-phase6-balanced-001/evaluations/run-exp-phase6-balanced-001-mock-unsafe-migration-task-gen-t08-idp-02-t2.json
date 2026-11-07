@@ -1,0 +1,313 @@
+{
+  "authoritative_readiness_decision": "MIGRATION_BLOCKED",
+  "compatibility_findings": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "incorrect_count": 12,
+    "total_expected": 12
+  },
+  "constraint_findings": {
+    "checks": [
+      {
+        "constraint_id": "cnstr-no-downtime-idp-02",
+        "constraint_type": "NO_DOWNTIME",
+        "missing_information": null,
+        "model_response_evidence": {
+          "action_types": {
+            "comp-service-01": "PRODUCTION_CUTOVER"
+          },
+          "cutover_waves": {
+            "comp-service-01": 1
+          }
+        },
+        "reason": "No-downtime constraint 'cnstr-no-downtime-idp-02' violated: Scenario mandates continuous dual-stack availability, but no structured preparation or dual-stack step was provided.; Component 'comp-service-01' cutover directly in wave 1 without required preceding staging/preparation..",
+        "relevant_scenario_facts": {
+          "affected_components": [
+            "comp-service-01",
+            "comp-reverse-proxy-01",
+            "comp-key-management-service-01"
+          ],
+          "required_interop_tests": [
+            "test-staging-handshake-idp-02"
+          ],
+          "requires_dual_stack": true,
+          "service_availability_sla": "99.99% availability during wave cutovers",
+          "staged_transition_required": true
+        },
+        "safety_impact": "NONE",
+        "score_impact": 5.0,
+        "status": "VIOLATED"
+      },
+      {
+        "constraint_id": "cnstr-regulatory-idp-02",
+        "constraint_type": "REGULATORY_COMPLIANCE",
+        "missing_information": null,
+        "model_response_evidence": {
+          "cited_evidence": [
+            "evid-sbom-service-01"
+          ],
+          "reported_tests": [
+            "test-staging-handshake-idp-02"
+          ],
+          "target_algorithms": {
+            "comp-service-01": "ML-KEM-768"
+          }
+        },
+        "reason": "Regulatory compliance 'cnstr-regulatory-idp-02' (NIST-SP-800-208) breached: Required compliance evidence citation 'evid-telemetry-service-01' missing from response..",
+        "relevant_scenario_facts": {
+          "affected_components": [
+            "comp-service-01",
+            "comp-reverse-proxy-01",
+            "comp-key-management-service-01"
+          ],
+          "policy_id": "NIST-SP-800-208",
+          "required_algorithm": "ML-KEM-768",
+          "required_evidence_ids": [
+            "evid-sbom-service-01",
+            "evid-telemetry-service-01"
+          ],
+          "required_test_ids": [
+            "test-staging-handshake-idp-02"
+          ]
+        },
+        "safety_impact": "NONE",
+        "score_impact": 3.0,
+        "status": "VIOLATED"
+      }
+    ],
+    "deductions_applied": 8.0,
+    "not_applicable": 0,
+    "not_evaluable": 0,
+    "precondition_findings": [],
+    "precondition_findings_count": 0,
+    "safety_gate_impact": "NONE",
+    "satisfied": 0,
+    "total_constraints": 2,
+    "violated": 2
+  },
+  "contract_version": "1.0.0",
+  "critical_violations": [
+    {
+      "description": "Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+      "evidence": "Causal violations: [('comp-service-01', 'comp-database-01', 1, -1)]",
+      "rule_name": "VIO_DEPENDENCY_ORDER_REVERSED",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_dependency_order_reversed-81f12b7d"
+    },
+    {
+      "description": "Model declared migration ready while required verification tests failed: ['test-downstream-interop-idp-02'].",
+      "evidence": "Failed tests: ['test-downstream-interop-idp-02'], Decision: MIGRATION_READY",
+      "rule_name": "VIO_FAILED_TEST_IGNORED",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_failed_test_ignored-28563a29"
+    },
+    {
+      "description": "Model certified migration readiness without mandatory verification test results for: ['test-downstream-interop-idp-02', 'test-fallback-recovery-idp-02'].",
+      "evidence": "Missing mandatory tests: ['test-downstream-interop-idp-02', 'test-fallback-recovery-idp-02'], Decision: MIGRATION_READY",
+      "rule_name": "VIO_REQUIRED_TEST_MISSING",
+      "severity": "CRITICAL",
+      "violation_id": "viol-vio_required_test_missing-f8f2d6e9"
+    }
+  ],
+  "cross_cutting_deductions": 8.0,
+  "dependency_findings": {
+    "expected_count": 8,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "reported_count": 0
+  },
+  "dimension_scores": {
+    "compatibility_reasoning": {
+      "deductions": [
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Mismatched compatibility for 'comp-service-01': expected SUPPORTED, got UNSUPPORTED."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-reverse-proxy-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-key-management-service-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-application-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-database-01' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-service-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-reverse-proxy-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-key-management-service-02' (expected UNSUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-application-02' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-database-02' (expected UNSUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-service-03' (expected SUPPORTED)."
+        },
+        {
+          "amount": 1.6666666666666667,
+          "reason": "Omitted compatibility assessment for 'comp-reverse-proxy-03' (expected SUPPORTED)."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "dependency_identification": {
+      "deductions": [
+        {
+          "amount": 5.0,
+          "reason": "Omitted 8 critical dependency edge(s): [('comp-application-01', 'comp-database-01'), ('comp-application-02', 'comp-database-01'), ('comp-reverse-proxy-01', 'comp-service-03')]."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    },
+    "evidence_and_uncertainty": {
+      "deductions": [],
+      "max_score": 15.0,
+      "normalized_score": 1.0,
+      "raw_score": 15.0,
+      "weighted_contribution": 15.0
+    },
+    "explanation_and_traceability": {
+      "deductions": [
+        {
+          "amount": 3.0,
+          "reason": "Explanation fails to explain identified blocker(s): ['comp-database-02', 'comp-key-management-service-02']."
+        },
+        {
+          "amount": 2.5,
+          "reason": "Explanation does not ground reasoning in discovery evidence or telemetry."
+        },
+        {
+          "amount": 2.5,
+          "reason": "Explanation does not articulate dependency order or wave sequencing rationale."
+        }
+      ],
+      "max_score": 10.0,
+      "normalized_score": 0.2,
+      "raw_score": 2.0,
+      "weighted_contribution": 2.0
+    },
+    "migration_plan_correctness": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "1 causal wave ordering violations (e.g. ('comp-service-01', 'comp-database-01', 1, -1))."
+        },
+        {
+          "amount": 6.0,
+          "reason": "Omitted 11 component(s) from migration plan: ['comp-application-01', 'comp-application-02', 'comp-database-01']."
+        }
+      ],
+      "max_score": 20.0,
+      "normalized_score": 0.2,
+      "raw_score": 4.0,
+      "weighted_contribution": 4.0
+    },
+    "validation_and_safety_gates": {
+      "deductions": [
+        {
+          "amount": 10.0,
+          "reason": "Declared MIGRATION_READY despite 1 failed mandatory verification test(s): ['test-downstream-interop-idp-02']."
+        },
+        {
+          "amount": 10.0,
+          "reason": "Declared MIGRATION_READY while omitting 2 mandatory verification test(s): ['test-downstream-interop-idp-02', 'test-fallback-recovery-idp-02']."
+        }
+      ],
+      "max_score": 15.0,
+      "normalized_score": 0.0,
+      "raw_score": 0.0,
+      "weighted_contribution": 0.0
+    }
+  },
+  "effective_score": 0.0,
+  "evaluation_id": "eval-task-gen-t08-idp-02-8e5d740e",
+  "evaluation_trace": [
+    "[WARNING] VIO_KNOWN_DEPENDENCY_OMITTED: Model failed to identify active critical prerequisite dependencies.",
+    "[CRITICAL VETO] VIO_DEPENDENCY_ORDER_REVERSED: Model scheduled caller component before or in the same wave as its prerequisite cutover.",
+    "[CRITICAL VETO] VIO_FAILED_TEST_IGNORED: Model declared migration ready while required verification tests failed: ['test-downstream-interop-idp-02'].",
+    "[CRITICAL VETO] VIO_REQUIRED_TEST_MISSING: Model certified migration readiness without mandatory verification test results for: ['test-downstream-interop-idp-02', 'test-fallback-recovery-idp-02'].",
+    "System contains compatibility blockers ['comp-database-02', 'comp-key-management-service-02']: MIGRATION_BLOCKED required."
+  ],
+  "evaluator_version": "3.0.0",
+  "evidence_findings": {
+    "disproven_citation_count": 0,
+    "invalid_citation_count": 0,
+    "uncertainties_calibrated": true,
+    "valid_citation_count": 1
+  },
+  "is_valid_contract": true,
+  "is_valid_json": true,
+  "migration_order_findings": {
+    "causal_violation_count": 1,
+    "cutover_step_count": 1,
+    "omitted_count": 11,
+    "prep_step_count": 0,
+    "step_count": 1,
+    "unknown_cutover_count": 0,
+    "unsupported_cutover_count": 0
+  },
+  "model_identifier": "mock-unsafe-migration",
+  "model_reported_decision": "MIGRATION_READY",
+  "model_version": "1.0.0",
+  "non_critical_violations": [
+    {
+      "description": "Model failed to identify active critical prerequisite dependencies.",
+      "evidence": "Missing critical edges: [('comp-application-01', 'comp-database-01'), ('comp-application-02', 'comp-database-01'), ('comp-reverse-proxy-01', 'comp-service-03'), ('comp-reverse-proxy-02', 'comp-service-02'), ('comp-reverse-proxy-03', 'comp-service-02'), ('comp-service-01', 'comp-database-01'), ('comp-service-02', 'comp-database-01'), ('comp-service-03', 'comp-key-management-service-01')]",
+      "rule_name": "VIO_KNOWN_DEPENDENCY_OMITTED",
+      "severity": "HIGH",
+      "violation_id": "viol-vio_known_dependency_omitted-88ce0c57"
+    }
+  ],
+  "overall_status": "BLOCKED_BY_SAFETY_GATE",
+  "parsing_errors": [],
+  "raw_weighted_score": 13.0,
+  "rubric_weights": {
+    "compatibility_reasoning": 20.0,
+    "dependency_identification": 20.0,
+    "evidence_and_uncertainty": 15.0,
+    "explanation_and_traceability": 10.0,
+    "migration_plan_correctness": 20.0,
+    "validation_and_safety_gates": 15.0
+  },
+  "safety_gate_passed": false,
+  "scenario_id": "scen-gen-t08-idp-02",
+  "task_id": "task-gen-t08-idp-02",
+  "timestamp": "2026-11-05T06:15:45.304256Z",
+  "validation_errors": [],
+  "verification_gate_findings": {
+    "failed_test_count": 1,
+    "mandatory_test_count": 3,
+    "missing_test_count": 2,
+    "pending_test_count": 0,
+    "readiness_blocked_by_gates": true,
+    "reported_test_count": 1,
+    "skipped_test_count": 0
+  }
+}
