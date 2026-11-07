@@ -1,5 +1,7 @@
 """Command-line application entry point for PHOENIX-EVAL."""
 
+import utils.transport
+import utils.session
 import argparse
 import sys
 from pathlib import Path

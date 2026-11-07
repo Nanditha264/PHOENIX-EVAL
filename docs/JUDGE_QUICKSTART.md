@@ -36,16 +36,17 @@ pip install -e . --no-deps
 
 ---
 
-### Step 2: Run the Automated Test Suite (292 Tests)
-Execute the complete test suite covering schemas, graph verifiers, causal ordering, and safety gates:
+### Step 2: Run the Automated Test Suite (363 Tests)
+Execute the complete test suite covering schemas, graph verifiers, causal ordering, adversarial invariants, and safety gates:
 
 ```bash
 python -m pytest
 ```
 
-**Expected Outcome:**
-- `292 passed in ~12 seconds`
-- 100% pass rate across unit and integration tests.
+**Recorded Release Result (Verification Evidence):**
+- `363 passed in ~29.5 seconds`
+- 100% pass rate across all 363 unit and integration tests.
+*(Note: Execution time on the reader's local environment may vary based on hardware, typically 25–40 seconds.)*
 
 ---
 

@@ -41,6 +41,7 @@ PHOENIX-EVAL provides rigorous, evidence-based evaluation rubrics and safety gat
 - ❌ **Is NOT an autonomous agent framework:** No LangChain, LangGraph, vector databases, or autonomous agents are embedded in the benchmark.
 - ❌ **Does NOT provide OS-level process sandboxing:** Ground-truth isolation is an architectural boundary within the Python application preventing accidental prompt contamination; it is not a cryptographic enclave against hostile code executing in the same Python process.
 - ❌ **Does NOT execute production grading in Phase 1:** Phase 1 provides abstract evaluator contracts and a deterministic `MockEvaluator` to verify pipeline data flow. Real semantic grading and rubric scoring belong to Phase 3.
+- ❌ **Does NOT include real frontier-model benchmark runs:** Zero real frontier-model evaluations (e.g. OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 1.5 Pro) have been completed in this offline release. While production-ready API provider adapters and smoke-test harnesses are fully implemented, all 84 experimental runs in `exp-phase6-balanced-001` are mock-only simulations designed to validate benchmark metrics and failure taxonomy pipelines without credential dependencies.
 
 ---
 
@@ -146,8 +147,8 @@ PHOENIX-EVAL/
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd "MICRO EVAL"
+   git clone https://github.com/Nanditha264/PHOENIX-EVAL.git
+   cd PHOENIX-EVAL
    ```
 
 2. **Create and activate a virtual environment (optional but recommended):**
@@ -255,6 +256,7 @@ python -m phoenix_eval.main export-experiment exp-mock-comparison-001 --format m
 
 # --- Phase 5 & 5.1: Scientific Ingestion, Failure Intelligence & Research Report ---
 # Audit experiment artifacts, integrity hashes, and 5-field dataset fingerprints
+# (Note: All 84 experimental runs in exp-phase6-balanced-001 are mock-only baseline runs; zero real frontier-model evaluations were completed offline)
 python -m phoenix_eval.main validate-results --experiment exp-phase6-balanced-001
 
 # Execute comprehensive Phase 5/5.1 multidimensional analysis and report generation
@@ -275,11 +277,11 @@ python -m phoenix_eval.main generate-research-report --experiment exp-phase6-bal
 # Inspect analysis manifest and cryptographic input hashes
 python -m phoenix_eval.main inspect-analysis anal-178df363
 
-# --- Phase 6: Real-Model Quality Control, Visualizations & Judge Demo ---
+# --- Phase 6: Pre-Flight Verification, Quality Control, Visualizations & Judge Demo ---
 # Run pre-flight quality control smoke test on mock provider (3 canonical archetypes)
 python -m phoenix_eval.main smoke-test --mock
 
-# Run smoke test on commercial frontier model provider (verifies API key credentials)
+# Run smoke test on commercial frontier model provider adapter (verifies API key credentials)
 python -m phoenix_eval.main smoke-test --model gpt-4o
 python -m phoenix_eval.main smoke-test --model gemini-1.5-flash
 
